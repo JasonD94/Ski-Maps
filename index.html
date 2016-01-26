@@ -1,0 +1,112 @@
+<!--
+      Created by Jason Downing
+      This page is simply a test of random stuff.
+
+      MIT Licensed - do whatever you want with this code.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- CSS file -->
+
+  <!-- Need CSS file for some of this stuff. -->
+  <!--  <link rel="stylesheet" type="text/css" href="main.css" />  -->
+
+  <!-- jQuery minified version. -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  <!-- maphilight, used to overlay the map using a GIMP generated Image Map
+       This JS file was found on this website: http://davidlynch.org/projects/maphilight/docs/
+
+       The JS file was retrieved on Jan 26th 2016 at 12PM from the following URL:
+       http://davidlynch.org/projects/maphilight/jquery.maphilight.min.js
+
+       I did not create this file, nor do I claim ownership of it.
+
+       It can also be found on GitHub and is MIT Licensed, like my own code.
+       GitHub link: https://github.com/kemayo/maphilight
+   -->
+  <script type="text/javascript" src="../js/jquery.maphilight.min.js"></script>
+
+  <!-- This JavaScript should be moved to its own JavaScript file.
+       For now, it will live here for testing purposes. -->
+  <script type="text/javascript">
+
+    // This is from the maphilight docs, and has been changed for the Ski Trail
+    // highlighting to look "better", basically yellowish instead of dark gray.
+    $.fn.maphilight.defaults = {
+      fill: true,
+      fillColor: 'FFEA1C',
+      fillOpacity: 0.5,
+      stroke: false,
+      strokeColor: '000000',
+      strokeOpacity: 1,
+      strokeWidth: 1,
+      fade: false,
+      alwaysOn: true,
+      neverOn: false,
+      groupBy: false,
+      wrapClass: true,
+      shadow: false,
+      shadowX: 0,
+      shadowY: 0,
+      shadowRadius: 6,
+      shadowColor: '000000',
+      shadowOpacity: 0.8,
+      shadowPosition: 'outside',
+      shadowFrom: false
+    }
+
+    $(function() {
+      $('.map').maphilight();
+    });
+  </script>
+
+  <meta charset="UTF-8">
+  <title>Waterville Valley Map Test</title>
+  </head>
+  <body>
+
+  <h1>Dynamic Trail Map</h1>
+  <p>This site will test displaying a static map and highlighting trails that are
+  open / closed on the map.</p>
+
+  <!--
+  Generated this image map from GIMP. See this link for info on how to do this:
+  http://www.makeuseof.com/tag/create-image-map-gimp/
+
+  Image found at this URL:
+  (I claim no ownership of this image)
+  https://d13fo19pohlmh8.cloudfront.net/media/assets/ac0736961b5b728cdb1a4f5fb63c6352.jpeg
+
+  I got some help from this handy Stackoverflow post which included a JS Fiddle
+  to mess around with.
+  https://stackoverflow.com/questions/17613729/using-maphilight-for-total-beginners
+  https://jsfiddle.net/k67gq/6/
+  -->
+  <img class="map" src="../img/waterville_valley.jpeg"
+  width="800" height="1037" border="0" usemap="#map"/>
+
+  <map name="map">
+  <!-- #$-:Image map file created by GIMP Image Map plug-in -->
+  <!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+  <!-- #$-:Please do not edit lines starting with "#$" -->
+  <!-- #$VERSION:2.3 -->
+  <!-- #$AUTHOR: Jason Downing   -->
+  <area shape="poly" coords="370,399,410,380,434,369,503,357,508,366,461,376,432,387,403,402,383,426,369,399,370,398,374,405" href="#sunrun" />
+  <area shape="poly" coords="363,397,285,444,224,524,235,539,293,464,331,446,378,414,375,412" href="#ciao" />
+  <area shape="poly" coords="655,195,644,200,644,218,651,218,618,280,610,274,629,239,624,225,630,200,646,189,650,190" href="#treeline" />
+  <area shape="poly" coords="650,190,666,178,684,178,672,183,654,218,645,217,645,216" href="#ruthiesrun" />
+  <area shape="poly" coords="676,184,683,179,699,201,699,210,691,222,679,235,666,257,662,269,653,287,637,301,632,302,610,331,597,332,617,303,628,299,657,248,669,239,670,222,662,215,679,180" href="#scramble" />
+  <area shape="poly" coords="621,229,589,246,581,272,596,277,605,300,613,284,607,275,618,244,628,238,623,227" href="#express" />
+  <area shape="poly" coords="582,273,561,315,535,344,546,353,569,344,589,338,598,307,603,300,597,279" href="#mainstreet" />
+  <area shape="poly" coords="463,379,483,373,260,588,248,575,302,528,327,502,341,489,359,469,400,426,433,394" href="#truegrit" />
+  <area shape="poly" coords="394,428,378,420,349,454,318,467,267,521,246,545,250,558,275,535,343,474,391,432" href="#gema" />
+  </map>
+
+
+  <!-- Load up highlight JS code -->
+  <!--<script src="../js/test.js"></script>-->
+
+  </body>
+</html>

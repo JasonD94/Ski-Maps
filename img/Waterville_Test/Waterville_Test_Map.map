@@ -1,0 +1,18 @@
+<img src="Untitled" width="800" height="1037" border="0" usemap="#map" />
+
+<map name="map">
+<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+<!-- #$-:Please do not edit lines starting with "#$" -->
+<!-- #$VERSION:2.3 -->
+<!-- #$AUTHOR:asus   -->
+<area shape="poly" coords="370,399,410,380,434,369,503,357,508,366,461,376,432,387,403,402,383,426,369,399,370,398,374,405" href="#sunrun" />
+<area shape="poly" coords="363,397,285,444,224,524,235,539,293,464,331,446,378,414,375,412" href="#ciao" />
+<area shape="poly" coords="655,195,644,200,644,218,651,218,618,280,610,274,629,239,624,225,630,200,646,189,650,190" href="#treeline" />
+<area shape="poly" coords="650,190,666,178,684,178,672,183,654,218,645,217,645,216" href="#ruthiesrun" />
+<area shape="poly" coords="676,184,683,179,699,201,699,210,691,222,679,235,666,257,662,269,653,287,637,301,632,302,610,331,597,332,617,303,628,299,657,248,669,239,670,222,662,215,679,180" href="#scramble" />
+<area shape="poly" coords="621,229,589,246,581,272,596,277,605,300,613,284,607,275,618,244,628,238,623,227" href="#express" />
+<area shape="poly" coords="582,273,561,315,535,344,546,353,569,344,589,338,598,307,603,300,597,279" href="#mainstreet" />
+<area shape="poly" coords="463,379,483,373,260,588,248,575,302,528,327,502,341,489,359,469,400,426,433,394" href="#truegrit" />
+<area shape="poly" coords="394,428,378,420,349,454,318,467,267,521,246,545,250,558,275,535,343,474,391,432" href="#gema" />
+</map>
