@@ -5,7 +5,7 @@
 <!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
 <!-- #$-:Please do not edit lines starting with "#$" -->
 <!-- #$VERSION:2.3 -->
-<!-- #$AUTHOR:asus     -->
+<!-- #$AUTHOR:asus      -->
 <area shape="poly" coords="370,399,410,380,434,369,503,357,508,366,461,376,432,387,403,402,383,426,369,399,370,398,374,405" href="#sunrun" />
 <area shape="poly" coords="363,397,285,444,215,531,230,558,293,464,331,446,378,414,375,412" href="#ciao" />
 <area shape="poly" coords="655,195,644,200,644,218,651,218,618,280,610,274,629,239,624,225,630,200,646,189,650,190" href="#treeline" />

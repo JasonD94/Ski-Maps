@@ -60,6 +60,64 @@
     $(function() {
       $('.map').maphilight();
     });
+
+    $(function() {
+
+      // Testing
+      //var areas = $( "area" );
+      //console.log(areas);
+
+      // See if we can modify the color of the highlighting!
+      // Idea from: https://stackoverflow.com/questions/30788867/jquery-maphilight-changing-colors-dynamically
+      // and: https://stackoverflow.com/questions/9541922/changing-fillcolor-of-an-area-on-click-using-jquery-maphilight-plugin
+      // Note: this works, just disabled to test other stuff.
+      // $("area").each(function(){
+      //   console.log("CHANGING COLORS");
+      //   $(this).data('maphilight', {"fillColor":"000000"});
+      // });
+    });
+
+    // Change all the highlighting to yellow.
+    function color_yellow() {
+
+      // This goes through and changes all the maphilight data "fillColor" properties
+      // to "FFEA1C" which is the same yellow color I set as "default" for all areas.
+      $("area").each(function(){
+        console.log("CHANGING COLORS to YELLOW");
+        $(this).data('maphilight', {"fillColor":"FFEA1C"});
+      });
+
+      $('.map').maphilight();   // Must call this to update the map!
+
+      return true;
+    }
+
+    // Change all the highlighting to red.
+    function color_red() {
+      // This goes through and changes all the maphilight data "fillColor" properties
+      // to "A30002" which is a red color.
+      $("area").each(function(){
+        console.log("CHANGING COLORS to RED");
+        $(this).data('maphilight', {"fillColor":"A30002"});
+      });
+
+      $('.map').maphilight();   // Must call this to update the map!
+
+      return true;
+    }
+
+    // Change just "lower bobby's run" to blue.
+    function bobbys_run() {
+      // This only changes one ID, as a proof of concept for dynamically styling each
+      // trail area.
+      console.log("CHANGING COLORS to BLUE for BOBBYS RUN");
+      $(".bobbysrun").data('maphilight', {"fillColor":"061D5A"});
+
+      $('.map').maphilight();   // Must call this to update the map!
+
+      return true;
+    }
+
   </script>
 
   <meta charset="UTF-8">
@@ -70,6 +128,12 @@
   <h1>Dynamic Trail Map</h1>
   <p>This site will test displaying a static map and highlighting trails that are
   open / closed on the map.</p>
+
+  <!-- Buttons for demoing the jQuery Maphilight -->
+  <button type="button" onclick="color_yellow()">Change highlighting to YELLOW</button>
+  <button type="button" onclick="color_red()">Change highlighting to RED</button>
+  <button type="button" onclick="bobbys_run()">Change "Bobby's Run" to BLUE</button>
+  <br/><br/>
 
   <!--
   Generated this image map from GIMP. See this link for info on how to do this:
@@ -107,8 +171,8 @@
 <area shape="poly" coords="497,353,512,346,461,335,365,351,327,370,329,397,313,411,250,438,234,460,170,498,159,506,173,521,193,513,231,484,255,461,263,448,302,430,332,412,349,398,351,376,355,367,424,352,450,346,468,345" href="#oblivion" />
 <area shape="poly" coords="413,332,414,332,485,333,489,316,405,314,405,332" href="#palmersway" />
 <area shape="poly" coords="471,398,455,412,441,432,449,448,465,448,480,404" href="#bailout" />
-<area shape="poly" coords="507,366,510,368,491,425,481,451,481,469,460,470,446,460,466,444,478,401,491,380" href="#upperbobbysrun" />
-<area shape="poly" coords="438,491,458,471,447,459,418,484,374,519,320,567,261,598,274,616,351,575,404,536,409,516" href="#lowerbobbysrun" />
+<area class="bobbysrun" shape="poly" coords="507,366,510,368,491,425,481,451,481,469,460,470,446,460,466,444,478,401,491,380" href="#upperbobbysrun" />
+<area class="bobbysrun" shape="poly" coords="438,491,458,471,447,459,418,484,374,519,320,567,261,598,274,616,351,575,404,536,409,516" href="#lowerbobbysrun" />
 <area shape="poly" coords="448,483,434,494,421,505,410,514,404,536,421,569,430,550,442,540,448,526,451,509,456,492" href="#pyschedout" />
 <area shape="poly" coords="520,370,519,370,541,370,534,399,518,442,500,442" href="#whitecaps" />
 <area shape="poly" coords="518,442,507,448,510,459,536,479,560,484,576,477,563,467,545,467" href="#terrystrail" />
