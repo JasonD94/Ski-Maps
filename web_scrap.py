@@ -56,41 +56,16 @@ def waterville():
 
   print ("\n")
 
-# Cannon Mt
-def cannon():
-  open_trails = []
-  closed_trails = []
-
-  #Get the page, then grab just the text and use BeautifulSoup to work some magic on it.
-  page = requests.get(urls[0])
-  data = page.text
-  soup = BeautifulSoup(data, "lxml")
-
-  # Get an entire div.
-  ski_data = soup.findAll('div', {'class' : 'tabset_content'})
-
-  # Let's get all open trails.
-  for each_div in soup.findAll('li', {'class' : 'open'}):
-    open_trails.append(each_div.text)
-
-  print ("*** Open lifts / trails: ***\n")
-  print (open_trails)
-
-  # Also all closed trails.
-  for each_div in soup.findAll('li', {'class' : 'closed'}):
-    closed_trails.append(each_div.text)
-
-  print ("\n\n*** Closed lifts / trails: ***\n")
-  print (closed_trails)
-
-  print ("\n")
-
   # Time to write the lists to a JSON file.
   # Stackoverflow post this is from:
   # https://stackoverflow.com/questions/16267767/python-writing-json-to-file
   with open("json/ski.json", "w") as outfile:
     json.dump({'waterville_open': open_trails,
       'waterville_closed': closed_trails}, outfile, indent=4)
+
+# Cannon Mt
+def cannon():
+  print ("NOT DONE.\n");
 
 # Bretton Woods
 def bretton_woods():
