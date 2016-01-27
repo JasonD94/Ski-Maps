@@ -32,51 +32,6 @@
        For now, it will live here for testing purposes. -->
   <script type="text/javascript">
 
-    // This is from the maphilight docs, and has been changed for the Ski Trail
-    // highlighting to look "better", basically yellowish instead of dark gray.
-    $.fn.maphilight.defaults = {
-      fill: true,
-      fillColor: 'FFEA1C',
-      fillOpacity: 0.5,
-      stroke: false,
-      strokeColor: '000000',
-      strokeOpacity: 1,
-      strokeWidth: 1,
-      fade: false,
-      alwaysOn: true,
-      neverOn: false,
-      groupBy: false,
-      wrapClass: true,
-      shadow: false,
-      shadowX: 0,
-      shadowY: 0,
-      shadowRadius: 6,
-      shadowColor: '000000',
-      shadowOpacity: 0.8,
-      shadowPosition: 'outside',
-      shadowFrom: false
-    }
-
-    $(function() {
-      $('.map').maphilight();
-    });
-
-    $(function() {
-
-      // Testing
-      //var areas = $( "area" );
-      //console.log(areas);
-
-      // See if we can modify the color of the highlighting!
-      // Idea from: https://stackoverflow.com/questions/30788867/jquery-maphilight-changing-colors-dynamically
-      // and: https://stackoverflow.com/questions/9541922/changing-fillcolor-of-an-area-on-click-using-jquery-maphilight-plugin
-      // Note: this works, just disabled to test other stuff.
-      // $("area").each(function(){
-      //   console.log("CHANGING COLORS");
-      //   $(this).data('maphilight', {"fillColor":"000000"});
-      // });
-    });
-
     // Change all the highlighting to yellow.
     function color_yellow() {
 
@@ -111,7 +66,43 @@
       // This only changes one ID, as a proof of concept for dynamically styling each
       // trail area.
       console.log("CHANGING COLORS to BLUE for BOBBYS RUN");
-      $(".bobbysrun").data('maphilight', {"fillColor":"061D5A"});
+
+      $("area").each(function(){
+        var compare = "Upper Bobbys";
+
+        //console.log("Trail: " + compare + " attr: " + $(this).attr("alt"));
+
+        if(compare == $(this).attr("alt")) {
+          console.log("Changing color for Bobby's Run");
+          $(this).data('maphilight', {"fillColor":"0000FF"});
+        }
+      });
+
+      $('.map').maphilight();   // Must call this to update the map!
+
+      return true;
+    }
+
+    // Change the highlighting given a list of trails.
+    function color_list() {
+      console.log("Figure out how to change a list of trails.");
+
+      // List of trails open / closed.
+      var open_trails = ['White Peak Express Quad', 'Valley Run Quad ', 'Pasture J-Bar', 'Lower Meadows Double Chair', 'The Pasture', 'Baseway', 'Kinder Park', "Leroy's Loop", 'Revelation', 'Stemtation - FT', 'Valley Run', 'Main Street', 'Ruthies Run', 'Scramble', 'Lower Stillness', 'Stillness - FT', 'And Tyler Too', 'Grimes Way', 'Lower Periphery - FT', 'Lower Tippecanoe', 'No Grit', 'Oblivion', 'Old Tecumseh', 'Palmers Way', 'Extension', 'Sidewinder', 'Siegel Street', 'Sun Run', 'Terrys Trail', 'Tippecanoe', 'Upper Bobbys', 'Upper Valley Run', 'White Caps', 'South Street - FT', "Lower Sel's Choice", "Sel's Choice", "Tommy's World Cup Run - FT", 'Utter Abandon - FT', 'Exhibition - FT', 'Exhibition', 'South Street', 'Open'];
+      var closed_trails = ['High Country Double Chair', 'Exhibition Poma', 'Northside Double Chair', 'Sunnyside Triple Chair', 'World Cup T-Bar', 'World Cup Triple Chair', 'Kinderpark Lift**For lessons only, closed to the public.\n', 'Tree Line', 'Rock Island', 'Bail Out', 'Lower White Caps - FT', 'Periphery', 'Psyched - FT', 'Tangent', 'Boneyard', 'Psyched Out', 'Ciao', 'Gema', 'True Grit', 'The Chute', "Lower Bobby's Run", 'Psyched ', 'WV Progression Park', 'Closed'];
+
+      $("area").each(function(){
+        for (trail in open_trails) {
+          var compare = open_trails[trail];
+
+          //console.log("Trail: " + compare + " attr: " + $(this).attr("alt"));
+
+          if(compare == $(this).attr("alt")) {
+            console.log("Changing color for " + compare);
+            $(this).data('maphilight', {"fillColor":"FFEA1C"});
+          }
+        }
+      });
 
       $('.map').maphilight();   // Must call this to update the map!
 
@@ -133,86 +124,63 @@
   <button type="button" onclick="color_yellow()">Change highlighting to YELLOW</button>
   <button type="button" onclick="color_red()">Change highlighting to RED</button>
   <button type="button" onclick="bobbys_run()">Change "Bobby's Run" to BLUE</button>
+  <button type="button" onclick="color_list()">Open / Closed Trail test</button>
   <br/><br/>
+
+  <!--
+  Image found at this URL:
+  (I claim no ownership of this image)
+  https://d13fo19pohlmh8.cloudfront.net/media/assets/ac0736961b5b728cdb1a4f5fb63c6352.jpeg
+  -->
+  <img class="map" src="img/waterville_valley.jpeg"
+  width="800" height="1037" border="0" usemap="#map"/>
 
   <!--
   Generated this image map from GIMP. See this link for info on how to do this:
   http://www.makeuseof.com/tag/create-image-map-gimp/
-
-  Image found at this URL:
-  (I claim no ownership of this image)
-  https://d13fo19pohlmh8.cloudfront.net/media/assets/ac0736961b5b728cdb1a4f5fb63c6352.jpeg
 
   I got some help from this handy Stackoverflow post which included a JS Fiddle
   to mess around with.
   https://stackoverflow.com/questions/17613729/using-maphilight-for-total-beginners
   https://jsfiddle.net/k67gq/6/
   -->
-  <img class="map" src="img/waterville_valley.jpeg"
-  width="800" height="1037" border="0" usemap="#map"/>
+  <div id="ski_area_map"></div>
 
-  <!--  This map should be moved to a separate file in the future.
-        That would allow for dynamically changing which Ski Map we want to display. -->
-<map name="map">
-<!-- #$-:Image map file created by GIMP Image Map plug-in -->
-<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
-<!-- #$-:Please do not edit lines starting with "#$" -->
-<!-- #$VERSION:2.3 -->
-<!-- #$AUTHOR: Jason Downing     -->
-<area shape="poly" coords="370,399,410,380,434,369,503,357,508,366,461,376,432,387,403,402,383,426,369,399,370,398,374,405" href="#sunrun" />
-<area shape="poly" coords="363,397,285,444,215,531,230,558,293,464,331,446,378,414,375,412" href="#ciao" />
-<area shape="poly" coords="655,195,644,200,644,218,651,218,618,280,610,274,629,239,624,225,630,200,646,189,650,190" href="#treeline" />
-<area shape="poly" coords="650,190,666,178,684,178,672,183,654,218,645,217,645,216" href="#ruthiesrun" />
-<area shape="poly" coords="676,184,683,179,699,201,699,210,691,222,679,235,666,257,662,269,653,287,637,301,632,302,610,331,597,332,617,303,628,299,657,248,669,239,670,222,662,215,679,180" href="#scramble" />
-<area shape="poly" coords="621,229,589,246,581,272,596,277,605,300,613,284,607,275,618,244,628,238,623,227" href="#express" />
-<area shape="poly" coords="582,273,561,315,535,344,546,353,569,344,589,338,598,307,603,300,597,279" href="#mainstreet" />
-<area shape="poly" coords="463,379,483,373,253,601,241,580,260,565,322,504,341,489,359,469,400,426,433,394" href="#truegrit" />
-<area shape="poly" coords="394,428,378,420,349,454,318,467,267,521,231,556,242,579,275,535,343,474,391,432" href="#gema" />
-<area shape="poly" coords="497,353,512,346,461,335,365,351,327,370,329,397,313,411,250,438,234,460,170,498,159,506,173,521,193,513,231,484,255,461,263,448,302,430,332,412,349,398,351,376,355,367,424,352,450,346,468,345" href="#oblivion" />
-<area shape="poly" coords="413,332,414,332,485,333,489,316,405,314,405,332" href="#palmersway" />
-<area shape="poly" coords="471,398,455,412,441,432,449,448,465,448,480,404" href="#bailout" />
-<area class="bobbysrun" shape="poly" coords="507,366,510,368,491,425,481,451,481,469,460,470,446,460,466,444,478,401,491,380" href="#upperbobbysrun" />
-<area class="bobbysrun" shape="poly" coords="438,491,458,471,447,459,418,484,374,519,320,567,261,598,274,616,351,575,404,536,409,516" href="#lowerbobbysrun" />
-<area shape="poly" coords="448,483,434,494,421,505,410,514,404,536,421,569,430,550,442,540,448,526,451,509,456,492" href="#pyschedout" />
-<area shape="poly" coords="520,370,519,370,541,370,534,399,518,442,500,442" href="#whitecaps" />
-<area shape="poly" coords="518,442,507,448,510,459,536,479,560,484,576,477,563,467,545,467" href="#terrystrail" />
-<area shape="poly" coords="567,420,543,385,540,393,544,430,553,451,571,474,596,494,639,530,650,536,643,501,604,468,590,464,566,422,567,423,567,424" href="#andtylertoo" />
-<area shape="poly" coords="545,374,543,387,568,421,573,418,593,447,626,472,648,498,693,518,656,465,624,448,589,409,573,389,574,389" href="#tippecanoe" />
-<area shape="poly" coords="592,338,620,370,632,392,631,406,647,417,647,378,610,332" href="#tangent" />
-<area shape="poly" coords="572,340,553,352,580,383,630,427,652,440,641,425,628,418,614,401,592,379,578,364,586,341" href="#sidewinder" />
-<area shape="poly" coords="585,348,595,345,604,351,595,358,591,365,622,385,631,405,635,411,629,418,614,401,612,389,603,380,591,375,580,364" href="#grimesway" />
-<area shape="poly" coords="638,410,635,420,694,472,697,486,712,512,695,522,700,547,730,532,730,532,739,518,727,500,724,481,701,454" href="#periphery" />
-<area shape="poly" coords="645,497,646,513,652,541,670,562,671,613,661,652,646,661,653,667,688,648,693,634,699,571,702,553,695,519" href="#lowertippy" />
-<area shape="poly" coords="731,531,704,539,700,543,702,559,722,582,721,608,700,629,689,632,686,649,723,630,741,608,743,570" href="#theboneyard" />
-<area shape="poly" coords="653,538,636,526,628,549,611,561,569,595,572,605,608,587,629,563" href="#siegelstreet" />
-<area shape="poly" coords="622,609,617,636,635,661,612,665,596,688,584,680,596,639,593,574,588,546,543,479,564,483,589,524,607,540,612,540,611,540" href="#oldtecumseh" />
-<area shape="poly" coords="615,671,612,667,638,662,647,661,653,667,647,698,634,731,607,753,558,771,529,784,494,797,500,757,536,752,574,747,593,742,616,724,620,704" href="#lowerperiphery" />
-<area shape="poly" coords="515,464,505,499,509,515,504,540,518,581,520,610,545,606,544,589,542,567,541,538,544,526,530,506" href="#upperselschoice" />
-<area shape="poly" coords="543,568,542,570,544,591,551,591,555,602,554,609,548,611,551,628,556,633,560,654,553,665,545,682,544,751,577,746,596,691,585,679,575,672,584,635,576,606,562,587,563,586" href="#lowerselschoice" />
-<area shape="poly" coords="522,609,546,607,557,632,557,654,547,678,541,723,540,754,516,754,524,689,527,647" href="#tommysworldcuprun" />
-<area shape="poly" coords="500,440,507,448,512,464,505,536,494,557,483,600,475,623,464,668,438,664,462,582" href="#thechute" />
-<area shape="poly" coords="477,470,460,471,455,497,451,509,444,542,430,550,421,578,429,600,433,610,445,578,444,560,459,546,478,492" href="#psyched" />
-<area shape="poly" coords="506,538,499,548,494,589,486,601,484,614,484,625,477,638,476,647,479,662,468,666,463,690,472,697,462,706,462,718,466,725,458,734,457,743,457,751,457,758,448,774,484,775,493,767,485,749,496,730,500,715,498,690,495,674,492,668,502,656,497,650,497,639,502,634,506,618,510,601,516,592,516,579" href="#utterabandon" />
-<area shape="poly" coords="467,668,438,664,427,710,410,761,405,785,386,817,424,822,434,784,456,723,464,691" href="#lowerwhitecaps" />
-<area shape="poly" coords="448,774,435,784,427,814,453,810,480,804,496,798,496,776,497,770,491,770,484,775" href="#minipipe" />
-<area shape="poly" coords="432,618,391,663,378,683,354,687,339,698,331,716,322,744,337,771,352,787,371,817,371,772,381,741,391,742,401,684,408,668" href="#exhibition" />
-<area shape="poly" coords="528,786,493,798,448,818,422,828,371,817,349,838,347,851,360,861,404,857,463,829,511,813,537,804,543,802,542,802" href="#thepasture" />
-<area shape="poly" coords="465,842,402,872,403,886,438,871,474,857" href="#kinderpark" />
-<area shape="poly" coords="198,513,192,514,173,521,183,539,192,556,201,579,210,606,223,632,233,657,283,626,265,600,252,598,244,588,216,535,203,517" href="#uppervalleyrun" />
-<area shape="poly" coords="283,627,258,641,274,683,281,696,292,686,321,764,311,767,343,842,371,819,353,788,338,774,323,748,314,706,317,681,310,665,302,647" href="#rockisland" />
-<area shape="poly" coords="242,650,229,659,239,695,260,752,276,798,292,827,332,845,337,843,304,770,289,729,268,683,255,644" href="#valleyrun" />
-<area shape="poly" coords="174,522,160,508,154,515,153,524,161,545,172,574,182,600,195,602,202,592,199,577,192,558,186,564,170,526,171,526" href="#southstreet" />
-<area shape="poly" coords="197,604,183,602,187,640,192,667,191,686,191,712,195,716,206,709,209,691,207,650,203,625" href="#stillness" />
-<area shape="poly" coords="210,708,194,716,200,730,217,751,232,775,238,800,233,807,258,813,264,796,252,755,240,729,222,717,222,716,223,716" href="#lowerstillness" />
-<area shape="poly" coords="353,387,350,376,353,375,361,370,405,359,417,366,420,374,408,380,407,371,369,382" href="#nogrit" />
-<area shape="poly" coords="105,834,111,857,129,883,150,911,160,924,174,915,178,903,158,883,135,859,129,846,141,833,154,814,177,803,169,785,141,801" href="#leroysloop" />
-<area shape="poly" coords="170,787,175,800,184,815,190,815,213,839,219,855,225,865,241,869,255,862,251,843,236,836,222,819,190,796,191,796" href="#revelation" />
-<area shape="poly" coords="172,804,165,808,154,814,158,826,149,839,140,846,149,859,155,856,163,859,162,871,167,885,178,892,187,896,197,888,177,822,177,823" href="#stemtation" />
-<area shape="poly" coords="233,808,226,812,227,823,232,831,246,838,265,840,268,856,279,865,348,850,296,828,285,824,260,814,261,814" href="#baseway" />
-</map>
+  <!--  Waterville Valley Map, added to the HTML via JavaScript -->
+  <script type="text/javascript">
+    $(function(){
+      $("#ski_area_map").load("maps/Waterville.map");
+    });
 
-  <!-- Load up highlight JS code -->
-  <!--<script src="../js/test.js"></script>-->
+    $(document).ready(function() {
+      // This is from the maphilight docs, and has been changed for the Ski Trail
+      // highlighting to look "better", basically yellowish instead of dark gray.
+      $.fn.maphilight.defaults = {
+        fill: true,
+        fillColor: 'A30002',
+        fillOpacity: 0.5,
+        stroke: false,
+        strokeColor: '000000',
+        strokeOpacity: 1,
+        strokeWidth: 1,
+        fade: false,
+        alwaysOn: true,
+        neverOn: false,
+        groupBy: false,
+        wrapClass: true,
+        shadow: false,
+        shadowX: 0,
+        shadowY: 0,
+        shadowRadius: 6,
+        shadowColor: '000000',
+        shadowOpacity: 0.8,
+        shadowPosition: 'outside',
+        shadowFrom: false
+      }
+
+      $('.map').maphilight();
+    });
+  </script>
 
   </body>
 </html>
