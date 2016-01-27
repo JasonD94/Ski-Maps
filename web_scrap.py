@@ -12,6 +12,7 @@
 # Follow this URL: http://linuxconfig.org/how-to-install-python3-beautiful-soup-environment-on-debian-linux
 # and run this: pip install requests
 
+import json
 import requests
 from bs4 import BeautifulSoup
 
@@ -84,6 +85,13 @@ def cannon():
 
   print ("\n")
 
+  # Time to write the lists to a JSON file.
+  # Stackoverflow post this is from:
+  # https://stackoverflow.com/questions/16267767/python-writing-json-to-file
+  with open("json/ski.json", "w") as outfile:
+    json.dump({'waterville_open': open_trails,
+      'waterville_closed': closed_trails}, outfile, indent=4)
+
 # Bretton Woods
 def bretton_woods():
   print ("NOT DONE.\n")
@@ -104,7 +112,7 @@ for num in range(0, len(urls)):
   print ("Current URL to check: " + urls[num] + "\n")
 
   if (num == 0):
-    #waterville()
+    waterville()
 
   if (num == 1):
     cannon()

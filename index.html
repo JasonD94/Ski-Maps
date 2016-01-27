@@ -85,22 +85,33 @@
 
     // Change the highlighting given a list of trails.
     function color_list() {
-      console.log("Figure out how to change a list of trails.");
+      console.log(ski_data);
 
       // List of trails open / closed.
-      var open_trails = ['White Peak Express Quad', 'Valley Run Quad ', 'Pasture J-Bar', 'Lower Meadows Double Chair', 'The Pasture', 'Baseway', 'Kinder Park', "Leroy's Loop", 'Revelation', 'Stemtation - FT', 'Valley Run', 'Main Street', 'Ruthies Run', 'Scramble', 'Lower Stillness', 'Stillness - FT', 'And Tyler Too', 'Grimes Way', 'Lower Periphery - FT', 'Lower Tippecanoe', 'No Grit', 'Oblivion', 'Old Tecumseh', 'Palmers Way', 'Extension', 'Sidewinder', 'Siegel Street', 'Sun Run', 'Terrys Trail', 'Tippecanoe', 'Upper Bobbys', 'Upper Valley Run', 'White Caps', 'South Street - FT', "Lower Sel's Choice", "Sel's Choice", "Tommy's World Cup Run - FT", 'Utter Abandon - FT', 'Exhibition - FT', 'Exhibition', 'South Street', 'Open'];
+      var open_trails = ski_data.waterville_open;
+      var closed_trails = ski_data.waterville_closed;
 
-      var closed_trails = ['High Country Double Chair', 'Exhibition Poma', 'Northside Double Chair', 'Sunnyside Triple Chair', 'World Cup T-Bar', 'World Cup Triple Chair', 'Kinderpark Lift**For lessons only, closed to the public.\n', 'Tree Line', 'Rock Island', 'Bail Out', 'Lower White Caps - FT', 'Periphery', 'Psyched - FT', 'Tangent', 'Boneyard', 'Psyched Out', 'Ciao', 'Gema', 'True Grit', 'The Chute', "Lower Bobby's Run", 'Psyched ', 'WV Progression Park', 'Closed'];
+      console.log("open trails: " + open_trails);
+      console.log("closed trails: " + closed_trails);
 
+      // Open Trails
       $("area").each(function(){
         for (trail in open_trails) {
           var compare = open_trails[trail];
 
-          //console.log("Trail: " + compare + " attr: " + $(this).attr("alt"));
+          if(compare == $(this).attr("alt")) {
+            $(this).data('maphilight', {"fillColor":"FFEA1C"});
+          }
+        }
+      });
+
+      // Closed Trails
+      $("area").each(function(){
+        for (trail in closed_trails) {
+          var compare = closed_trails[trail];
 
           if(compare == $(this).attr("alt")) {
-            console.log("Changing color for " + compare);
-            $(this).data('maphilight', {"fillColor":"FFEA1C"});
+            $(this).data('maphilight', {"fillColor":"A30002"});
           }
         }
       });
@@ -129,9 +140,9 @@
   <br/><br/>
 
   <!--
-  Image found at this URL:
-  (I claim no ownership of this image)
-  https://d13fo19pohlmh8.cloudfront.net/media/assets/ac0736961b5b728cdb1a4f5fb63c6352.jpeg
+    Image found at this URL:
+    (I claim no ownership of this image)
+    https://d13fo19pohlmh8.cloudfront.net/media/assets/ac0736961b5b728cdb1a4f5fb63c6352.jpeg
   -->
   <img class="map" src="img/waterville_valley.jpeg"
   width="800" height="1037" border="0" usemap="#map"/>
@@ -149,11 +160,19 @@
 
   <!--  Waterville Valley Map, added to the HTML via JavaScript -->
   <script type="text/javascript">
+    var ski_data;
+
     $(function(){
       $("#ski_area_map").load("maps/Waterville.map");
     });
 
     $(document).ready(function() {
+      // Get open / closed trails from json file "ski.json"
+      // https://stackoverflow.com/questions/15764844/jquery-getjson-save-result-into-variable
+      $.getJSON("json/ski.json", function(data) {
+        ski_data = data;
+      });
+
       // This is from the maphilight docs, and has been changed for the Ski Trail
       // highlighting to look "better", basically yellowish instead of dark gray.
       $.fn.maphilight.defaults = {
