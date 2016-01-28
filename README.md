@@ -16,4 +16,5 @@ Current files:
 - web_scrap.py -> this file will contain all the necessary web scraping, currently only
 one ski mountain actually works.
 - index.html -> this is the demo of the client side web page.
-- img/js/json -> used by the demo web page, CSS to be added later along with better JS.
+
+CSS / JS / JSON / IMG / etc can be found in the relevant folders.
