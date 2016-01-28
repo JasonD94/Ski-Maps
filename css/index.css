@@ -69,6 +69,14 @@ html {
   width: 100%;
 }
 
+td {
+  margin: auto;
+  text-align: center;
+
+  height: 300px;
+  width: 300px;
+}
+
 /* from:  https://stackoverflow.com/questions/5347833/centering-bullets-on-a-centered-list */
 ul {
     list-style-position: inside;
@@ -84,6 +92,15 @@ ul {
 .center_text_images {
   margin: auto;
   text-align: center;
+}
+
+/*
+    Center table in Bootstrap
+    URL: https://stackoverflow.com/questions/9596475/center-table-with-twitter-bootstrap-2
+*/
+.center-table {
+  margin: 0 auto !important;
+  float: none !important;
 }
 
 /*
