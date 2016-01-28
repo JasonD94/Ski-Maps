@@ -2,7 +2,9 @@
 This Git Repository will contain all the code for our GUI II Project.
 
 A demo of client side programming may be found at the following URL:
-http://jasond94.github.io/GUI-II-Project
+http://jasond94.github.io/Dynamic-Ski-Maps
+and
+http://downing.io/Dynamic-Ski-Maps/
 
 A demo of the actual project will be hosted on an AWS EC2 instance, URL TBD.
 
