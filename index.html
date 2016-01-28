@@ -1,206 +1,79 @@
 <!--
-      Created by Jason Downing
-      This page is simply a test of random stuff.
+       Date Created: ??
+      Last Modified: 1/28/2016 12:40PM EST
+         Created by: Jason Downing
 
-      MIT Licensed - do whatever you want with this code.
+      This page is the index for the Dynamic Ski Map Project.
+      Currently it hosts links to a Waterville Valley map, and in the future
+      a Bretton Woods map as well.
+
+      MIT Licensed - do whatever you want with this code. Just don't sue me plz.
 -->
 <!DOCTYPE html>
 <html>
-  <head>
-  <!-- CSS file -->
+<head>
+  <meta charset="UTF-8">
 
-  <!-- Need CSS file for some of this stuff. -->
-  <!--  <link rel="stylesheet" type="text/css" href="main.css" />  -->
+  <!-- CSS file, used by all the web pages for consistency. -->
+  <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
   <!-- jQuery minified version. -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-  <!-- maphilight, used to overlay the map using a GIMP generated Image Map
-       This JS file was found on this website: http://davidlynch.org/projects/maphilight/docs/
-
-       The JS file was retrieved on Jan 26th 2016 at 12PM from the following URL:
-       http://davidlynch.org/projects/maphilight/jquery.maphilight.min.js
-
-       I did not create this file, nor do I claim ownership of it.
-
-       It can also be found on GitHub and is MIT Licensed, like my own code.
-       GitHub link: https://github.com/kemayo/maphilight
-   -->
-  <script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
-
-  <!-- This JavaScript should be moved to its own JavaScript file.
-       For now, it will live here for testing purposes. -->
-  <script type="text/javascript">
-
-    // Change all the highlighting to yellow.
-    function color_yellow() {
-
-      // This goes through and changes all the maphilight data "fillColor" properties
-      // to "FFEA1C" which is the same yellow color I set as "default" for all areas.
-      $("area").each(function(){
-        console.log("CHANGING COLORS to YELLOW");
-        $(this).data('maphilight', {"fillColor":"FFEA1C"});
-      });
-
-      $('.map').maphilight();   // Must call this to update the map!
-
-      return true;
-    }
-
-    // Change all the highlighting to red.
-    function color_red() {
-      // This goes through and changes all the maphilight data "fillColor" properties
-      // to "A30002" which is a red color.
-      $("area").each(function(){
-        console.log("CHANGING COLORS to RED");
-        $(this).data('maphilight', {"fillColor":"A30002"});
-      });
-
-      $('.map').maphilight();   // Must call this to update the map!
-
-      return true;
-    }
-
-    // Change just "lower bobby's run" to blue.
-    function bobbys_run() {
-      // This only changes one ID, as a proof of concept for dynamically styling each
-      // trail area.
-      console.log("CHANGING COLORS to BLUE for BOBBYS RUN");
-
-      $("area").each(function(){
-        var compare = "Upper Bobbys";
-
-        //console.log("Trail: " + compare + " attr: " + $(this).attr("alt"));
-
-        if(compare == $(this).attr("alt")) {
-          console.log("Changing color for Bobby's Run");
-          $(this).data('maphilight', {"fillColor":"0000FF"});
-        }
-      });
-
-      $('.map').maphilight();   // Must call this to update the map!
-
-      return true;
-    }
-
-    // Change the highlighting given a list of trails.
-    function color_list() {
-      console.log(ski_data);
-
-      // List of trails open / closed.
-      var open_trails = ski_data.waterville_open;
-      var closed_trails = ski_data.waterville_closed;
-
-      console.log("open trails: " + open_trails);
-      console.log("closed trails: " + closed_trails);
-
-      // Open Trails
-      $("area").each(function(){
-        for (trail in open_trails) {
-          var compare = open_trails[trail];
-
-          if(compare == $(this).attr("alt")) {
-            $(this).data('maphilight', {"fillColor":"FFEA1C"});
-          }
-        }
-      });
-
-      // Closed Trails
-      $("area").each(function(){
-        for (trail in closed_trails) {
-          var compare = closed_trails[trail];
-
-          if(compare == $(this).attr("alt")) {
-            $(this).data('maphilight', {"fillColor":"A30002"});
-          }
-        }
-      });
-
-      $('.map').maphilight();   // Must call this to update the map!
-
-      return true;
-    }
-
-  </script>
-
-  <meta charset="UTF-8">
-  <title>Waterville Valley Map Test</title>
-  </head>
-  <body>
-
-  <h1>Dynamic Trail Map</h1>
-  <p>This site will test displaying a static map and highlighting trails that are
-  open / closed on the map.</p>
-
-  <!-- Buttons for demoing the jQuery Maphilight -->
-  <button type="button" onclick="color_yellow()">Change highlighting to YELLOW</button>
-  <button type="button" onclick="color_red()">Change highlighting to RED</button>
-  <button type="button" onclick="bobbys_run()">Change "Bobby's Run" to BLUE</button>
-  <button type="button" onclick="color_list()">Open / Closed Trail test</button>
-  <br/><br/>
-
   <!--
-    Image found at this URL:
-    (I claim no ownership of this image)
-    https://d13fo19pohlmh8.cloudfront.net/media/assets/ac0736961b5b728cdb1a4f5fb63c6352.jpeg
+  Google fonts. Included here at the top for performance gains and to avoid the use of @import
+  like Google recommends here:
+  http://googlewebfonts.blogspot.com/2010/09/optimizing-use-of-google-font-api.html
+
+  Fix for the validator comes from this page (| is encoded as %7C):
+  https://stackoverflow.com/questions/22466913/google-fonts-url-break-html5-validation-on-w3-org
   -->
-  <img class="map" src="img/waterville_valley.jpeg"
-  width="800" height="1037" border="0" usemap="#map"/>
+  <link rel="stylesheet" type="text/css"href="http://fonts.googleapis.com/css?family=Advent+Pro%7CBangers%7CSlackey%7CSigmar+One%7CRighteous%7CUbuntu">
 
-  <!--
-  Generated this image map from GIMP. See this link for info on how to do this:
-  http://www.makeuseof.com/tag/create-image-map-gimp/
+  <!--  Configuration -->
+  <meta name="viewport" content="width=device-width,
+  initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  I got some help from this handy Stackoverflow post which included a JS Fiddle
-  to mess around with.
-  https://stackoverflow.com/questions/17613729/using-maphilight-for-total-beginners
-  https://jsfiddle.net/k67gq/6/
-  -->
-  <div id="ski_area_map"></div>
+  <!-- Custom favicon -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
-  <!--  Waterville Valley Map, added to the HTML via JavaScript -->
-  <script type="text/javascript">
-    var ski_data;
+  <title>Dynamic Ski Map Project</title>
+</head>
+<body>
 
-    $(function(){
-      $("#ski_area_map").load("maps/Waterville.map");
-    });
+  <!-- Title -->
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <h1 class="highlight_centered">Dynamic Trail Maps</h1>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
 
-    $(document).ready(function() {
-      // Get open / closed trails from json file "ski.json"
-      // https://stackoverflow.com/questions/15764844/jquery-getjson-save-result-into-variable
-      $.getJSON("json/ski.json", function(data) {
-        ski_data = data;
-      });
+  <!-- Description -->
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <p class="highlight_centered">This site will host links to Dynamic Ski Maps, which are maps that will display open / closed trail & ski lifts for the given Ski Resort.</p>
+      <p class="highlight_centered">Currently a "working" demo for Waterville Valley is available, with plans for Bretton Woods and other resorts to be added later.</p>
 
-      // This is from the maphilight docs, and has been changed for the Ski Trail
-      // highlighting to look "better", basically yellowish instead of dark gray.
-      $.fn.maphilight.defaults = {
-        fill: true,
-        fillColor: 'A30002',
-        fillOpacity: 0.5,
-        stroke: false,
-        strokeColor: '000000',
-        strokeOpacity: 1,
-        strokeWidth: 1,
-        fade: false,
-        alwaysOn: true,
-        neverOn: false,
-        groupBy: false,
-        wrapClass: true,
-        shadow: false,
-        shadowX: 0,
-        shadowY: 0,
-        shadowRadius: 6,
-        shadowColor: '000000',
-        shadowOpacity: 0.8,
-        shadowPosition: 'outside',
-        shadowFrom: false
-      }
+      <p class="highlight_centered">Links: </p>
+      <ul class="highlight_centered_margins">
+        <li><a href="waterville.html">Waterville Valley (Demo)</a></li>
+        <li><a href="bretton_woods.html">Bretton Woods (WIP)</a></li>
+        <li><a href="">Cannon Mountain (NOT DONE)</a></li>
+        <li><a href="">Cranmore Mountain (NOT DONE)</a></li>
+        <li><a href="">Loon Mountain (NOT DONE)</a></li>
+      </ul>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
 
-      $('.map').maphilight();
-    });
-  </script>
-
-  </body>
+</body>
 </html>

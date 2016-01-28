@@ -1,0 +1,104 @@
+<!--
+      Created by Jason Downing
+
+      Waterville Valley Demo Map
+
+      MIT Licensed - do whatever you want with this code.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <!-- CSS file, used by all the web pages for consistency. -->
+  <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+  <!--
+  Google fonts. Included here at the top for performance gains and to avoid the use of @import
+  like Google recommends here:
+  http://googlewebfonts.blogspot.com/2010/09/optimizing-use-of-google-font-api.html
+
+  Fix for the validator comes from this page (| is encoded as %7C):
+  https://stackoverflow.com/questions/22466913/google-fonts-url-break-html5-validation-on-w3-org
+  -->
+  <link rel="stylesheet" type="text/css"href="http://fonts.googleapis.com/css?family=Advent+Pro%7CBangers%7CSlackey%7CSigmar+One%7CRighteous%7CUbuntu">
+
+  <!--  Configuration -->
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximum-scale=1, user-scalable=no">
+
+  <!-- Custom favicon -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <!-- jQuery minified version. -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  <!-- maphilight, used to overlay the map using a GIMP generated Image Map
+       This JS file was found on this website: http://davidlynch.org/projects/maphilight/docs/
+
+       The JS file was retrieved on Jan 26th 2016 at 12PM from the following URL:
+       http://davidlynch.org/projects/maphilight/jquery.maphilight.min.js
+
+       I did not create this file, nor do I claim ownership of it.
+
+       It can also be found on GitHub and is MIT Licensed, like my own code.
+       GitHub link: https://github.com/kemayo/maphilight
+   -->
+  <script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+
+  <!-- Waterville Valley JS File -->
+  <script type="text/javascript" src="js/waterville.js"></script>
+
+  <title>Waterville Valley Map Test</title>
+</head>
+<body>
+  <div class="row">
+    <div class="col-md-2"></div>
+
+    <div class="col-md-8">
+      <h1 class="highlight_centered">Dynamic Trail Map</h1>
+      <p class="highlight_centered">
+      This site will test displaying a static map and highlighting trails that are
+      open / closed on the map.</p>
+
+      <!-- Center the buttons / map. -->
+      <div class="center_text_images">
+        <!-- Buttons for demoing the jQuery Maphilight -->
+        <button type="button" onclick="color_yellow()">Change highlighting to YELLOW</button>
+        <button type="button" onclick="color_red()">Change highlighting to RED</button>
+        <button type="button" onclick="bobbys_run()">Change "Bobby's Run" to BLUE</button>
+        <button type="button" onclick="color_list()">Open / Closed Trail Test
+        (using real, cached data)</button>
+        <br/><br/>
+      </div>
+
+      <!--
+        Image found at this URL:
+        (I claim no ownership of this image)
+        https://d13fo19pohlmh8.cloudfront.net/media/assets/ac0736961b5b728cdb1a4f5fb63c6352.jpeg
+      -->
+      <img class="map" src="img/waterville_valley.jpeg"
+      width="800" height="1037" border="0" usemap="#map"/>
+
+      <!--
+      Generated this image map from GIMP. See this link for info on how to do this:
+      http://www.makeuseof.com/tag/create-image-map-gimp/
+
+      I got some help from this handy Stackoverflow post which included a JS Fiddle
+      to mess around with.
+      https://stackoverflow.com/questions/17613729/using-maphilight-for-total-beginners
+      https://jsfiddle.net/k67gq/6/
+      -->
+      <div id="ski_area_map"></div>
+    </div>
+
+    <div class="col-md-2"></div>
+  </div>
+</body>
+</html>
