@@ -9,7 +9,14 @@ and
 
 http://downing.io/Dynamic-Ski-Maps/
 
-A demo of the actual project will be hosted on an AWS EC2 instance, URL TBD.
+A demo of the full project, complete with client / server programming will
+be found at the following URLs:
+
+http://aws.downing.io/Dynamic-Ski-Maps/
+
+and
+
+http://ski.downing.io/
 
 
 Current files:
