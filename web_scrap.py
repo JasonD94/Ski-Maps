@@ -20,7 +20,7 @@ from bs4 import BeautifulSoup
 # Order is: Waterville Valley, Cannon Mt, Bretton Woods, Loon Mt & Cranmore Mt
 urls = ["http://www.waterville.com/ski-ride/snow-report.html",
         "http://cannonmt.com/trail-lift-report.html",
-        "http://brettonwoods.com/alpine_conditions/snow_conditions",
+        "http://brettonwoods.com/alpine_trails/trail_report#top",
         "http://www.loonmtn.com/explore/snow-conditions/trail-lift-report",
         "http://www.cranmore.com/winter/snow-grooming-report"]
 
@@ -69,7 +69,69 @@ def cannon():
 
 # Bretton Woods
 def bretton_woods():
-  print ("NOT DONE.\n")
+  print ("WIP.\n")
+
+  open_trails = []
+  closed_trails = []
+
+  #Get the page, then grab just the text and use BeautifulSoup to work some magic on it.
+  page = requests.get(urls[2])
+  data = page.text
+  soup = BeautifulSoup(data, "lxml")
+
+  # Get an entire div.
+  ski_data = soup.findAll('div', {'id' : 'trail-content'})
+
+  # print out the open / closed tags, should be in order for us to scrape.
+  #print (open_closed_img)
+
+  open_closed = []
+
+  # Get all images in the div 'condition'
+  images = soup.select('id.trail-content > a > img')
+
+  for image in images:
+    print (image['src'])
+
+  #[div.a for div in
+  #      soup.findAll('div', attrs={'class' : 'productName'})]
+
+  # Now I have a list of open and closed, so let's put that in order.
+  #for img in img_links:
+    #print (img)
+    #link = img.a['href']
+
+    # only get open or closed srcs.
+    #if (link == '/images/icons/open-sm.png'):
+    #  open_closed.append('open')
+    #if (link == '/images/icons/closed-sm.png'):
+    #  open_closed.append('closed')
+
+  # print out all open / closed trails, should be in order so we can compare
+  # against a list of trails in a minute.
+  #print ("open + closed trails: \n" + open_closed)
+
+
+  #//*[@id="trail-content"]/div[4]/div[3]/img[1]
+
+  # Test printing the HTML we got.
+  #print (ski_data)
+
+  # Let's get all open trails.
+  #for each_div in soup.findAll('li', {'class' : 'open'}):
+  #  open_trails.append(each_div.text)
+
+  #print ("*** Open lifts / trails: ***\n")
+  #print (open_trails)
+
+  # Also all closed trails.
+  #for each_div in soup.findAll('li', {'class' : 'closed'}):
+  #  closed_trails.append(each_div.text)
+
+  #print ("\n\n*** Closed lifts / trails: ***\n")
+  #print (closed_trails)
+
+  print ("\n")
 
 # Loon Mt
 def loon():
@@ -87,7 +149,8 @@ for num in range(0, len(urls)):
   print ("Current URL to check: " + urls[num] + "\n")
 
   if (num == 0):
-    waterville()
+    print ("meh")
+    #waterville()
 
   if (num == 1):
     cannon()

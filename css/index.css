@@ -145,6 +145,11 @@ h1.name {
   background-color: black;
 }
 
+.highlight_box {
+  background-color: black;
+  color: white;
+}
+
 /* Assignment 5 title */
 .highlight_red {
   background-color: black;
