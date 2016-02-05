@@ -137,12 +137,17 @@ ul {
 h1.name {
   color: white;
   font-family: "Ubuntu";
-  font-size: 750%;
+  font-size: 250%;
   text-align: center;
 }
 
 .highlight {
   background-color: black;
+}
+
+.highlight_box {
+  background-color: black;
+  color: white;
 }
 
 /* Assignment 5 title */
@@ -166,8 +171,8 @@ h1.name {
   background-color: black;
   color: white;
   font-family: "Advent Pro";
-  font-size: 200%;
-  font-weight: 900;
+  font-size: 100%;
+  font-weight: 100;
   text-align: center;
 }
 
