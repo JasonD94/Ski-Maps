@@ -114,7 +114,7 @@ def cannon():
   list_length = len(trail_list)
 
   for a in range(list_length):
-    if (trail_status[a] == 'open'):
+    if (trail_status[a] == 'Open'):
       open_trails.append(trail_list[a])
     else:
       closed_trails.append(trail_list[a])
