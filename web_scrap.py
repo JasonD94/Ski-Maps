@@ -22,7 +22,8 @@ urls = ["http://www.waterville.com/ski-ride/snow-report.html",
         "http://cannonmt.com/trail-lift-report.html",
         "http://brettonwoods.com/alpine_trails/trail_report#top",
         "http://www.loonmtn.com/explore/snow-conditions/trail-lift-report",
-        "http://www.cranmore.com/winter/snow-grooming-report"]
+        "http://www.cranmore.com/winter/snow-grooming-report",
+        "http://www.patspeak.com/snow_report.php"]
 
 mountains = ["Waterville Valley", "Cannon Mt", "Bretton Woods",
              "Loon Mt", "Cranmore Mt"]
@@ -133,7 +134,6 @@ def bretton_woods():
   closed_trails = []    # All the closed trails or lifts
 
   open_src = '/images/icons/open-sm.png'
-  #closed_src = '/images/icons/closed-sm.png'
 
   #Get the page, then grab just the text and use BeautifulSoup to work some magic on it.
   page = requests.get(urls[2])
@@ -193,6 +193,16 @@ def cranmore():
   JSON_trails['cranmore_open'] = open_trails
   JSON_trails['cranmore_closed'] = closed_trails
 
+def pats_peak():
+  print ("NOT DONE.\n")
+
+  open_trails = []
+  closed_trails = []
+
+  # Dump to trails object.
+  JSON_trails['pats_peak_open'] = open_trails
+  JSON_trails['pats_peak_closed'] = closed_trails
+
 # Main loop for data gathering
 for num in range(0, len(urls)):
   print (mountains[num] + " lift / trail conditions")
@@ -212,6 +222,9 @@ for num in range(0, len(urls)):
 
   if (num == 4):
     cranmore()
+
+  if (num == 5):
+    pats_peak()
 
 # Dump to JSON file now.
 # Stackoverflow post this is from:
