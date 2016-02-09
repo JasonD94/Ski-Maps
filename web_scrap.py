@@ -26,13 +26,15 @@ urls = ["http://www.waterville.com/ski-ride/snow-report.html",
         "http://www.patspeak.com/snow_report.php"]
 
 mountains = ["Waterville Valley", "Cannon Mt", "Bretton Woods",
-             "Loon Mt", "Cranmore Mt"]
+             "Loon Mt", "Cranmore Mt", "Pats Peak"]
 
 # global JSON object to write only once.
 JSON_trails = {}
 
 # Waterville Valley
 def waterville():
+  print ("DONE\n")
+
   open_trails = []
   closed_trails = []
 
@@ -48,17 +50,9 @@ def waterville():
   for each_div in soup.findAll('li', {'class' : 'open'}):
     open_trails.append(each_div.text)
 
-  print ("*** Open lifts / trails: ***\n")
-  print (open_trails)
-
   # Also all closed trails.
   for each_div in soup.findAll('li', {'class' : 'closed'}):
     closed_trails.append(each_div.text)
-
-  print ("\n\n*** Closed lifts / trails: ***\n")
-  print (closed_trails)
-
-  print ("\n")
 
   # Dump to trails object.
   JSON_trails['waterville_open'] = open_trails
@@ -66,6 +60,7 @@ def waterville():
 
 # Cannon Mt
 def cannon():
+  print ("DONE\n")
 
   trail_list = []
   trail_status = []
@@ -127,6 +122,7 @@ def cannon():
 
 # Bretton Woods
 def bretton_woods():
+  print ("DONE\n")
 
   trail_list = []       # List of all the trails, in order on the page.
   trail_status = []     # List of trail status, in order on the page.
@@ -168,8 +164,6 @@ def bretton_woods():
   # Dump to trails object.
   JSON_trails['bretton_woods_open'] = open_trails
   JSON_trails['bretton_woods_closed'] = closed_trails
-
-  print ("\n")
 
 # Loon Mt
 def loon():
