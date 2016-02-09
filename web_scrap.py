@@ -27,6 +27,9 @@ urls = ["http://www.waterville.com/ski-ride/snow-report.html",
 mountains = ["Waterville Valley", "Cannon Mt", "Bretton Woods",
              "Loon Mt", "Cranmore Mt"]
 
+# global JSON object to write only once.
+JSON_trails = {}
+
 # Waterville Valley
 def waterville():
   open_trails = []
@@ -56,23 +59,31 @@ def waterville():
 
   print ("\n")
 
-  # Time to write the lists to a JSON file.
-  # Stackoverflow post this is from:
-  # https://stackoverflow.com/questions/16267767/python-writing-json-to-file
-  with open("json/ski.json", "w") as outfile:
-    json.dump({'waterville_open': open_trails,
-      'waterville_closed': closed_trails}, outfile, indent=4)
+  # Dump to trails object.
+  JSON_trails['waterville_open'] = open_trails
+  JSON_trails['waterville_closed'] = closed_trails
 
 # Cannon Mt
 def cannon():
   print ("NOT DONE.\n");
 
-# Bretton Woods
-def bretton_woods():
-  print ("WIP.\n")
-
   open_trails = []
   closed_trails = []
+
+  # Dump to trails object.
+  JSON_trails['cannon_open'] = open_trails
+  JSON_trails['cannon_closed'] = closed_trails
+
+# Bretton Woods
+def bretton_woods():
+
+  trail_list = []
+  trail_status = []
+  open_trails = []
+  closed_trails = []
+
+  open_src = '/images/icons/open-sm.png'
+  #closed_src = '/images/icons/closed-sm.png'
 
   #Get the page, then grab just the text and use BeautifulSoup to work some magic on it.
   page = requests.get(urls[2])
@@ -82,54 +93,49 @@ def bretton_woods():
   # Get an entire div.
   ski_data = soup.findAll('div', {'id' : 'trail-content'})
 
-  # print out the open / closed tags, should be in order for us to scrape.
-  #print (open_closed_img)
+  # Using this Stackoverflow post to figure out how to get the text I need.
+  # https://stackoverflow.com/questions/13202087/beautiful-soup-find-children-for-particular-div
+  for tag in ski_data:
+    tab = tag.findAll('div', {'class': 'trails-report'})
+    for tag2 in tab:
+      trail_list.append(tag2.text)      # This gets all the trails by name.
 
-  open_closed = []
+    # Now to get trail conditions
+    tab = tag.findAll('div', {'class': 'condition'})
+    for img in tab:
+      #print (img.findAll('img')[0].get('src'))  # This gets all the image sources that we need!
+      img_src = img.findAll('img')[0].get('src')
+      trail_status.append(img_src)
+      # if (img_src == open_src)
+      #   open_trails.append(img_src)     # open trails
+      # else
+      #   closed_trails.append(img_src)   # closed trails
 
-  # Get all images in the div 'condition'
-  images = soup.select('id.trail-content > a > img')
+  # Print all trails
+  #print ("All the trails I found are: \n")
 
-  for image in images:
-    print (image['src'])
+  # for trail in trail_list:
+  #   print (trail)
 
-  #[div.a for div in
-  #      soup.findAll('div', attrs={'class' : 'productName'})]
+  # Now let's print out open / closed status for trails!
+  # I HOPE THIS WORKS.
+  list_length = len(trail_list)
 
-  # Now I have a list of open and closed, so let's put that in order.
-  #for img in img_links:
-    #print (img)
-    #link = img.a['href']
+  # print ("*****************************")
+  # print ("* Trail List / Trail Status *")
+  # print ("*****************************")
 
-    # only get open or closed srcs.
-    #if (link == '/images/icons/open-sm.png'):
-    #  open_closed.append('open')
-    #if (link == '/images/icons/closed-sm.png'):
-    #  open_closed.append('closed')
+  for a in range(list_length):
+    if (trail_status[a] == open_src):
+      open_trails.append(trail_list[a])
+      say = "open"
+    else:
+      closed_trails.append(trail_list[a])
+      say = "closed"
 
-  # print out all open / closed trails, should be in order so we can compare
-  # against a list of trails in a minute.
-  #print ("open + closed trails: \n" + open_closed)
-
-
-  #//*[@id="trail-content"]/div[4]/div[3]/img[1]
-
-  # Test printing the HTML we got.
-  #print (ski_data)
-
-  # Let's get all open trails.
-  #for each_div in soup.findAll('li', {'class' : 'open'}):
-  #  open_trails.append(each_div.text)
-
-  #print ("*** Open lifts / trails: ***\n")
-  #print (open_trails)
-
-  # Also all closed trails.
-  #for each_div in soup.findAll('li', {'class' : 'closed'}):
-  #  closed_trails.append(each_div.text)
-
-  #print ("\n\n*** Closed lifts / trails: ***\n")
-  #print (closed_trails)
+  # Dump to trails object.
+  JSON_trails['bretton_woods_open'] = open_trails
+  JSON_trails['bretton_woods_closed'] = closed_trails
 
   print ("\n")
 
@@ -137,11 +143,23 @@ def bretton_woods():
 def loon():
   print ("NOT DONE.\n")
 
+  open_trails = []
+  closed_trails = []
+
+  # Dump to trails object.
+  JSON_trails['loon_open'] = open_trails
+  JSON_trails['loon_closed'] = closed_trails
+
 # Cranmore Mt
 def cranmore():
   print ("NOT DONE.\n")
 
+  open_trails = []
+  closed_trails = []
 
+  # Dump to trails object.
+  JSON_trails['cranmore_open'] = open_trails
+  JSON_trails['cranmore_closed'] = closed_trails
 
 # Main loop for data gathering
 for num in range(0, len(urls)):
@@ -149,8 +167,7 @@ for num in range(0, len(urls)):
   print ("Current URL to check: " + urls[num] + "\n")
 
   if (num == 0):
-    print ("meh")
-    #waterville()
+    waterville()
 
   if (num == 1):
     cannon()
@@ -163,3 +180,9 @@ for num in range(0, len(urls)):
 
   if (num == 4):
     cranmore()
+
+# Dump to JSON file now.
+# Stackoverflow post this is from:
+# https://stackoverflow.com/questions/16267767/python-writing-json-to-file
+with open("json/ski.json", "w") as outfile:
+  json.dump(JSON_trails, outfile, indent=4)
