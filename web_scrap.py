@@ -65,10 +65,60 @@ def waterville():
 
 # Cannon Mt
 def cannon():
-  print ("NOT DONE.\n");
 
+  trail_list = []
+  trail_status = []
   open_trails = []
   closed_trails = []
+
+  #Get the page, then grab just the text and use BeautifulSoup to work some magic on it.
+  page = requests.get(urls[1])
+  data = page.text
+  soup = BeautifulSoup(data, "lxml")
+
+  # Get lift status
+  # From stackoverflow:
+  # https://stackoverflow.com/questions/13074586/extracting-selected-columns-from-a-table-using-beautifulsoup
+  tables = soup.find('table')
+
+  rows = tables.findAll('tr')
+  for cells in rows:
+    cell = cells.findAll('td')
+    trail_list.append(cell[0].text)
+    trail_status.append(cell[1].text)
+
+  # Get trail status
+  # THIS TRICK COMES FROM STACKOVERFLOW!
+  # https://stackoverflow.com/questions/14095511/beautifulsoup-in-python-getting-the-n-th-tag-of-a-type
+  tables = soup.findAll('table')[1]
+
+  rows = tables.findAll('tr')
+  for cells in rows:
+    if (len(cells) == 4):
+      cell = cells.findAll('td')
+      trail_list.append(cell[0].text)
+      trail_status.append(cell[1].text)
+
+  # # Print for debugging purposes.
+  # print ("Trails: \n")
+
+  # for trail in trail_list:
+  #   print (trail)
+
+  # print ("Status: \n")
+
+  # for status in trail_status:
+  #   print (status)
+
+  # Now let's figure out open / closed status for trails!
+  list_length = len(trail_list)
+
+  for a in range(list_length):
+    if (trail_status[a] == 'open'):
+      open_trails.append(trail_list[a])
+    else:
+      closed_trails.append(trail_list[a])
+
 
   # Dump to trails object.
   JSON_trails['cannon_open'] = open_trails
@@ -77,10 +127,10 @@ def cannon():
 # Bretton Woods
 def bretton_woods():
 
-  trail_list = []
-  trail_status = []
-  open_trails = []
-  closed_trails = []
+  trail_list = []       # List of all the trails, in order on the page.
+  trail_status = []     # List of trail status, in order on the page.
+  open_trails = []      # All the open trails or lifts
+  closed_trails = []    # All the closed trails or lifts
 
   open_src = '/images/icons/open-sm.png'
   #closed_src = '/images/icons/closed-sm.png'
@@ -103,35 +153,17 @@ def bretton_woods():
     # Now to get trail conditions
     tab = tag.findAll('div', {'class': 'condition'})
     for img in tab:
-      #print (img.findAll('img')[0].get('src'))  # This gets all the image sources that we need!
-      img_src = img.findAll('img')[0].get('src')
+      img_src = img.findAll('img')[0].get('src')  # This gets the trail status (by image source)
       trail_status.append(img_src)
-      # if (img_src == open_src)
-      #   open_trails.append(img_src)     # open trails
-      # else
-      #   closed_trails.append(img_src)   # closed trails
 
-  # Print all trails
-  #print ("All the trails I found are: \n")
-
-  # for trail in trail_list:
-  #   print (trail)
-
-  # Now let's print out open / closed status for trails!
-  # I HOPE THIS WORKS.
+  # Now let's figure out open / closed status for trails!
   list_length = len(trail_list)
-
-  # print ("*****************************")
-  # print ("* Trail List / Trail Status *")
-  # print ("*****************************")
 
   for a in range(list_length):
     if (trail_status[a] == open_src):
       open_trails.append(trail_list[a])
-      say = "open"
     else:
       closed_trails.append(trail_list[a])
-      say = "closed"
 
   # Dump to trails object.
   JSON_trails['bretton_woods_open'] = open_trails
