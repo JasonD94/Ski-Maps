@@ -70,6 +70,7 @@ html {
 }
 
 td {
+  border: red 10px;
   margin: auto;
   text-align: center;
 
