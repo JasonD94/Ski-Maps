@@ -4,8 +4,8 @@
 #   https://stackoverflow.com/questions/18966368/python-beautifulsoup-scrape-tables       #
 #   Also this page as well:                                                               #
 #   http://www.pythonforbeginners.com/python-on-the-web/web-scraping-with-beautifulsoup/  #
-#
-#   MIT LICENSED - DO WHATEVER YOU WANT WITH THIS CODE.
+#                                                                                         #
+#   MIT LICENSED                                                                          #
 ###########################################################################################
 
 # To setup urllib2 / bs4 (BeautifulSoup)
@@ -38,7 +38,7 @@ def waterville():
   open_trails = []
   closed_trails = []
 
-  #Get the page, then grab just the text and use BeautifulSoup to work some magic on it.
+  # Get the page, then grab just the text and use BeautifulSoup to work some magic on it.
   page = requests.get(urls[0])
   data = page.text
   soup = BeautifulSoup(data, "lxml")
@@ -224,4 +224,4 @@ for num in range(0, len(urls)):
 # Stackoverflow post this is from:
 # https://stackoverflow.com/questions/16267767/python-writing-json-to-file
 with open("json/ski.json", "w") as outfile:
-  json.dump(JSON_trails, outfile, indent=4)
+  json.dump(JSON_trails, outfile, indent = 4)
