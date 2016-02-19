@@ -5,18 +5,19 @@
 #   Also this page as well:                                                               #
 #   http://www.pythonforbeginners.com/python-on-the-web/web-scraping-with-beautifulsoup/  #
 #                                                                                         #
-#   MIT LICENSED                                                                          #
+#   Copyright 2016 Jason Downing                                                          #                 #
+#   MIT LICENSED -                                                                        #
 ###########################################################################################
 
 # To setup urllib2 / bs4 (BeautifulSoup)
 # Follow this URL: http://linuxconfig.org/how-to-install-python3-beautiful-soup-environment-on-debian-linux
-# and run this: pip install requests
+# and run this command: pip install requests
 
 import json
 import requests
 from bs4 import BeautifulSoup
 
-# 5 URLs to scrap for lift / trail data.
+# 6 URLs to scrap for lift / trail data.
 # Order is: Waterville Valley, Cannon Mt, Bretton Woods, Loon Mt & Cranmore Mt
 urls = ["http://www.waterville.com/ski-ride/snow-report.html",
         "http://cannonmt.com/trail-lift-report.html",
