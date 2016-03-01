@@ -6,7 +6,7 @@
 #   http://www.pythonforbeginners.com/python-on-the-web/web-scraping-with-beautifulsoup/  #
 #                                                                                         #
 #   Copyright 2016 Jason Downing                                                          #                 #
-#   MIT LICENSED -                                                                        #
+#   MIT LICENSED - DO WHATEVER YOU WANT WITH THIS FILE.                                   #
 ###########################################################################################
 
 # To setup urllib2 / bs4 (BeautifulSoup)
