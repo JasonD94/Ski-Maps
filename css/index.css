@@ -303,3 +303,42 @@ h1.name {
 .sidebar-nav {
     padding: 9px 0;
 }
+
+/*
+
+    This is from the following URL:
+    http://presscustomizr.com/snippet/change-navbar-colorsfontsize/
+
+*/
+
+/* Adjust Menu (red) text color, (Garamond) font-family, (1.5em) font-size  */
+.navbar .nav > li > a, .navbar .nav > li > a:first-letter,
+.navbar .nav > li.current-menu-item > a,
+.navbar .nav > li.current-menu-ancestor > a {
+  /*color:          red;*/
+  /*font-family:    Garamond;*/
+  /*padding:        5px 20px;*/
+  font-size:      1.5em;
+}
+
+/* Adjust Menu colors - Normal */
+.navbar .nav > li > a, .navbar .nav > li > a:first-letter {
+  color:          white;
+  text-shadow:    none;
+}
+
+/* Adjust Menu colors - Active */
+.navbar .nav > li > a:active, .navbar .nav > li > a:active:first-letter,
+.navbar .nav > li.current-menu-item > a,
+.navbar .nav > li.current-menu-ancestor > a,
+.navbar .nav > li.current-menu-item > a:first-letter,
+.navbar .nav > li.current-menu-ancestor > a:first-letter {
+  color:          blue;
+  text-shadow:    none;
+}
+
+/*
+    Testing from this URL:
+    http://codepen.io/davidcochran/pen/rcHae
+*/
+
