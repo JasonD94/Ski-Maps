@@ -1,5 +1,7 @@
 <!--
-      Created by Jason Downing
+       Date Created: 1/26/2016
+      Last Modified: 3/3/2016 2PM EST
+         Created by: Jason Downing
 
       Pats Peak Demo Map
 
@@ -9,9 +11,6 @@
 <html>
 <head>
   <meta charset="UTF-8">
-
-  <!-- CSS file, used by all the web pages for consistency. -->
-  <link rel="stylesheet" type="text/css" href="css/index.css"/>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -30,41 +29,20 @@
   <link rel="stylesheet" type="text/css"href="http://fonts.googleapis.com/css?family=Advent+Pro%7CBangers%7CSlackey%7CSigmar+One%7CRighteous%7CUbuntu">
 
   <!--  Configuration -->
-  <meta name="viewport" content="width=device-width, initial-scale=1,
-  maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- CSS file, used by all the web pages for consistency. -->
+  <link rel="stylesheet" type="text/css" href="css/index.css"/>
 
   <!-- Custom favicon -->
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-
-  <!-- jQuery minified version. -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-  <!-- maphilight, used to overlay the map using a GIMP generated Image Map
-       This JS file was found on this website: http://davidlynch.org/projects/maphilight/docs/
-
-       The JS file was retrieved on Jan 26th 2016 at 12PM from the following URL:
-       http://davidlynch.org/projects/maphilight/jquery.maphilight.min.js
-
-       I did not create this file, nor do I claim ownership of it.
-
-       It can also be found on GitHub and is MIT Licensed, like my own code.
-       GitHub link: https://github.com/kemayo/maphilight
-   -->
-  <script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
-
-  <!-- Bretton Woods JS File -->
-<!--   <script type="text/javascript" src="js/bretton_woods.js"></script>
- -->
   <title>Pats Peak Map</title>
 </head>
-<body>
-  <div class="row">
-    <div class="col-md-4"></div>
 
-    <div class="col-md-4">
-      <h1 class="highlight_centered">Dynamic Trail Map</h1>
-    </div>
-  </div>
+<body onload="load_navbar()">
+  <!--  Navbar div. See html/navbar.html for that code. It gets loaded into this
+        div by the JS at the bottom of this page. -->
+  <div id="NavBarHeader"></div>
 
   <div class="row">
     <div class="col-md-1"></div>
@@ -101,5 +79,42 @@
     </div>
     <div class="col-md-1"></div>
   </div>
+
+  <!--  This div will have the footer (html/footer.html) loaded into it
+        by the JS at the bottom of the page. -->
+  <div id="TheFooter"></div>
+
+  <!--
+      These are moved to the bottom of the <body> tag to decrease website load time.
+      This stackoverflow post is helpful for this issue:
+      https://stackoverflow.com/questions/6625773/where-should-i-put-the-css-and-javascript-code-in-an-html-webpage
+      See Yahoo's best practice rules as well:
+      https://developer.yahoo.com/performance/rules.html#css_top=
+   -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <!-- maphilight, used to overlay the map using a GIMP generated Image Map
+       This JS file was found on this website: http://davidlynch.org/projects/maphilight/docs/
+
+       The JS file was retrieved on Jan 26th 2016 at 12PM from the following URL:
+       http://davidlynch.org/projects/maphilight/jquery.maphilight.min.js
+
+       I did not create this file, nor do I claim ownership of it.
+
+       It can also be found on GitHub and is MIT Licensed, like my own code.
+       GitHub link: https://github.com/kemayo/maphilight
+   -->
+  <script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+
+  <!-- Load the header/footer when the page is ready. -->
+  <script src="js/load_navbar.js"></script>
+
+  <!-- Pats Peak JS File -->
+  <script type="text/javascript" src="js/pats_peak.js"></script>
+
 </body>
 </html>
