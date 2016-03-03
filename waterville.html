@@ -150,5 +150,13 @@
   <!-- Waterville Valley JS File -->
   <script type="text/javascript" src="js/waterville.js"></script>
 
+  <!-- Navbar test -->
+  <script>
+    $(".nav a").on("click", function(){
+       $(".nav").find(".active").removeClass("active");
+       $(this).parent().addClass("active");
+    });
+  </script>
+
 </body>
 </html>
