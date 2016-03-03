@@ -1,0 +1,211 @@
+<!--
+       Date Created: ??
+      Last Modified: 1/28/2016 12:40PM EST
+         Created by: Jason Downing
+
+      This page is the index for the Dynamic Ski Map Project.
+      Currently it hosts links to a Waterville Valley map, and in the future
+      a Bretton Woods map as well.
+
+      MIT Licensed - do whatever you want with this code. Just don't sue me plz.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <!-- CSS file, used by all the web pages for consistency. -->
+  <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+  <!-- jQuery minified version. -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  <!--
+  Google fonts. Included here at the top for performance gains and to avoid the use of @import
+  like Google recommends here:
+  http://googlewebfonts.blogspot.com/2010/09/optimizing-use-of-google-font-api.html
+
+  Fix for the validator comes from this page (| is encoded as %7C):
+  https://stackoverflow.com/questions/22466913/google-fonts-url-break-html5-validation-on-w3-org
+  -->
+  <link rel="stylesheet" type="text/css"href="http://fonts.googleapis.com/css?family=Advent+Pro%7CBangers%7CSlackey%7CSigmar+One%7CRighteous%7CUbuntu">
+
+  <!--  Configuration -->
+  <meta name="viewport" content="width=device-width,
+  initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- Custom favicon -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <title>Dynamic Ski Map Project</title>
+</head>
+<body>
+
+  <!-- Title -->
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <h1 class="highlight_centered name">Dynamic Trail Maps</h1>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+
+  <!-- Description -->
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <p class="highlight_centered">
+      This site will host links to Dynamic Ski Maps, which are maps that will
+      display open / closed trail & ski lifts for the given Ski Resort.
+      Currently a "working" demo for Waterville Valley is available, with plans
+      for Bretton Woods and other resorts to be added later.</p>
+
+      <!--  This table is responsive (using Bootstrap)
+            It currently exists as a 3x2 grid of mountains with links
+            to different HTML pages. -->
+      <div class="table-responsive">
+        <table class="highlight center-table">
+          <tr>
+            <td>
+              <a href="waterville.html">
+              <img  class="img-responsive center_text_images"
+                    src="img/logos/Waterville.png"><br/><br>
+              Waterville Valley (Demo)</a>
+            </td>
+            <td>
+              <a href="bretton_woods.html">
+              <img  class="img-responsive center_text_images"
+                    src="img/logos/BrettonWoods.png"><br/><br/>
+              Bretton Woods (WIP)</a>
+            </td>
+            <td>
+              <a href="cannon.html">
+              <img  class="img-responsive"
+                    src="img/logos/Cannon.jpg" height="170" width="250"><br/><br/>
+              Cannon Mountain (WIP)</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="cranmore.html">
+              <img  class="img-responsive center_text_images"
+                    src="img/logos/Cranmore.png" height="170" width="250"><br/><br/>
+              Cranmore Mountain (WIP)</a>
+            </td>
+            <td>
+              <a href="loon.html">
+              <img  class="img-responsive center_text_images"
+                    src="img/logos/Loon.jpg" height="170" width="250"><br/><br/>
+              Loon Mountain (WIP)</a>
+            </td>
+            <td>
+              <a href="pats_peak.html">
+              <img  class="img-responsive center_text_images"
+                    src="img/logos/PatsPeak.png"><br/><br/>
+              Pats Peak (WIP)</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!--
+          Tablet View
+       -->
+<!--       <div class="table-responsive">
+        <table class="highlight center-table">
+          <tr>
+            <td>
+              <a href="waterville.html">
+              <img class="img-responsive" src="img/logos/Waterville.png"><br/><br>
+              Waterville Valley (Demo)</a>
+            </td>
+            <td>
+              <a href="bretton_woods.html">
+              <img class="img-responsive" src="img/logos/BrettonWoods.png"><br/><br/>
+              Bretton Woods (WIP)</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="cannon.html">
+              <img class="img-responsive" src="img/logos/Cannon.jpg" height="170" width="250"><br/><br/>
+              Cannon Mountain (NOT DONE)</a>
+            </td>
+            <td>
+              <a href="cranmore.html">
+              <img class="img-responsive" src="img/logos/Cranmore.png" height="170" width="250"><br/><br/>
+              Cranmore Mountain (NOT DONE)</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="loon.html">
+              <img class="img-responsive" src="img/logos/Loon.jpg" height="170" width="250"><br/><br/>
+              Loon Mountain (NOT DONE)</a>
+            </td>
+            <td>
+              <a href="pats_peak.html">
+              <img class="img-responsive" src="img/logos/PatsPeak.png"><br/><br/>
+              Pats Peak (NOT DONE)</a>
+            </td>
+          </tr>
+        </table>
+      </div> -->
+
+       <!--
+          Smartphone View
+       -->
+<!--       <div class="table-responsive">
+        <table class="highlight center-table">
+          <tr>
+            <td>
+              <img src="img/logos/Waterville.png"><br/><br>
+              <a href="waterville.html">Waterville Valley (Demo)</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/logos/BrettonWoods.png"><br/><br/>
+              <a href="bretton_woods.html">Bretton Woods (WIP)</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/logos/Cannon.jpg" height="170" width="250"><br/><br/>
+              <a href="">Cannon Mountain (NOT DONE)</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/logos/Cranmore.png" height="170" width="250"><br/><br/>
+              <a href="">Cranmore Mountain (NOT DONE)</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/logos/Loon.jpg" height="170" width="250"><br/><br/>
+              <a href="">Loon Mountain (NOT DONE)</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/logos/PatsPeak.png"><br/><br/>
+              <a href="">Pats Peak (NOT DONE)</a>
+            </td>
+          </tr>
+        </table>
+      </div> -->
+
+
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+
+</body>
+</html>

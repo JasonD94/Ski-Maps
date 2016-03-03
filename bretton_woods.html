@@ -1,0 +1,105 @@
+<!--
+      Created by Jason Downing
+
+      Bretton Woods Demo Map
+
+      MIT Licensed - do whatever you want with this code.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <!-- CSS file, used by all the web pages for consistency. -->
+  <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+  <!--
+  Google fonts. Included here at the top for performance gains and to avoid the use of @import
+  like Google recommends here:
+  http://googlewebfonts.blogspot.com/2010/09/optimizing-use-of-google-font-api.html
+
+  Fix for the validator comes from this page (| is encoded as %7C):
+  https://stackoverflow.com/questions/22466913/google-fonts-url-break-html5-validation-on-w3-org
+  -->
+  <link rel="stylesheet" type="text/css"href="http://fonts.googleapis.com/css?family=Advent+Pro%7CBangers%7CSlackey%7CSigmar+One%7CRighteous%7CUbuntu">
+
+  <!--  Configuration -->
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximum-scale=1, user-scalable=no">
+
+  <!-- Custom favicon -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <!-- jQuery minified version. -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  <!-- maphilight, used to overlay the map using a GIMP generated Image Map
+       This JS file was found on this website: http://davidlynch.org/projects/maphilight/docs/
+
+       The JS file was retrieved on Jan 26th 2016 at 12PM from the following URL:
+       http://davidlynch.org/projects/maphilight/jquery.maphilight.min.js
+
+       I did not create this file, nor do I claim ownership of it.
+
+       It can also be found on GitHub and is MIT Licensed, like my own code.
+       GitHub link: https://github.com/kemayo/maphilight
+   -->
+  <script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+
+  <!-- Bretton Woods JS File -->
+<!--   <script type="text/javascript" src="js/bretton_woods.js"></script>
+ -->
+  <title>Bretton Woods Map</title>
+</head>
+<body>
+  <div class="row">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+      <h1 class="highlight_centered">Dynamic Trail Map</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <p class="highlight_centered">This site will test displaying a static map
+      and highlighting trails that are open / closed on the map.</p>
+
+      <!-- Buttons for demoing the jQuery Maphilight -->
+      <!-- To be modified for Bretton Woods. -->
+      <button type="button" onclick="color_yellow()">Change highlighting to YELLOW</button>
+      <button type="button" onclick="color_red()">Change highlighting to RED</button>
+      <button type="button" onclick="color_list()">Open / Closed Trail Test
+      (using real, cached data)</button>
+      <br/><br/>
+
+      <!--
+        Image found at this URL:
+        (I claim no ownership of this image)
+        http://brettonwoods.com/images/uploads/039564b8-5ef9-459d-89fe-df1b4bb54b35.jpg
+      -->
+      <img class="map center_text_images" src="img/maps_imgs/bretton_woods.jpg"
+      width="1200" height="800" border="0" usemap="#map"/>
+
+      <!--
+        Generated this image map from GIMP. See this link for info on how to do this:
+        http://www.makeuseof.com/tag/create-image-map-gimp/
+
+        I got some help from this handy Stackoverflow post which included a JS Fiddle
+        to mess around with.
+        https://stackoverflow.com/questions/17613729/using-maphilight-for-total-beginners
+        https://jsfiddle.net/k67gq/6/
+      -->
+      <div id="ski_area_map"></div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</body>
+</html>
