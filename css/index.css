@@ -74,8 +74,8 @@ td {
   margin: auto;
   text-align: center;
 
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
 }
 
 /* from:  https://stackoverflow.com/questions/5347833/centering-bullets-on-a-centered-list */
@@ -138,7 +138,7 @@ ul {
 h1.name {
   color: white;
   font-family: "Ubuntu";
-  font-size: 250%;
+  font-size: 500%;
   text-align: center;
 }
 
@@ -169,6 +169,15 @@ h1.name {
 }
 
 .highlight_centered {
+  background-color: black;
+  color: white;
+  font-family: "Advent Pro";
+  font-size: 150%;
+  font-weight: 100;
+  text-align: center;
+}
+
+.highlight_centered_small {
   background-color: black;
   color: white;
   font-family: "Advent Pro";
