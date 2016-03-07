@@ -4,7 +4,7 @@
  *  an image displayed using HTML.
  *
  *  File created: 1/28/2016 12:30PM EST
- *   Last edited: 1/28/2016 12:30PM EST
+ *   Last edited: 3/7/2016 12:30PM EST
  *    Created by: Jason Downing
  *
  */
@@ -137,4 +137,58 @@ function color_list() {
   $('.map').maphilight();   // Must call this to update the map!
 
   return true;
+}
+
+// This will be a demo function to change the map we have working,
+// with fake data.
+function change_day(date) {
+  // Change date based on input.
+  if(date == "nov15") {
+    $.getJSON("json/nov15.json", function(data) {
+      ski_data = data;
+    });
+
+    console.log(ski_data);
+
+    // List of trails open / closed.
+    var open_trails = ski_data.waterville_open;
+    var closed_trails = ski_data.waterville_closed;
+
+    console.log("open trails: " + open_trails);
+    console.log("closed trails: " + closed_trails);
+
+    // Open Trails
+    $("area").each(function(){
+      for (trail in open_trails) {
+        var compare = open_trails[trail];
+
+        if(compare == $(this).attr("alt")) {
+          $(this).data('maphilight', {"fillColor":"FFEA1C"});
+        }
+      }
+    });
+
+    // Closed Trails
+    $("area").each(function(){
+      for (trail in closed_trails) {
+        var compare = closed_trails[trail];
+
+        if(compare == $(this).attr("alt")) {
+          $(this).data('maphilight', {"fillColor":"A30002"});
+        }
+      }
+    });
+
+    $('.map').maphilight();   // Must call this to update the map!
+
+    return true;
+  }
+
+  if(date == "") {
+
+  }
+
+  else {
+
+  }
 }
