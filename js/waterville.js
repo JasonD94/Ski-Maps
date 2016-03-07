@@ -72,14 +72,12 @@ var nov15_json = {
     "WV Progression Park",
     "Exhibition",
     "South Street",
-    "Open",
     "Northside Double Chair",
     "Sunnyside Triple Chair",
     "World Cup Triple Chair",
     "Boneyard",
     "Lower Bobby's Run",
-    "Psyched ",
-    "Closed"
+    "Psyched "
   ],
   "waterville_open": [
   ]
@@ -93,7 +91,6 @@ var dec15_json = {
       "Boneyard",
       "Lower Bobby's Run",
       "Psyched ",
-      "Closed",
       "Kinderpark Lift**For lessons only, closed to the public.\n",
       "Leroy's Loop",
       "Revelation",
@@ -152,8 +149,7 @@ var dec15_json = {
       "Exhibition",
       "WV Progression Park",
       "Exhibition",
-      "South Street",
-      "Open"
+      "South Street"
     ]
 };
 
@@ -165,7 +161,6 @@ var jan15_json = {
       "Boneyard",
       "Lower Bobby's Run",
       "Psyched ",
-      "Closed",
       "Kinderpark Lift**For lessons only, closed to the public.\n",
       "Leroy's Loop",
       "Revelation",
@@ -224,14 +219,12 @@ var jan15_json = {
       "Exhibition",
       "WV Progression Park",
       "Exhibition",
-      "South Street",
-      "Open"
+      "South Street"
     ]
 };
 
 var feb15_json = {
     "waterville_closed": [
-      "Closed"
     ],
     "waterville_open": [
       "Northside Double Chair",
@@ -296,8 +289,7 @@ var feb15_json = {
       "Exhibition",
       "WV Progression Park",
       "Exhibition",
-      "South Street",
-      "Open"
+      "South Street"
     ]
 };
 
@@ -306,7 +298,6 @@ var mar15_json = {
       "Northside Double Chair",
       "Sunnyside Triple Chair",
       "World Cup Triple Chair",
-      "Closed",
       "Exhibition Poma",
       "Upper Bobbys",
       "Upper Valley Run",
@@ -369,8 +360,7 @@ var mar15_json = {
       "Exhibition",
       "WV Progression Park",
       "Exhibition",
-      "South Street",
-      "Open"
+      "South Street"
     ]
 };
 
@@ -379,7 +369,6 @@ var apr15_json = {
       "Northside Double Chair",
       "Sunnyside Triple Chair",
       "World Cup Triple Chair",
-      "Closed",
       "Exhibition Poma",
       "Upper Bobbys",
       "Upper Valley Run",
@@ -441,8 +430,7 @@ var apr15_json = {
       "Exhibition",
       "WV Progression Park",
       "Exhibition",
-      "South Street",
-      "Open"
+      "South Street"
     ]
 };
 
@@ -611,13 +599,27 @@ function update_map(filename) {
     });
 
     $('.map').maphilight();   // Must call this to update the map!
-
-    return true;
 }
 
 
 // Update the sidebar with a list of trails based on filename given.
-update_sidebar(filename)
+function update_sidebar(filename) {
+  // Empty IDs
+  $( "#open_trails" ).empty();
+  $( "#closed_trails" ).empty();
+
+  // Add open trails.
+  for(var open in filename.waterville_open) {
+    console.log("open is: " + filename.waterville_open[open])
+    $("#open_trails").append("<div>" + filename.waterville_open[open] + "</div>");
+  }
+
+  // Add closed trails.
+  for(var closed in filename.waterville_closed) {
+    console.log("closed is: " + filename.waterville_closed[closed])
+    $("#closed_trails").append("<div>" + filename.waterville_closed[closed] + "</div>");
+  }
+}
 
 
 // This will be a demo function to change the map we have working,
@@ -626,30 +628,51 @@ function change_day(date) {
   // Change date based on input.
   if(date == "nov15") {
     update_map(nov15_json);
+    update_sidebar(nov15_json);
+
+    return true;
   }
 
   if(date == "dec15") {
     update_map(dec15_json);
+    update_sidebar(dec15_json);
+
+    return true;
   }
 
   if(date == "jan15") {
     update_map(jan15_json);
+    update_sidebar(jan15_json);
+
+    return true;
   }
 
   if(date == "feb15") {
     update_map(feb15_json);
+    update_sidebar(feb15_json);
+
+    return true;
   }
 
   if(date == "mar15") {
     update_map(mar15_json);
+    update_sidebar(mar15_json);
+
+    return true;
   }
 
   if(date == "apr15") {
     update_map(apr15_json);
+    update_sidebar(apr15_json);
+
+    return true;
   }
 
   if(date == "may15") {
     update_map(nov15_json);   // Nov15 because all closed.
+    update_sidebar(nov15_json);
+
+    return true;
   }
 
   else {
