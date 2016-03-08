@@ -1,4 +1,6 @@
-# Ski Maps
+# SKI MAPS
+![alt text](http://downing.io/Ski-Maps/img/demo.png "Demo")
+
 Ski Maps makes it easy find the current ski conditions at several NH ski resorts.
 
 The site will allow users to view the current conditions for the following Ski Resorts:
@@ -19,8 +21,7 @@ http://aws.downing.io/Dynamic-Ski-Maps/
 
 (this should end up being a custom domain at some point)
 
-## Setup
-
+##
 Ski Maps is built using HTML5, along with various CSS / JS libraries.
 
 On the front end, we're using
