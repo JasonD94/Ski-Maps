@@ -344,6 +344,7 @@ https://stackoverflow.com/questions/18175040/how-do-i-center-these-twitter-boots
     float:none;
 }
 
+/*  */
 @media (min-width: 768px) {
     .navbar .navbar-nav {
         display: inline-block;
