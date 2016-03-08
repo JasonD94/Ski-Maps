@@ -1,12 +1,12 @@
 /*
       Created By: Jason Downing
-         Created: 1/28/2016 1:30PM EST
-    Last Updated: 1/28/2016 1:30PM EST
+         Created: 3/7/2016 1:30PM EST
+    Last Updated: 3/7/2016 1:30PM EST
 
     MIT Licensed - see http://opensource.org/licenses/MIT for details.
     Anyone may freely use this code. Just don't sue me if it breaks stuff.
 
-    This is the primary CSS file for the Dynamic Ski Map Project for GUI II.
+    This is the override CSS file for the Waterville Valley page.
 */
 
 /* CSS Reset */
@@ -36,8 +36,8 @@ body {
       http://www.rapidtables.com/web/color/RGB_Color.htm
   */
   background-color: #000000;
-  background-image: url('../img/snowy-night.jpg');
-  background-position: center;
+/*  background-image: url('../img/snowy-night.jpg');
+*/  background-position: center;
   background-repeat: no-repeat;
 
   /*
@@ -253,14 +253,6 @@ h1.name {
   font-size: 200%;
 }
 
-/* This is to style the "Ski Maps" logo text. */
-.ski_logo {
-  color: blue;
-  font-family: "Slackey";
-  font-size: 200%;
-  font-weight: 200;
-}
-
 /*********************************************************************************************************/
 /*
     This was a pretty cool piece of CSS, as it lets you make the dropdown menu open on hover.
@@ -348,9 +340,9 @@ h1.name {
 /*
 From:
 https://stackoverflow.com/questions/18175040/how-do-i-center-these-twitter-bootstrap-3-navbar-links */
-/*.navbar-nav.nav-justified > li {
+.navbar-nav.nav-justified > li {
     float:none;
-}*/
+}
 
 /*  */
 @media (min-width: 768px) {

@@ -1,6 +1,5 @@
 # Ski Maps
-Ski Maps is a website that aims to make looking up skiing conditions
-as easy as possible.
+Ski Maps makes it easy find the current ski conditions at several NH ski resorts.
 
 The site will allow users to view the current conditions for the following Ski Resorts:
 - Bretton Woods
@@ -12,26 +11,22 @@ The site will allow users to view the current conditions for the following Ski R
 
 A demo of client side programming may be found at the following URL:
 
-http://jasond94.github.io/Ski-Maps
-
-and
-
 http://downing.io/Ski-Maps/
 
-A demo of the full project, complete with client / server programming will
-be found at the following URLs:
+A demo of the full project (with back-end) will be found at the following URL:
 
 http://aws.downing.io/Dynamic-Ski-Maps/
 
-and
+## Setup
 
-http://ski.downing.io/
+Ski Maps is built using HTML5, along with Bootstrap on the front end and
+Python for back-end data collection.
 
+To run the Python script, you will need to have Python3 and BeautifulSoup installed.
 
-Current files:
-- web_scrap.py -> this file will contain all the necessary web scraping, currently only
-one ski mountain actually works.
-- index.html -> this is the demo of the client side web page.
-- *.html -> Mt HTML pages.
+[BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) is a Python library
+for web scrapping. Install it by running the following command:
 
-CSS / JS / JSON / IMG / etc can be found in the relevant folders.
+```
+sudo apt-get install python3-bs4
+```
