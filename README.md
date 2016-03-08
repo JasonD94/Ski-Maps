@@ -1,13 +1,22 @@
-# GUI II Project Repository
-This Git Repository will contain all the code for our GUI II Project.
+# Ski Maps
+Ski Maps is a website that aims to make looking up skiing conditions
+as easy as possible.
+
+The site will allow users to view the current conditions for the following Ski Resorts:
+- Bretton Woods
+- Cannon
+- Cranmore
+- Loon
+- Pats Peak
+- Waterville Valley
 
 A demo of client side programming may be found at the following URL:
 
-http://jasond94.github.io/Dynamic-Ski-Maps
+http://jasond94.github.io/Ski-Maps
 
 and
 
-http://downing.io/Dynamic-Ski-Maps/
+http://downing.io/Ski-Maps/
 
 A demo of the full project, complete with client / server programming will
 be found at the following URLs:
@@ -23,5 +32,6 @@ Current files:
 - web_scrap.py -> this file will contain all the necessary web scraping, currently only
 one ski mountain actually works.
 - index.html -> this is the demo of the client side web page.
+- *.html -> Mt HTML pages.
 
 CSS / JS / JSON / IMG / etc can be found in the relevant folders.

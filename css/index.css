@@ -338,7 +338,20 @@ h1.name {
 }
 
 /*
-    Testing from this URL:
-    http://codepen.io/davidcochran/pen/rcHae
-*/
+From:
+https://stackoverflow.com/questions/18175040/how-do-i-center-these-twitter-bootstrap-3-navbar-links */
+.navbar-nav.nav-justified > li {
+    float:none;
+}
 
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
