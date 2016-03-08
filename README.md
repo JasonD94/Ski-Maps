@@ -1,7 +1,7 @@
-# SKI MAPS
-![alt text](http://downing.io/Ski-Maps/img/demo.png "Demo")
-
+# Ski Maps - Planning ski trips made easy
 Ski Maps makes it easy find the current ski conditions at several NH ski resorts.
+
+![alt text](http://downing.io/Ski-Maps/img/demo.png "Demo")
 
 The site will allow users to view the current conditions for the following Ski Resorts:
 - Bretton Woods
@@ -11,6 +11,7 @@ The site will allow users to view the current conditions for the following Ski R
 - Pats Peak
 - Waterville Valley
 
+## URLs
 A demo of client side programming may be found at the following URL:
 
 http://downing.io/Ski-Maps/
@@ -18,10 +19,9 @@ http://downing.io/Ski-Maps/
 A demo of the full project (with back-end) will be found at the following URL:
 
 http://aws.downing.io/Dynamic-Ski-Maps/
-
 (this should end up being a custom domain at some point)
 
-##
+## Powered by JS & Python
 Ski Maps is built using HTML5, along with various CSS / JS libraries.
 
 On the front end, we're using
@@ -49,3 +49,5 @@ Install it by running the following command:
 ```
 sudo apt-get install python3-bs4
 ```
+
+web_scrap.py tested using Ubuntu 14.04 LTS.
