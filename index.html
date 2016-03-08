@@ -42,9 +42,6 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-  <!-- Load the header/footer when the page is ready. -->
-  <script src="js/load_navbar.js"></script>
-
   <!--  Configuration -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -54,10 +51,17 @@
   <title>Ski Maps</title>
 </head>
 
-<body onload="load_navbar()">
+<body>
   <!--  Navbar div. See html/navbar.html for that code. It gets loaded into this
         div by the JS at the bottom of this page. -->
   <div id="NavBarHeader"></div>
+
+  <!-- SPEED UP NAVBAR LOADING
+  https://stackoverflow.com/questions/26635111/make-jquery-load-happen-before-html-load
+   -->
+  <script>
+    $("#NavBarHeader").load("html/navbar.html");
+  </script>
 
   <!-- Title -->
   <div class="row">
@@ -142,5 +146,11 @@
   <!--  This div will have the footer (html/footer.html) loaded into it
         by the JS at the bottom of the page. -->
   <div id="TheFooter"></div>
+
+  <!-- Load Footer -->
+  <script>
+    $("#TheFooter").load("html/footer.html");
+  </script>
+
 </body>
 </html>
