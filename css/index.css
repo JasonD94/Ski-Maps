@@ -41,6 +41,12 @@ body {
   background-repeat: no-repeat;
 
   /*
+      Quick hack to fix scrollbar on home page - wtf, why is this showing up?
+      https://stackoverflow.com/questions/3296644/hiding-the-scrollbar-on-an-html-page
+  */
+  overflow-x:hidden;
+
+  /*
         This line came off of Stackoverflow. It works very well. See the first answer from Vashishtha Jogi.
         https://stackoverflow.com/questions/1150163/stretch-and-scale-a-css-image-in-the-background-with-css-only
    */
@@ -340,4 +346,11 @@ h1.name {
   font-weight: 100;
   text-align: center;
   text-decoration-color: white;
+}
+
+/*
+    Center jquery maphilight map
+*/
+.center-map {
+  margin: 0 auto;
 }

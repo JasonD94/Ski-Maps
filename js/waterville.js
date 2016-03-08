@@ -481,7 +481,9 @@ $(document).ready(function() {
     shadowFrom: false
   }
 
-  $('.map').maphilight();
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map');
 });
 
 // Change all the highlighting to yellow.
@@ -494,7 +496,10 @@ function color_yellow() {
     $(this).data('maphilight', {"fillColor":"FFEA1C"});
   });
 
-  $('.map').maphilight();   // Must call this to update the map!
+  // Must call this to update the map!
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map');
 
   return true;
 }
@@ -508,7 +513,10 @@ function color_red() {
     $(this).data('maphilight', {"fillColor":"A30002"});
   });
 
-  $('.map').maphilight();   // Must call this to update the map!
+  // Must call this to update the map!
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map');
 
   return true;
 }
@@ -530,7 +538,10 @@ function bobbys_run() {
     }
   });
 
-  $('.map').maphilight();   // Must call this to update the map!
+  // Must call this to update the map!
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map');
 
   return true;
 }
@@ -568,7 +579,10 @@ function color_list() {
     }
   });
 
-  $('.map').maphilight();   // Must call this to update the map!
+  // Must call this to update the map!
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map');
 
   return true;
 }
@@ -608,7 +622,10 @@ function update_map(filename) {
       }
     });
 
-    $('.map').maphilight();   // Must call this to update the map!
+    // Must call this to update the map!
+    // Center the map using this helpful SO post
+    // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+    $('.map').maphilight().parent().addClass('center-map');
 }
 
 
