@@ -29,9 +29,16 @@ On the front end, we're using
 [jQuery Maphilight](https://github.com/kemayo/maphilight),
 and [Image Map Resizer](https://github.com/davidjbradshaw/image-map-resizer).
 
-On the back end we're planning on just using Python, along with
+On the back end we're planning on just using
+[Python](https://www.python.org/),
+along with
 [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/)
 which is a Python library for web scrapping.
+
+We may consider using a combination of or some of:
+[node.js](https://nodejs.org/en/),
+[Angular.js](https://angularjs.org/),
+and [Django](https://www.djangoproject.com/).
 
 ## Running web_scrap.py
 To run the Python script, you will need to have Python3 and BeautifulSoup installed.
