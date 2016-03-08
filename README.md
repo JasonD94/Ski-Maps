@@ -17,15 +17,26 @@ A demo of the full project (with back-end) will be found at the following URL:
 
 http://aws.downing.io/Dynamic-Ski-Maps/
 
+(this should end up being a custom domain at some point)
+
 ## Setup
 
-Ski Maps is built using HTML5, along with Bootstrap on the front end and
-Python for back-end data collection.
+Ski Maps is built using HTML5, along with various CSS / JS libraries.
 
+On the front end, we're using
+[Bootstrap](https://getbootstrap.com/),
+[jQuery](https://jquery.com/),
+[jQuery Maphilight](https://github.com/kemayo/maphilight),
+and [Image Map Resizer](https://github.com/davidjbradshaw/image-map-resizer).
+
+On the back end we're planning on just using Python, along with
+[BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/)
+which is a Python library for web scrapping.
+
+## Running web_scrap.py
 To run the Python script, you will need to have Python3 and BeautifulSoup installed.
 
-[BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) is a Python library
-for web scrapping. Install it by running the following command:
+Install it by running the following command:
 
 ```
 sudo apt-get install python3-bs4
