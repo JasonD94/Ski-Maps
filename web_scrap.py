@@ -68,7 +68,7 @@ def cannon():
   open_trails = []
   closed_trails = []
 
-  #Get the page, then grab just the text and use BeautifulSoup to work some magic on it.
+  # Get the page, then grab just the text and use BeautifulSoup to work some magic on it.
   page = requests.get(urls[1])
   data = page.text
   soup = BeautifulSoup(data, "lxml")
@@ -132,7 +132,7 @@ def bretton_woods():
 
   open_src = '/images/icons/open-sm.png'
 
-  #Get the page, then grab just the text and use BeautifulSoup to work some magic on it.
+  # Get the page, then grab just the text and use BeautifulSoup to work some magic on it.
   page = requests.get(urls[2])
   data = page.text
   soup = BeautifulSoup(data, "lxml")
@@ -168,10 +168,65 @@ def bretton_woods():
 
 # Loon Mt
 def loon():
-  print ("NOT DONE.\n")
+  trail_list = []       # List of all the trails, in order on the page.
+  trail_status = []     # List of trail status, in order on the page.
+  open_trails = []      # All the open trails or lifts
+  closed_trails = []    # All the closed trails or lifts
 
-  open_trails = []
-  closed_trails = []
+  # Get the page, then grab just the text and use BeautifulSoup to work some magic on it.
+  page = requests.get(urls[3])
+  data = page.text
+  soup = BeautifulSoup(data, "lxml")
+
+  lifts = soup.findAll("table", {"class": "lift-status"})
+
+  titles_html = []
+
+  open_src = "/assets/prebuilt/img/template/small-green-checkmark.png"
+  closed_src = "/assets/prebuilt/img/template/small-red-x.png"
+
+  # Get all the td's on the page so we can go through and find the names / trail status.
+  for td in soup.findAll("td"):
+    titles_html += td
+
+  # Let's get all the img's so we can find open / closed trails and lifts.
+  for lift in lifts:
+
+    # Get all the trail names.
+    for td in lift.findAll('td'):
+      #print (td.getText())
+      trail_list.append(td.getText().strip())
+
+    # Get all the trail status'
+    img_src = lift.findAll('img')   # Get all img's.
+    # See if we found an image
+    if len(img_src):
+      # We did, so only keep the relevant images.
+      if (img_src[0].get('src') == open_src or img_src[0].get('src') == closed_src):
+        # Append to our trail status list.
+        trail_status.append(img_src)
+
+  # See what list of trails we got.
+  # for trail in trail_list:
+  #   print (trail)
+
+  # See what list of status we got.
+  for status in trail_status:
+    print (status)
+
+  print ("length of names: ")
+  print (len(trail_list))
+  print ("length of status: ")
+  print (len(trail_status))
+
+  # Now that we have a list of status and trails, let's put them together.
+  list_length = len(trail_list)
+
+  for a in range(list_length):
+    if (trail_status[a] == open_src):
+      open_trails.append(trail_list[a])
+    else:
+      closed_trails.append(trail_list[a])
 
   # Dump to trails object.
   JSON_trails['loon_open'] = open_trails
@@ -204,22 +259,27 @@ for num in range(0, len(urls)):
   print ("Current URL to check: " + urls[num] + "\n")
 
   if (num == 0):
-    waterville()
+    print ("Hello.")
+    #waterville()
 
   if (num == 1):
-    cannon()
+    print ("Hello.")
+    #cannon()
 
   if (num == 2):
-    bretton_woods()
+    print ("Hello.")
+    #bretton_woods()
 
   if (num == 3):
     loon()
 
   if (num == 4):
-    cranmore()
+    print ("Hello.")
+    #cranmore()
 
   if (num == 5):
-    pats_peak()
+    print ("Hello.")
+    #pats_peak()
 
 # Dump to JSON file now.
 # Stackoverflow post this is from:
