@@ -1,6 +1,6 @@
 <!--
        Date Created: 1/26/2016
-      Last Modified: 3/3/2016 2PM EST
+      Last Modified: 3/7/2016 2PM EST
          Created by: Jason Downing
 
       Waterville Valley Demo Map
@@ -34,76 +34,48 @@
   <!-- CSS file, used by all the web pages for consistency. -->
   <link rel="stylesheet" type="text/css" href="css/index.css"/>
 
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <!-- Load the header/footer when the page is ready. -->
+<!--   <script src="js/load_navbar.js"></script> -->
+
+  <!-- Waterville Valley overrides. -->
+<!--   <link rel="stylesheet" type="text/css" href="css/waterville.css"/> -->
+
   <!-- Custom favicon -->
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
   <title>Waterville Valley Map</title>
 </head>
 
-<body onload="load_navbar()">
+<body>
   <!--  Navbar div. See html/navbar.html for that code. It gets loaded into this
         div by the JS at the bottom of this page. -->
   <div id="NavBarHeader"></div>
 
-  <div class="row">
-    <div class="col-md-2"></div>
-
-    <div class="col-md-8">
-      <p class="highlight_centered">
-      This site will test displaying a static map and highlighting trails that are
-      open / closed on the map.</p>
-    </div>
-  </div>
-
-  <!-- Demo buttons -->
-  <div class="row">
-    <div class="col-md-3"></div>
-
-    <div class="col-md-8">
-
-      <button class="btn btn-default" type="button" onclick="change_day('nov15')">
-        November 15th, 2015
-      </button>
-
-      <button class="btn btn-default" type="button" onclick="change_day('dec15')">
-        December 15th, 2015
-      </button>
-
-      <button class="btn btn-default" type="button" onclick="change_day('jan15')">
-        January 15th, 2016
-      </button>
-
-      <button class="btn btn-default" type="button" onclick="change_day('feb15')">
-        Febuary 15th, 2016
-      </button>
-
-      <button class="btn btn-default" type="button" onclick="change_day('mar15')">
-        March 15th, 2016
-      </button>
-
-      <button class="btn btn-default" type="button" onclick="change_day('apr15')">
-        April 15th, 2016
-      </button>
-
-      <button class="btn btn-default" type="button" onclick="change_day('may15')">
-        May 15th, 2016
-      </button>
-
-    </div>
-
-    <div class="col-md-2"></div>
-  </div>
+  <!-- SPEED UP NAVBAR LOADING
+  https://stackoverflow.com/questions/26635111/make-jquery-load-happen-before-html-load
+   -->
+  <script>
+    $("#NavBarHeader").load("html/navbar.html");
+  </script>
 
   <div class="row">
-    <div class="col-md-1"></div>
+    <div class="col-sm-12 col-md-1 col-lg-3"></div>
 
-    <div class="col-md-7">
+    <div class="col-sm-12 col-md-6 col-lg-6 center-map">
       <!--
         Image found at this URL:
         (I claim no ownership of this image)
         https://d13fo19pohlmh8.cloudfront.net/media/assets/ac0736961b5b728cdb1a4f5fb63c6352.jpeg
       -->
-      <img class="map" src="img/maps_imgs/waterville_valley.jpeg"
+      <img class="map center-map"
+      style="display: block; position: relative; padding: 0px; width: 800px; height: 1037px; background-image: url("http://127.0.0.1:8000/img/maps_imgs/waterville_valley.png"); background-size: contain;"
+      src="img/maps_imgs/waterville_valley.png"
       width="800" height="1037" border="0" usemap="#map"/>
 
       <!--
@@ -118,24 +90,69 @@
       <div id="ski_area_map"></div>
     </div>
 
-    <div class="col-md-2">
+<!--     <div class="col-sm-12 col-md-2">
       <div class="highlight_centered">
         <h1>Open trails</h1>
         <div id="open_trails"></div>
       </div>
     </div>
 
-    <div class="col-md-2">
+    <div class="col-sm-12 col-md-2">
       <div class="highlight_centered">
         <h1>Closed trails</h1>
         <div id="closed_trails"></div>
       </div>
+    </div> -->
+
+    <div class="col-sm-12 col-md-1"></div>
+  </div>
+
+    <!-- Demo buttons -->
+  <div class="row">
+    <div class="col-sm-1 col-md-1"></div>
+
+    <div class="col-md-10">
+      <div class="center_text_images">
+        <button class="btn btn-default" type="button" onclick="change_day('nov15')">
+          November 2015
+        </button>
+
+        <button class="btn btn-default" type="button" onclick="change_day('dec15')">
+          December 2015
+        </button>
+
+        <button class="btn btn-default" type="button" onclick="change_day('jan15')">
+          January 2016
+        </button>
+
+        <button class="btn btn-default" type="button" onclick="change_day('feb15')">
+          Febuary 2016
+        </button>
+
+        <button class="btn btn-default" type="button" onclick="change_day('mar15')">
+          March 2016
+        </button>
+
+        <button class="btn btn-default" type="button" onclick="change_day('apr15')">
+          April 2016
+        </button>
+
+        <button class="btn btn-default" type="button" onclick="change_day('may15')">
+          May 2016
+        </button>
+      </div>
     </div>
+    <div class="col-md-1"></div>
   </div>
 
   <!--  This div will have the footer (html/footer.html) loaded into it
         by the JS at the bottom of the page. -->
   <div id="TheFooter"></div>
+
+  <!-- Load Footer -->
+  <script>
+    $("#TheFooter").load("html/footer.html");
+  </script>
 
   <!--
       These are moved to the bottom of the <body> tag to decrease website load time.
@@ -144,11 +161,6 @@
       See Yahoo's best practice rules as well:
       https://developer.yahoo.com/performance/rules.html#css_top=
    -->
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
   <!-- maphilight, used to overlay the map using a GIMP generated Image Map
        This JS file was found on this website: http://davidlynch.org/projects/maphilight/docs/
@@ -163,19 +175,8 @@
    -->
   <script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
 
-  <!-- Load the header/footer when the page is ready. -->
-  <script src="js/load_navbar.js"></script>
-
   <!-- Waterville Valley JS File -->
   <script type="text/javascript" src="js/waterville.js"></script>
-
-  <!-- Navbar test -->
-  <script>
-    $(".nav a").on("click", function(){
-       $(".nav").find(".active").removeClass("active");
-       $(this).parent().addClass("active");
-    });
-  </script>
 
 </body>
 </html>

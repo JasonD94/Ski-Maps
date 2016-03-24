@@ -16,10 +16,18 @@ var ski_data;
 var nov15_json = {
   "waterville_closed": [
     "Exhibition Poma",
+    "Northside Double Chair",
+    "Sunnyside Triple Chair",
+    "World Cup T-Bar",
+    "World Cup Triple Chair",
+    "Boneyard",
+    "Lower Bobby's Run",
+    "Psyched ",
+    "Closed",
+    "High Country Double Chair",
     "White Peak Express Quad",
     "Valley Run Quad ",
     "Pasture J-Bar",
-    "World Cup T-Bar",
     "Lower Meadows Double Chair",
     "Kinderpark Lift**For lessons only, closed to the public.\n",
     "The Pasture",
@@ -34,13 +42,13 @@ var nov15_json = {
     "Scramble",
     "Lower Stillness",
     "Rock Island",
-    "Stillness",
+    "Stillness - FT",
     "And Tyler Too",
     "Bail Out",
     "Grimes Way",
-    "Lower Periphery",
+    "Lower Periphery - FT",
     "Lower Tippecanoe",
-    "Lower White Caps",
+    "Lower White Caps - FT",
     "No Grit",
     "Oblivion",
     "Old Tecumseh",
@@ -72,85 +80,80 @@ var nov15_json = {
     "WV Progression Park",
     "Exhibition",
     "South Street",
-    "Northside Double Chair",
-    "Sunnyside Triple Chair",
-    "World Cup Triple Chair",
-    "Boneyard",
-    "Lower Bobby's Run",
-    "Psyched "
+    "Open"
   ],
   "waterville_open": [
   ]
 };
 
 var dec15_json = {
-    "waterville_closed": [
-      "Northside Double Chair",
-      "Sunnyside Triple Chair",
-      "World Cup Triple Chair",
-      "Boneyard",
-      "Lower Bobby's Run",
-      "Psyched ",
-      "Kinderpark Lift**For lessons only, closed to the public.\n",
-      "Leroy's Loop",
-      "Revelation",
-      "Stemtation",
-      "Valley Run",
-      "Main Street",
-      "Ruthies Run",
-      "Scramble",
-      "Lower Stillness",
-      "Rock Island",
-      "Stillness",
-      "And Tyler Too",
-      "Bail Out",
-      "Grimes Way",
-      "Lower Periphery",
-      "Lower Tippecanoe",
-      "Lower White Caps",
-      "No Grit",
-      "Oblivion",
-      "Old Tecumseh"
-    ],
-    "waterville_open": [
-      "Exhibition Poma",
-      "White Peak Express Quad",
-      "Valley Run Quad ",
-      "Pasture J-Bar",
-      "World Cup T-Bar",
-      "Lower Meadows Double Chair",
-      "The Pasture",
-      "Baseway",
-      "Kinder Park",
-      "Palmers Way",
-      "Periphery",
-      "Higher Ground",
-      "Sidewinder",
-      "Siegel Street",
-      "Sun Run",
-      "Tangent",
-      "Terrys Trail",
-      "Tippecanoe",
-      "Tree Line",
-      "Upper Bobbys",
-      "Upper Valley Run",
-      "White Caps",
-      "Psyched Out",
-      "South Street",
-      "Ciao",
-      "Gema",
-      "Lower Sel's Choice",
-      "Psyched",
-      "Sel's Choice",
-      "The Chute",
-      "Tommy's World Cup Run",
-      "True Grit",
-      "Utter Abandon",
-      "Exhibition",
-      "WV Progression Park",
-      "Exhibition",
-      "South Street"
-    ]
+  "waterville_closed": [
+    "Northside Double Chair",
+    "Sunnyside Triple Chair",
+    "World Cup Triple Chair",
+    "Boneyard",
+    "Lower Bobby's Run",
+    "Psyched ",
+    "Kinderpark Lift**For lessons only, closed to the public.\n",
+    "Leroy's Loop",
+    "Revelation",
+    "Stemtation",
+    "Main Street",
+    "Ruthies Run",
+    "Scramble",
+    "Lower Stillness",
+    "Rock Island",
+    "Stillness",
+    "And Tyler Too",
+    "Bail Out",
+    "Grimes Way",
+    "Lower Periphery",
+    "Lower Tippecanoe",
+    "Lower White Caps",
+    "Old Tecumseh",
+    "The Chute",
+    "True Grit",
+    "Gema",
+    "Tree Line",
+  ],
+  "waterville_open": [
+    "Valley Run",
+    "No Grit",
+    "Oblivion",
+    "Exhibition Poma",
+    "White Peak Express Quad",
+    "Valley Run Quad ",
+    "Pasture J-Bar",
+    "World Cup T-Bar",
+    "Lower Meadows Double Chair",
+    "The Pasture",
+    "Baseway",
+    "Kinder Park",
+    "Palmers Way",
+    "Periphery",
+    "Higher Ground",
+    "Sidewinder",
+    "Siegel Street",
+    "Sun Run",
+    "Tangent",
+    "Terrys Trail",
+    "Tippecanoe",
+    "Upper Bobbys",
+    "Upper Valley Run",
+    "White Caps",
+    "Psyched Out",
+    "South Street",
+    "Ciao",
+    "Lower Sel's Choice",
+    "Psyched",
+    "Sel's Choice",
+    "Tommy's World Cup Run",
+    "Utter Abandon",
+    "Exhibition",
+    "WV Progression Park",
+    "Exhibition",
+    "South Street"
+  ]
 };
 
 var jan15_json = {
@@ -170,6 +173,7 @@ var jan15_json = {
       "Ruthies Run"
     ],
     "waterville_open": [
+      "High Country Double Chair",
       "Exhibition Poma",
       "White Peak Express Quad",
       "Valley Run Quad ",
@@ -227,28 +231,104 @@ var feb15_json = {
     "waterville_closed": [
     ],
     "waterville_open": [
+      "Exhibition Poma",
       "Northside Double Chair",
       "Sunnyside Triple Chair",
+      "World Cup T-Bar",
       "World Cup Triple Chair",
       "Boneyard",
       "Lower Bobby's Run",
       "Psyched ",
+      "Closed",
+      "High Country Double Chair",
+      "White Peak Express Quad",
+      "Valley Run Quad ",
+      "Pasture J-Bar",
+      "Lower Meadows Double Chair",
       "Kinderpark Lift**For lessons only, closed to the public.\n",
+      "The Pasture",
+      "Baseway",
+      "Kinder Park",
       "Leroy's Loop",
       "Revelation",
       "Stemtation",
       "Valley Run",
       "Main Street",
       "Ruthies Run",
+      "Scramble",
+      "Lower Stillness",
+      "Rock Island",
+      "Stillness - FT",
+      "And Tyler Too",
+      "Bail Out",
+      "Grimes Way",
+      "Lower Periphery",
+      "Lower Tippecanoe",
+      "Lower White Caps - FT",
+      "No Grit",
+      "Oblivion",
+      "Old Tecumseh",
+      "Palmers Way",
+      "Periphery",
+      "Higher Ground",
+      "Sidewinder",
+      "Siegel Street",
+      "Sun Run",
+      "Tangent",
+      "Terrys Trail",
+      "Tippecanoe",
+      "Tree Line",
+      "Upper Bobbys",
+      "Upper Valley Run",
+      "White Caps",
+      "Psyched Out",
+      "South Street",
+      "Ciao",
+      "Gema",
+      "Lower Sel's Choice",
+      "Psyched",
+      "Sel's Choice",
+      "The Chute",
+      "Tommy's World Cup Run",
+      "True Grit",
+      "Utter Abandon",
+      "Exhibition",
+      "WV Progression Park",
+      "Exhibition",
+      "South Street",
+      "Open",
+      "Lower Periphery - FT"
+    ]
+};
+
+var mar15_json = {
+    "waterville_closed": [
       "Exhibition Poma",
+      "Northside Double Chair",
+      "Sunnyside Triple Chair",
+      "World Cup T-Bar",
+      "World Cup Triple Chair",
+      "Boneyard",
+      "Lower Bobby's Run",
+      "Psyched ",
+      "Closed"
+    ],
+    "waterville_open": [
+      "High Country Double Chair",
       "White Peak Express Quad",
       "Valley Run Quad ",
       "Pasture J-Bar",
-      "World Cup T-Bar",
       "Lower Meadows Double Chair",
+      "Kinderpark Lift**For lessons only, closed to the public.\n",
       "The Pasture",
       "Baseway",
       "Kinder Park",
+      "Leroy's Loop",
+      "Revelation",
+      "Stemtation",
+      "Valley Run",
+      "Main Street",
+      "Ruthies Run",
       "Scramble",
       "Lower Stillness",
       "Rock Island",
@@ -289,78 +369,8 @@ var feb15_json = {
       "Exhibition",
       "WV Progression Park",
       "Exhibition",
-      "South Street"
-    ]
-};
-
-var mar15_json = {
-    "waterville_closed": [
-      "Northside Double Chair",
-      "Sunnyside Triple Chair",
-      "World Cup Triple Chair",
-      "Exhibition Poma",
-      "Upper Bobbys",
-      "Upper Valley Run",
-      "White Caps",
-      "Psyched Out",
       "South Street",
-      "Ciao",
-      "Gema",
-      "Lower Sel's Choice"
-    ],
-    "waterville_open": [
-
-      "White Peak Express Quad",
-      "Valley Run Quad ",
-      "Pasture J-Bar",
-      "World Cup T-Bar",
-      "Lower Meadows Double Chair",
-      "Boneyard",
-      "Lower Bobby's Run",
-      "Psyched ",
-      "Kinderpark Lift**For lessons only, closed to the public.\n",
-      "Leroy's Loop",
-      "Revelation",
-      "Stemtation",
-      "Valley Run",
-      "Main Street",
-      "Ruthies Run",
-      "The Pasture",
-      "Baseway",
-      "Kinder Park",
-      "Scramble",
-      "Lower Stillness",
-      "Rock Island",
-      "Stillness",
-      "And Tyler Too",
-      "Bail Out",
-      "Grimes Way",
-      "Lower Periphery",
-      "Lower Tippecanoe",
-      "Lower White Caps",
-      "No Grit",
-      "Oblivion",
-      "Old Tecumseh",
-      "Palmers Way",
-      "Periphery",
-      "Higher Ground",
-      "Sidewinder",
-      "Siegel Street",
-      "Sun Run",
-      "Tangent",
-      "Terrys Trail",
-      "Tippecanoe",
-      "Tree Line",
-      "Psyched",
-      "Sel's Choice",
-      "The Chute",
-      "Tommy's World Cup Run",
-      "True Grit",
-      "Utter Abandon",
-      "Exhibition",
-      "WV Progression Park",
-      "Exhibition",
-      "South Street"
+      "Open"
     ]
 };
 
@@ -471,7 +481,9 @@ $(document).ready(function() {
     shadowFrom: false
   }
 
-  $('.map').maphilight();
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map');
 });
 
 // Change all the highlighting to yellow.
@@ -484,7 +496,10 @@ function color_yellow() {
     $(this).data('maphilight', {"fillColor":"FFEA1C"});
   });
 
-  $('.map').maphilight();   // Must call this to update the map!
+  // Must call this to update the map!
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map');
 
   return true;
 }
@@ -498,7 +513,10 @@ function color_red() {
     $(this).data('maphilight', {"fillColor":"A30002"});
   });
 
-  $('.map').maphilight();   // Must call this to update the map!
+  // Must call this to update the map!
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map');
 
   return true;
 }
@@ -520,7 +538,10 @@ function bobbys_run() {
     }
   });
 
-  $('.map').maphilight();   // Must call this to update the map!
+  // Must call this to update the map!
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map');
 
   return true;
 }
@@ -558,7 +579,10 @@ function color_list() {
     }
   });
 
-  $('.map').maphilight();   // Must call this to update the map!
+  // Must call this to update the map!
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map');
 
   return true;
 }
@@ -598,7 +622,10 @@ function update_map(filename) {
       }
     });
 
-    $('.map').maphilight();   // Must call this to update the map!
+    // Must call this to update the map!
+    // Center the map using this helpful SO post
+    // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+    $('.map').maphilight().parent().addClass('center-map');
 }
 
 
@@ -611,13 +638,13 @@ function update_sidebar(filename) {
 
   // Add open trails.
   for(var open in filename.waterville_open) {
-    console.log("open is: " + filename.waterville_open[open])
+    //console.log("open is: " + filename.waterville_open[open])
     $("#open_trails").append("<div>" + filename.waterville_open[open] + "</div>");
   }
 
   // Add closed trails.
   for(var closed in filename.waterville_closed) {
-    console.log("closed is: " + filename.waterville_closed[closed])
+    //console.log("closed is: " + filename.waterville_closed[closed])
     $("#closed_trails").append("<div>" + filename.waterville_closed[closed] + "</div>");
   }
 }

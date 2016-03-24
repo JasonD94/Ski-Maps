@@ -1,6 +1,6 @@
 <!--
        Date Created: 1/26/2016
-      Last Modified: 3/3/2016 2PM EST
+      Last Modified: 3/7/2016 2PM EST
          Created by: Jason Downing
 
       This page is the index for the Dynamic Ski Map Project.
@@ -42,9 +42,6 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-  <!-- Load the header/footer when the page is ready. -->
-  <script src="js/load_navbar.js"></script>
-
   <!--  Configuration -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -54,31 +51,34 @@
   <title>Ski Maps</title>
 </head>
 
-<body onload="load_navbar()">
+<body>
   <!--  Navbar div. See html/navbar.html for that code. It gets loaded into this
         div by the JS at the bottom of this page. -->
   <div id="NavBarHeader"></div>
 
+  <!-- SPEED UP NAVBAR LOADING
+  https://stackoverflow.com/questions/26635111/make-jquery-load-happen-before-html-load
+   -->
+  <script>
+    $("#NavBarHeader").load("html/navbar.html");
+  </script>
+
   <!-- Title -->
   <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
       <h1 class="highlight_centered name">Ski Maps</h1>
+      <p class="highlight_centered">
+      Ski Maps makes it easy find the current ski conditions at several NH ski resorts.</p>
     </div>
-    <div class="col-md-2"></div>
+    <div class="col-md-3"></div>
   </div>
 
   <!-- Description -->
   <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-      <p class="highlight_centered">
-      This site will host links to Dynamic Ski Maps, which are maps that will
-      display open / closed trail & ski lifts for the given Ski Resort.<p>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
 
-      <p class="highlight_centered">
-      Currently a "working" demo for Waterville Valley is available, with plans
-      for Bretton Woods and other resorts to be added later.</p>
 
       <!--  This table is responsive (using Bootstrap)
             It currently exists as a 3x2 grid of mountains with links
@@ -140,11 +140,17 @@
         </table>
       </div>
     </div>
-    <div class="col-md-1"></div>
-
-    <!--  This div will have the footer (html/footer.html) loaded into it
-          by the JS at the bottom of the page. -->
-    <div id="TheFooter"></div>
+    <div class="col-md-2"></div>
   </div>
+
+  <!--  This div will have the footer (html/footer.html) loaded into it
+        by the JS at the bottom of the page. -->
+  <div id="TheFooter"></div>
+
+  <!-- Load Footer -->
+  <script>
+    $("#TheFooter").load("html/footer.html");
+  </script>
+
 </body>
 </html>
