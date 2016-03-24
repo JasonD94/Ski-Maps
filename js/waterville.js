@@ -582,7 +582,7 @@ function update_map(filename) {
         var compare = open_trails[trail];
 
         if(compare == $(this).attr("alt")) {
-          $(this).data('maphilight', {"fillColor":"FFEA1C"});
+          $(this).data('maphilight', {"fillColor":"FFEA1C"});   // Try green color.
         }
       }
     });
@@ -603,6 +603,7 @@ function update_map(filename) {
 
 
 // Update the sidebar with a list of trails based on filename given.
+// IDEA: ADD SCROLL WHEEL.
 function update_sidebar(filename) {
   // Empty IDs
   $( "#open_trails" ).empty();

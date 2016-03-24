@@ -76,7 +76,7 @@ def cannon():
   # Get lift status
   # From stackoverflow:
   # https://stackoverflow.com/questions/13074586/extracting-selected-columns-from-a-table-using-beautifulsoup
-  tables = soup.find('table')
+  tables = soup.find('table')    # change this for consistent code.
 
   rows = tables.findAll('tr')
   for cells in rows:
