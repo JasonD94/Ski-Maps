@@ -8,11 +8,11 @@
  *    Created by: Jason Downing
  *
  */
-/*
+
 var ski_data;
 
 $(function(){
-  $("#ski_area_map").load("maps/Waterville.map");
+  $("#ski_area_map").load("maps/cannon_mt.map");
 });
 
 $(document).ready(function() {
@@ -138,4 +138,4 @@ function color_list() {
 
   return true;
 }
-*/
+
