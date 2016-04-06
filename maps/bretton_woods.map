@@ -1,4 +1,14 @@
-<img src="Untitled" width="3000" height="2003" border="0" usemap="#map" />
+<!--
+ 		Date Created: 4/6/2016 6PM EST
+       Last Modified: 4/6/2016 7PM EST
+          Created by: Brendan Bousquet
+
+          This file is the image map for the Bretton Woods Ski Map page.
+          It allows the highlighting of the trails to work, by defining regions
+          on the map that can be toggled on and off via JavaScript functions.
+-->
+<!--  UNCOMMENT THE LINE BELOW TO EDIT THE MAP IN GIMP OR WHATEVER! -->
+<!-- <img src="Untitled" width="3000" height="2003" border="0" usemap="#map" /> -->
 
 <map name="map">
 <!-- #$-:Image map file created by GIMP Image Map plug-in -->

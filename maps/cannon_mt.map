@@ -1,4 +1,14 @@
-<img src="[cannon_mt] (imported)" width="3831" height="2181" border="0" usemap="#map" />
+<!--
+ 		Date Created: 1/27/2016 12PM EST
+       Last Modified: 4/6/2016   7PM EST
+          Created by: Brendan Bousquet
+
+          This file is the image map for the Cannon Mt Ski Map page.
+          It allows the highlighting of the trails to work, by defining regions
+          on the map that can be toggled on and off via JavaScript functions.
+-->
+<!--  UNCOMMENT THE LINE BELOW TO EDIT THE MAP IN GIMP OR WHATEVER! -->
+<!-- <img src="[cannon_mt] (imported)" width="3831" height="2181" border="0" usemap="#map" /> -->
 
 <map name="map">
 <!-- #$-:Image map file created by GIMP Image Map plug-in -->
