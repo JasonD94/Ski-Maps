@@ -175,8 +175,19 @@
    -->
   <script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
 
+  <!--  Image Map Resize
+        See this URL for details: https://github.com/davidjbradshaw/image-map-resizer -->
+  <script type="text/javascript" src="js/imageMapResizer.min.js"></script>
+
   <!-- Waterville Valley JS File -->
   <script type="text/javascript" src="js/waterville.js"></script>
+
+  <!--  Make the maps resizable, using Image Map Resize.  -->
+  <script>
+  $(document).ready(function() {
+    $('.map').imageMapResize();
+  });
+  </script>
 
 </body>
 </html>

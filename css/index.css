@@ -35,8 +35,8 @@ body {
       The color was found with a Google search for "black color code", and this site was helpful for confirming:
       http://www.rapidtables.com/web/color/RGB_Color.htm
   */
-  background-color: #000000;
-  background-image: url('../img/snowy-night.jpg');
+  background-color: #1a1a1a;
+/*  background-image: url('../img/snowy-night.jpg'); */
   background-position: center;
   background-repeat: no-repeat;
 
@@ -149,11 +149,11 @@ h1.name {
 }
 
 .highlight {
-  background-color: black;
+/*  background-color: black;*/
 }
 
 .highlight_box {
-  background-color: black;
+/*  background-color: black;*/
   color: white;
 }
 
@@ -175,7 +175,7 @@ h1.name {
 }
 
 .highlight_centered {
-  background-color: black;
+/*  background-color: black;*/
   color: white;
   font-family: "Advent Pro";
   font-size: 150%;
