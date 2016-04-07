@@ -11,6 +11,14 @@
 
 var ski_data;
 
+/*
+    Global color variables
+    Red   = CLOSED
+    Green = OPEN
+*/
+var open_color = "006600";
+var closed_color = "A30002";
+
 $(function(){
   $("#ski_area_map").load("maps/cannon_mt.map");
 });
@@ -26,7 +34,7 @@ $(document).ready(function() {
   // highlighting to look "better", basically yellowish instead of dark gray.
   $.fn.maphilight.defaults = {
     fill: true,
-    fillColor: 'A30002',
+    fillColor: closed_color,
     fillOpacity: 0.5,
     stroke: false,
     strokeColor: '000000',
@@ -49,7 +57,7 @@ $(document).ready(function() {
 
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
-  $('.map').maphilight().parent().addClass('center-map');
+  $('.map').maphilight().parent().addClass('center-map_cmt');
 });
 
 // Change all the highlighting to yellow.
@@ -59,12 +67,12 @@ function color_yellow() {
   // to "FFEA1C" which is the same yellow color I set as "default" for all areas.
   $("area").each(function(){
     console.log("CHANGING COLORS to YELLOW");
-    $(this).data('maphilight', {"fillColor":"FFEA1C"});
+    $(this).data('maphilight', {"fillColor": open_color});
   });
 
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
-  $('.map').maphilight().parent().addClass('center-map');
+  $('.map').maphilight().parent().addClass('center-map_cmt');
 
   return true;
 }
@@ -75,12 +83,12 @@ function color_red() {
   // to "A30002" which is a red color.
   $("area").each(function(){
     console.log("CHANGING COLORS to RED");
-    $(this).data('maphilight', {"fillColor":"A30002"});
+    $(this).data('maphilight', {"fillColor": closed_color});
   });
 
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
-  $('.map').maphilight().parent().addClass('center-map');
+  $('.map').maphilight().parent().addClass('center-map_cmt');
 
   return true;
 }
@@ -98,13 +106,13 @@ function bobbys_run() {
 
     if(compare == $(this).attr("alt")) {
       console.log("Changing color for Bobby's Run");
-      $(this).data('maphilight', {"fillColor":"0000FF"});
+      $(this).data('maphilight', {"fillColor": open_color});
     }
   });
 
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
-  $('.map').maphilight().parent().addClass('center-map');
+  $('.map').maphilight().parent().addClass('center-map_cmt');
 
   return true;
 }
@@ -126,7 +134,7 @@ function color_list() {
       var compare = open_trails[trail];
 
       if(compare == $(this).attr("alt")) {
-        $(this).data('maphilight', {"fillColor":"FFEA1C"});
+        $(this).data('maphilight', {"fillColor": open_color});
       }
     }
   });
@@ -137,14 +145,14 @@ function color_list() {
       var compare = closed_trails[trail];
 
       if(compare == $(this).attr("alt")) {
-        $(this).data('maphilight', {"fillColor":"A30002"});
+        $(this).data('maphilight', {"fillColor": closed_color});
       }
     }
   });
 
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
-  $('.map').maphilight().parent().addClass('center-map');
+  $('.map').maphilight().parent().addClass('center-map_cmt');
 
   return true;
 }

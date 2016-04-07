@@ -373,6 +373,24 @@ h1.name {
 */
 .center-map {
   margin: 0 auto;
-  margin-top: -70px;
-  margin-bottom: -50px;
+  margin-top: -70px;      /* originally -70px */
+  margin-bottom: -50px;   /* originally -50px */
+}
+
+/*
+    Center map for Bretton Woods
+*/
+.center-map_bw {
+  margin: 0 auto;
+  margin-top: 0px;      /* originally -70px */
+  margin-bottom: 20px;   /* originally -50px */
+}
+
+/*
+    Center map for Cannon Mt
+*/
+.center-map_cmt {
+  margin: 0 auto;
+  margin-top: 0px;      /* originally -70px */
+  margin-bottom: 20px;   /* originally -50px */
 }

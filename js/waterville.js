@@ -11,6 +11,14 @@
 
 var ski_data;
 
+/*
+    Global color variables
+    Red   = CLOSED
+    Green = OPEN
+*/
+var open_color = "006600";
+var closed_color = "A30002";
+
 //******************************************************************************
 // This is a bad hack for the demo. In the future this won't be here.
 var nov15_json = {
@@ -460,7 +468,7 @@ $(document).ready(function() {
   // highlighting to look "better", basically yellowish instead of dark gray.
   $.fn.maphilight.defaults = {
     fill: true,
-    fillColor: 'A30002',
+    fillColor: closed_color,
     fillOpacity: 0.5,
     stroke: false,
     strokeColor: '000000',
@@ -490,10 +498,10 @@ $(document).ready(function() {
 function color_yellow() {
 
   // This goes through and changes all the maphilight data "fillColor" properties
-  // to "FFEA1C" which is the same yellow color I set as "default" for all areas.
+  // to "006600" which is the same yellow color I set as "default" for all areas.
   $("area").each(function(){
     console.log("CHANGING COLORS to YELLOW");
-    $(this).data('maphilight', {"fillColor":"FFEA1C"});
+    $(this).data('maphilight', {"fillColor":open_color});
   });
 
   // Must call this to update the map!
@@ -510,7 +518,7 @@ function color_red() {
   // to "A30002" which is a red color.
   $("area").each(function(){
     console.log("CHANGING COLORS to RED");
-    $(this).data('maphilight', {"fillColor":"A30002"});
+    $(this).data('maphilight', {"fillColor":closed_color});
   });
 
   // Must call this to update the map!
@@ -563,7 +571,7 @@ function color_list() {
       var compare = open_trails[trail];
 
       if(compare == $(this).attr("alt")) {
-        $(this).data('maphilight', {"fillColor":"FFEA1C"});
+        $(this).data('maphilight', {"fillColor":open_color});
       }
     }
   });
@@ -574,7 +582,7 @@ function color_list() {
       var compare = closed_trails[trail];
 
       if(compare == $(this).attr("alt")) {
-        $(this).data('maphilight', {"fillColor":"A30002"});
+        $(this).data('maphilight', {"fillColor":closed_color});
       }
     }
   });
@@ -606,7 +614,7 @@ function update_map(filename) {
         var compare = open_trails[trail];
 
         if(compare == $(this).attr("alt")) {
-          $(this).data('maphilight', {"fillColor":"FFEA1C"});   // Try green color.
+          $(this).data('maphilight', {"fillColor":open_color});
         }
       }
     });
@@ -617,7 +625,7 @@ function update_map(filename) {
         var compare = closed_trails[trail];
 
         if(compare == $(this).attr("alt")) {
-          $(this).data('maphilight', {"fillColor":"A30002"});
+          $(this).data('maphilight', {"fillColor":closed_color});
         }
       }
     });
