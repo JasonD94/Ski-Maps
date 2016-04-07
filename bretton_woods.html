@@ -81,7 +81,7 @@
         http://brettonwoods.com/images/uploads/039564b8-5ef9-459d-89fe-df1b4bb54b35.jpg
       -->
       <div class="center_text_images">
-        <img class="map center_text_images" src="img/maps_imgs/bretton_woods.jpg" width="3000" height="2003" border="0" usemap="#map"/>
+        <img class="map center_text_images" usemap="#map" src="img/maps_imgs/bretton_woods.jpg" border="0" width="3000" height="2003" />
       </div>
 
       <!--
@@ -123,8 +123,19 @@
    -->
   <script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
 
+  <!--  Image Map Resize
+        See this URL for details: https://github.com/davidjbradshaw/image-map-resizer -->
+<!--   <script type="text/javascript" src="js/resize.js"></script>
+ -->
+  <script type="text/javascript" src="js/jquery.rwdImageMaps.min.js"></script>
+
   <!-- Bretton Woods JS File -->
   <script type="text/javascript" src="js/bretton_woods.js"></script>
+
+  <!--  Make the maps resizable, using Image Map Resize.  -->
+  <script>
+    $('img[usemap]').rwdImageMaps();
+  </script>
 
 </body>
 </html>

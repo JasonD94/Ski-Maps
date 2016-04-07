@@ -394,3 +394,11 @@ h1.name {
   margin-top: 0px;      /* originally -70px */
   margin-bottom: 20px;   /* originally -50px */
 }
+
+/* TESTING */
+img[usemap] {
+  border: none;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
