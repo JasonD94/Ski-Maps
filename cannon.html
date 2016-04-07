@@ -54,8 +54,8 @@
         <!-- To be modified for Bretton Woods. -->
         <button type="button" onclick="color_yellow()">Change highlighting to GREEN</button>
         <button type="button" onclick="color_red()">Change highlighting to RED</button>
-        <button type="button" onclick="color_list()">Open / Closed Trail Test
-        (using real, cached data)</button>
+<!--         <button type="button" onclick="color_list()">Open / Closed Trail Test
+        (using real, cached data)</button> -->
         <br/><br/>
       </div>
 
@@ -64,9 +64,7 @@
         (I claim no ownership of this image)
         http://cannonmt.com/map.jpg
       -->
-      <div class="center_text_images">
-        <img class="map center_text_images" src="img/maps_imgs/cannon_mt.jpg" width="3831" height="2181" border="0" usemap="#map"/>
-      </div>
+      <img class="map" src="img/maps_imgs/cannon_mt.jpg" width="3831" height="2181" border="0" usemap="#map"/>
 
       <!--
         Generated this image map from GIMP. See this link for info on how to do this:
@@ -99,6 +97,9 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
+  <!-- Load the header/footer when the page is ready. -->
+  <script src="js/load_navbar.js"></script>
+
   <!-- maphilight, used to overlay the map using a GIMP generated Image Map
        This JS file was found on this website: http://davidlynch.org/projects/maphilight/docs/
 
@@ -111,12 +112,14 @@
        GitHub link: https://github.com/kemayo/maphilight
    -->
   <script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
-
-  <!-- Load the header/footer when the page is ready. -->
-  <script src="js/load_navbar.js"></script>
+  <script type="text/javascript" src="js/jquery.rwdImageMaps.min.js"></script>
 
   <!-- Cannon JS File -->
   <script type="text/javascript" src="js/cannon.js"></script>
+
+  <script>
+    $('img[usemap]').rwdImageMaps();
+  </script>
 
 </body>
 </html>

@@ -63,8 +63,8 @@
         <!-- To be modified for Bretton Woods. -->
         <button type="button" onclick="color_yellow()">Change highlighting to GREEN</button>
         <button type="button" onclick="color_red()">Change highlighting to RED</button>
-        <button type="button" onclick="color_list()">Open / Closed Trail Test
-        (using real, cached data)</button>
+<!--         <button type="button" onclick="color_list()">Open / Closed Trail Test
+        (using real, cached data)</button> -->
         <br/><br/>
       </div>
     </div>
@@ -80,9 +80,7 @@
         (I claim no ownership of this image)
         http://brettonwoods.com/images/uploads/039564b8-5ef9-459d-89fe-df1b4bb54b35.jpg
       -->
-      <div class="center_text_images">
-        <img class="map center_text_images" usemap="#map" src="img/maps_imgs/bretton_woods.jpg" border="0" width="3000" height="2003" />
-      </div>
+      <img class="map" usemap="#map" src="img/maps_imgs/bretton_woods.jpg" border="0" width="3000" height="2003" />
 
       <!--
         Generated this image map from GIMP. See this link for info on how to do this:
@@ -110,6 +108,9 @@
       https://developer.yahoo.com/performance/rules.html#css_top=
    -->
 
+  <!-- Bretton Woods JS File -->
+  <script type="text/javascript" src="js/bretton_woods.js"></script>
+
   <!-- maphilight, used to overlay the map using a GIMP generated Image Map
        This JS file was found on this website: http://davidlynch.org/projects/maphilight/docs/
 
@@ -125,16 +126,25 @@
 
   <!--  Image Map Resize
         See this URL for details: https://github.com/davidjbradshaw/image-map-resizer -->
-<!--   <script type="text/javascript" src="js/resize.js"></script>
- -->
+<!--   <script type="text/javascript" scr="js/imageMapResizer.min.js"></script> -->
+<!--   <script type="text/javascript" src="js/resize.js"></script> -->
   <script type="text/javascript" src="js/jquery.rwdImageMaps.min.js"></script>
 
-  <!-- Bretton Woods JS File -->
-  <script type="text/javascript" src="js/bretton_woods.js"></script>
-
+<!--   <script type="text/javascript" src="js/map_rollover.js"></script> -->
   <!--  Make the maps resizable, using Image Map Resize.  -->
   <script>
     $('img[usemap]').rwdImageMaps();
+
+    // $(document).ready(function() {
+    //     $('map').imageMapResize();
+    // });
+
+    // $(window).on('load',function(){
+    //     __init_resize();
+    //    $(window).resize(function(){
+    //           __init_resize();
+    //    });
+    // });
   </script>
 
 </body>
