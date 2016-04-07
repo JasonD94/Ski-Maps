@@ -61,8 +61,8 @@
       <div class="center_text_images">
         <!-- Buttons for demoing the jQuery Maphilight -->
         <!-- To be modified for Bretton Woods. -->
-        <button type="button" onclick="color_yellow()">Change highlighting to GREEN</button>
-        <button type="button" onclick="color_red()">Change highlighting to RED</button>
+        <button class="btn btn-default" type="button" onclick="color_yellow()">Change highlighting to GREEN</button>
+        <button class="btn btn-default" type="button" onclick="color_red()">Change highlighting to RED</button>
 <!--         <button type="button" onclick="color_list()">Open / Closed Trail Test
         (using real, cached data)</button> -->
         <br/><br/>
@@ -80,7 +80,13 @@
         (I claim no ownership of this image)
         http://brettonwoods.com/images/uploads/039564b8-5ef9-459d-89fe-df1b4bb54b35.jpg
       -->
-      <img class="map" src="img/maps_imgs/bretton_woods.jpg" width="3000" height="2003" usemap="#map"  />
+<!--       <img class="map" src="img/maps_imgs/bretton_woods.jpg" width="3000" height="2003" usemap="#map"  />
+ -->
+      <img class="map center-map"
+      style="display: block; position: relative; padding: 0px;
+      width: 800px; height: 1037px; background-size: contain;"
+      src="img/maps_imgs/bretton_woods.jpg"
+      width="3000" height="2003" border="0" usemap="#map"/>
 
       <!--
         Generated this image map from GIMP. See this link for info on how to do this:

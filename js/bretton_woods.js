@@ -155,4 +155,3 @@ function color_list() {
 
   return true;
 }
-
