@@ -261,10 +261,30 @@ h1.name {
 
 /* This is to style the "Ski Maps" logo text. */
 .ski_logo {
-  color: blue;
+  color: white;
   font-family: "Slackey";
-  font-size: 200%;
-  font-weight: 200;
+  font-size: 300%;
+  font-weight: 300;
+}
+
+/* For the "About" on the About Page. */
+.about_ski {
+  color:  #3333ff;
+  font-family: "Advent Pro";
+  font-size: 300%;
+  font-weight: 300;
+}
+
+.text_centered {
+  color: white;
+  font-family: "Ubuntu";
+  font-size: 150%;
+  font-weight: 100;
+  text-align: center;
+}
+
+.underline_text {
+  text-decoration: underline;
 }
 
 /******************************************************************************************************/
@@ -283,7 +303,7 @@ h1.name {
   /*color:          red;*/
   /*font-family:    Garamond;*/
   /*padding:        5px 20px;*/
-  font-size:      1.1em;
+  font-size:      1.2em;
 }
 
 /* Adjust Menu colors - Normal */
@@ -342,7 +362,7 @@ h1.name {
   background: rgba(69, 69, 69, 0.95);
   color: white;
   font-family: "Advent Pro";
-  font-size: 100%;
+  font-size: 120%;
   font-weight: 100;
   text-align: center;
   text-decoration-color: white;
