@@ -1,7 +1,7 @@
 /*
       Created By: Jason Downing
          Created: 1/28/2016 1:30PM EST
-    Last Updated: 3/7/2016 1:30PM EST
+    Last Updated: 4/17/2016 1:30PM EST
 
     MIT Licensed - see http://opensource.org/licenses/MIT for details.
     Anyone may freely use this code. Just don't sue me if it breaks stuff.
@@ -185,6 +185,13 @@ h1.name {
   font-size: 150%;
   font-weight: 600;
   text-align: center;
+}
+
+.color_links {
+  color: white;
+  font-size: 100%;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 /* Adding black outline to text.
