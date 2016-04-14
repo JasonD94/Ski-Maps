@@ -34,9 +34,12 @@ body {
 
       The color was found with a Google search for "black color code", and this site was helpful for confirming:
       http://www.rapidtables.com/web/color/RGB_Color.htm
+
+      Tint the background using this Stackoverflow post:
+      https://stackoverflow.com/questions/903659/why-cant-i-use-background-image-and-color-together
   */
 /*  background-color: #1a1a1a;*/
-  background-image: url('../img/background.jpg');
+  background-image: linear-gradient(0deg, rgba(69, 69, 69, 0.75), rgba(69, 69, 69, 0.75)), url('../img/background.jpg');
   background-position: center;
   background-repeat: no-repeat;
 
@@ -55,7 +58,7 @@ body {
   padding: 0px;
   height: 100%;
   width: 100%;
-  font-family: "Advent Pro";
+  font-family: "Work Sans";
 }
 
 /*
@@ -121,7 +124,7 @@ ul {
 
 .center_text {
   color: white;
-  font-family: "Advent Pro";
+  font-family: "Work Sans";
   font-size: 200%;
   font-weight: 900;
   text-align: center;
@@ -135,16 +138,17 @@ ul {
 
 .center_text_small {
   color: white;
-  font-family: "Advent Pro";
+  font-family: "Work Sans";
   font-size: 120%;
   font-weight: 900;
   text-align: center;
 }
 
 h1.name {
-  color: white;
-  font-family: "Slackey";
+  color: blue;
+  font-family: "Chivo";
   font-size: 500%;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -161,14 +165,14 @@ h1.name {
 .highlight_red {
   background-color: black;
   color: red;
-  font-family: "Righteous";
+  font-family: "Chivo";
 }
 
 /* Assignment 7 title */
 .highlight_gold {
   background-color: #e5c100;    /* Gold color */
   color: #990000;               /* Dark red color */
-  font-family: "Sigmar One";
+  font-family: "Chivo";
   font-size: 50%;
   padding-left: 5px;
   padding-right: 5px;
@@ -177,7 +181,7 @@ h1.name {
 .highlight_centered {
 /*  background-color: black;*/
   color: white;
-  font-family: "Advent Pro";
+  /*font-family: "Work Sans";*/
   font-size: 150%;
   font-weight: 600;
   text-align: center;
@@ -198,7 +202,7 @@ h1 {
 .highlight_centered_small {
   background-color: black;
   color: white;
-  font-family: "Advent Pro";
+  font-family: "Work Sans";
   font-size: 100%;
   font-weight: 100;
   text-align: center;
@@ -207,7 +211,7 @@ h1 {
 .highlight_centered_margins {
   background-color: black;
   color: white;
-  font-family: "Advent Pro";
+  font-family: "Work Sans";
   font-size: 200%;
   font-weight: 900;
   margin: 10px;
@@ -217,7 +221,7 @@ h1 {
 .highlight_left_aligned {
   background-color: black;
   color: white;
-  font-family: "Advent Pro";
+  font-family: "Work Sans";
   font-size: 200%;
   font-weight: 900;
   text-align: left;
@@ -226,7 +230,7 @@ h1 {
 .highlight_right_aligned {
   background-color: black;
   color: white;
-  font-family: "Advent Pro";
+  font-family: "Work Sans";
   font-size: 200%;
   font-weight: 900;
   margin-right: -20px;
@@ -242,7 +246,7 @@ h1 {
 .highlight_text_underline_centered {
   background-color: black;
   color: white;
-  font-family: "Advent Pro";
+  font-family: "Work Sans";
   font-size: 200%;
   font-weight: 900;
   text-align: center;
@@ -253,28 +257,28 @@ h1 {
 .left_align {
   color: white;
   text-align: left;
-  font-family: "Advent Pro";
+  font-family: "Work Sans";
   font-size: 200%;
 }
 
 .right_align {
   color: white;
   text-align: left;
-  font-family: "Advent Pro";
+  font-family: "Work Sans";
   font-size: 200%;
 }
 
 .white_text {
   background-color: black;
   color: white;
-  font-family: "Advent Pro";
+  font-family: "Work Sans";
   font-size: 200%;
 }
 
 /* This is to style the "Ski Maps" logo text. */
 .ski_logo {
   color: white;
-  font-family: "Slackey";
+  font-family: "Chivo";
   font-size: 300%;
   font-weight: 300;
 }
@@ -282,14 +286,14 @@ h1 {
 /* For the "About" on the About Page. */
 .about_ski {
   color:  #3333ff;
-  font-family: "Advent Pro";
+  font-family: "Work Sans";
   font-size: 300%;
   font-weight: 300;
 }
 
 .text_centered {
   color: white;
-  font-family: "Ubuntu";
+  font-family: "Work Sans";
   font-size: 150%;
   font-weight: 100;
   text-align: center;
@@ -409,13 +413,17 @@ h1 {
   font-weight: 600;
 }
 
+.background_dark {
+  background: rgba(69, 69, 69, 0.75);
+}
+
 /*
     Footer coloring.
 */
 .footer {
   background: rgba(69, 69, 69, 0.75);
   color: white;
-  font-family: "Advent Pro";
+  font-family: "Work Sans";
   font-size: 120%;
   font-weight: 400;
   text-align: center;
