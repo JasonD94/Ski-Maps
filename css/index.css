@@ -35,8 +35,8 @@ body {
       The color was found with a Google search for "black color code", and this site was helpful for confirming:
       http://www.rapidtables.com/web/color/RGB_Color.htm
   */
-  background-color: #1a1a1a;
-/*  background-image: url('../img/snowy-night.jpg'); */
+/*  background-color: #1a1a1a;*/
+  background-image: url('../img/background.jpg');
   background-position: center;
   background-repeat: no-repeat;
 
@@ -181,6 +181,18 @@ h1.name {
   font-size: 150%;
   font-weight: 600;
   text-align: center;
+}
+
+/* Adding black outline to text.
+https://stackoverflow.com/questions/4772906/css-is-it-possible-to-add-a-black-outline-around-each-character-in-text/4772914#4772914 */
+p {
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+h1 {
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .highlight_centered_small {
@@ -340,6 +352,47 @@ h1.name {
     }
 }
 
+
+/*  Tweak Nav Bar collapse level
+    URL: https://stackoverflow.com/questions/19827605/change-bootstrap-navbar-collapse-breakpoint-without-using-less
+*/
+@media (max-width: 1010px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+}
+
 /*
     Transparent Navbar.
     From StackOverFlow.
@@ -353,17 +406,18 @@ h1.name {
 */
 .navbar {
   background: rgba(69, 69, 69, 0.75);
+  font-weight: 600;
 }
 
 /*
     Footer coloring.
 */
 .footer {
-  background: rgba(69, 69, 69, 0.95);
+  background: rgba(69, 69, 69, 0.75);
   color: white;
   font-family: "Advent Pro";
   font-size: 120%;
-  font-weight: 100;
+  font-weight: 400;
   text-align: center;
   text-decoration-color: white;
 }
