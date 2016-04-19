@@ -143,7 +143,9 @@
 <!--   <script type="text/javascript" src="js/map_rollover.js"></script> -->
   <!--  Make the maps resizable, using Image Map Resize.  -->
   <script>
-    $('img[usemap]').rwdImageMaps();
+    $(document).ready(function() {
+      $('img[usemap]').rwdImageMaps();
+    });
 
     // $(document).ready(function() {
     //     $('map').imageMapResize();
