@@ -12,15 +12,6 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-  <!-- Load the header/footer when the page is ready. -->
-  <script src="js/load_navbar.js"></script>
-
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
@@ -44,16 +35,28 @@
   <!-- CSS file, used by all the web pages for consistency. -->
   <link rel="stylesheet" type="text/css" href="css/index.css"/>
 
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
   <!-- Custom favicon -->
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
   <title>Bretton Woods</title>
 </head>
 
-<body onload="load_navbar()">
-  <!--  Navbar div. See html/navbar.html for that code. It gets loaded into this
-        div by the JS at the bottom of this page. -->
+<body>
+  <!--  Navbar div. See html/navbar.html for that code. -->
   <div id="NavBarHeader"></div>
+
+  <!-- SPEED UP NAVBAR LOADING
+  https://stackoverflow.com/questions/26635111/make-jquery-load-happen-before-html-load
+   -->
+  <script>
+    $("#NavBarHeader").load("html/navbar.html");
+  </script>
 
   <div class="row">
     <div class="col-md-1"></div>
@@ -64,8 +67,6 @@
         <!-- To be modified for Bretton Woods. -->
         <button class="btn btn-default" type="button" onclick="color_yellow()">Change highlighting to GREEN</button>
         <button class="btn btn-default" type="button" onclick="color_red()">Change highlighting to RED</button>
-<!--         <button type="button" onclick="color_list()">Open / Closed Trail Test
-        (using real, cached data)</button> -->
         <br/><br/>
       </div>
     </div>
@@ -106,9 +107,13 @@
     <div class="col-md-1"></div>
   </div>
 
-  <!--  This div will have the footer (html/footer.html) loaded into it
-        by the JS at the bottom of the page. -->
+  <!--  This div will have the footer (html/footer.html) -->
   <div id="TheFooter"></div>
+
+  <!-- Load Footer -->
+  <script>
+    $("#TheFooter").load("html/footer.html");
+  </script>
 
   <!--
       These are moved to the bottom of the <body> tag to decrease website load time.
@@ -119,7 +124,7 @@
    -->
 
   <!-- Bretton Woods JS File -->
-  <script type="text/javascript" src="js/bretton_woods.js"></script>
+  <script src="js/bretton_woods.js"></script>
 
   <!-- maphilight, used to overlay the map using a GIMP generated Image Map
        This JS file was found on this website: http://davidlynch.org/projects/maphilight/docs/
@@ -132,31 +137,14 @@
        It can also be found on GitHub and is MIT Licensed, like my own code.
        GitHub link: https://github.com/kemayo/maphilight
    -->
-  <script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+  <script src="js/jquery.maphilight.min.js"></script>
+  <script src="js/jquery.rwdImageMaps.min.js"></script>
 
-  <!--  Image Map Resize
-        See this URL for details: https://github.com/davidjbradshaw/image-map-resizer -->
-<!--   <script type="text/javascript" scr="js/imageMapResizer.min.js"></script> -->
-<!--   <script type="text/javascript" src="js/resize.js"></script> -->
-  <script type="text/javascript" src="js/jquery.rwdImageMaps.min.js"></script>
-
-<!--   <script type="text/javascript" src="js/map_rollover.js"></script> -->
   <!--  Make the maps resizable, using Image Map Resize.  -->
   <script>
     $(document).ready(function() {
       $('img[usemap]').rwdImageMaps();
     });
-
-    // $(document).ready(function() {
-    //     $('map').imageMapResize();
-    // });
-
-    // $(window).on('load',function(){
-    //     __init_resize();
-    //    $(window).resize(function(){
-    //           __init_resize();
-    //    });
-    // });
   </script>
 
 </body>
