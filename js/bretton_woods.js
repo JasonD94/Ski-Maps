@@ -60,9 +60,14 @@ $(document).ready(function() {
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
   $('.map').maphilight().parent().addClass('center-map_bw');
   $('img[usemap]').rwdImageMaps();
+
+  // This is a total hack, but if it works, I'm happy.
+  color_yellow();
+  color_red();
 });
 
 // Change all the highlighting to yellow.
+// TODO: CHANGE THIS TO GREEN, WE NO LONGER COLOR YELLOW, ITS GREEN FOR OPEN NOW.
 function color_yellow() {
 
   // This goes through and changes all the maphilight data "fillColor" properties

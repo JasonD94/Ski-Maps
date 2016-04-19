@@ -21,14 +21,15 @@ var closed_color = "A30002";
 
 $(function(){
   $("#ski_area_map").load("maps/cannon_mt.map");
+  $('img[usemap]').rwdImageMaps();
 });
 
 $(document).ready(function() {
   // Get open / closed trails from json file "ski.json"
   // https://stackoverflow.com/questions/15764844/jquery-getjson-save-result-into-variable
-  $.getJSON("json/ski.json", function(data) {
-    ski_data = data;
-  });
+  // $.getJSON("json/ski.json", function(data) {
+  //   ski_data = data;
+  // });
 
   // This is from the maphilight docs, and has been changed for the Ski Trail
   // highlighting to look "better", basically yellowish instead of dark gray.
@@ -58,6 +59,12 @@ $(document).ready(function() {
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
   $('.map').maphilight().parent().addClass('center-map_cmt');
+  $('img[usemap]').rwdImageMaps();
+
+  // This is a total hack, but if it works, I'm happy.
+  color_yellow();
+  color_red();
+
 });
 
 // Change all the highlighting to yellow.
@@ -73,6 +80,7 @@ function color_yellow() {
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
   $('.map').maphilight().parent().addClass('center-map_cmt');
+  $('img[usemap]').rwdImageMaps();
 
   return true;
 }
@@ -89,6 +97,7 @@ function color_red() {
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
   $('.map').maphilight().parent().addClass('center-map_cmt');
+  $('img[usemap]').rwdImageMaps();
 
   return true;
 }
@@ -113,6 +122,7 @@ function bobbys_run() {
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
   $('.map').maphilight().parent().addClass('center-map_cmt');
+  $('img[usemap]').rwdImageMaps();
 
   return true;
 }
@@ -153,7 +163,7 @@ function color_list() {
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
   $('.map').maphilight().parent().addClass('center-map_cmt');
+  $('img[usemap]').rwdImageMaps();
 
   return true;
 }
-
