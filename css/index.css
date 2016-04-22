@@ -47,7 +47,8 @@ body {
       Quick hack to fix scrollbar on home page - wtf, why is this showing up?
       https://stackoverflow.com/questions/3296644/hiding-the-scrollbar-on-an-html-page
   */
-  overflow-x:hidden;
+  /* TO DO: figure out why i had this hidden in the first place. */
+/*  overflow-x:hidden;*/
 
   /*
         This line came off of Stackoverflow. It works very well. See the first answer from Vashishtha Jogi.
