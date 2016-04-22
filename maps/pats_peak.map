@@ -1,3 +1,12 @@
+<!--
+ 		Date Created: 4/21/2016 12PM EST
+    Last Modified: 4/21/2016   7PM EST
+    Created by: Huy Huynh
+
+          This file is the image map for the Pats Peak Map page.
+          It allows the highlighting of the trails to work, by defining regions
+          on the map that can be toggled on and off via JavaScript functions.
+-->
 <map name="map">
 <!-- #$-:Image map file created by GIMP Image Map plug-in -->
 <!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
