@@ -478,3 +478,8 @@ img[usemap] {
   max-width: 100%;
   width: auto;
 }
+
+/*
+Center Navbar Brand.
+https://stackoverflow.com/questions/20024463/bootstrap-3-how-do-i-place-the-brand-in-the-center-of-the-navbar
+*/
