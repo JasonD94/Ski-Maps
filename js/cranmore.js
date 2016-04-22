@@ -1,32 +1,44 @@
 /*
- *  This file is for the Bretton Woods Dynamic Ski Map
+ *  This file is for the Cranmore Ski Map
  *  It will pull in a JSON file and load up the open / closed trails onto
  *  an image displayed using HTML.
  *
  *  File created: 1/28/2016 12:30PM EST
- *   Last edited: 1/28/2016 12:30PM EST
+ *   Last edited: 4/21/2016 11:00PM EST
  *    Created by: Jason Downing
  *
  */
-/*
 var ski_data;
 
+/*
+    Global color variables
+    Red   = CLOSED
+    Green = OPEN
+*/
+var open_color = "006600";
+var closed_color = "A30002";
+
 $(function(){
-  $("#ski_area_map").load("maps/Waterville.map");
+  $("#ski_area_map").load("maps/cranmore_mt.map");
+  $('img[usemap]').rwdImageMaps();
+
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map_cmt');
 });
 
 $(document).ready(function() {
   // Get open / closed trails from json file "ski.json"
   // https://stackoverflow.com/questions/15764844/jquery-getjson-save-result-into-variable
-  $.getJSON("json/ski.json", function(data) {
-    ski_data = data;
-  });
+  // $.getJSON("json/ski.json", function(data) {
+  //   ski_data = data;
+  // });
 
   // This is from the maphilight docs, and has been changed for the Ski Trail
   // highlighting to look "better", basically yellowish instead of dark gray.
   $.fn.maphilight.defaults = {
     fill: true,
-    fillColor: 'A30002',
+    fillColor: closed_color,
     fillOpacity: 0.5,
     stroke: false,
     strokeColor: '000000',
@@ -47,7 +59,15 @@ $(document).ready(function() {
     shadowFrom: false
   }
 
-  $('.map').maphilight();
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map_cmt');
+  $('img[usemap]').rwdImageMaps();
+
+  // This is a total hack, but if it works, I'm happy.
+  color_yellow();
+  color_red();
+
 });
 
 // Change all the highlighting to yellow.
@@ -57,10 +77,13 @@ function color_yellow() {
   // to "FFEA1C" which is the same yellow color I set as "default" for all areas.
   $("area").each(function(){
     console.log("CHANGING COLORS to YELLOW");
-    $(this).data('maphilight', {"fillColor":"FFEA1C"});
+    $(this).data('maphilight', {"fillColor": open_color});
   });
 
-  $('.map').maphilight();   // Must call this to update the map!
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map_cmt');
+  $('img[usemap]').rwdImageMaps();
 
   return true;
 }
@@ -71,10 +94,13 @@ function color_red() {
   // to "A30002" which is a red color.
   $("area").each(function(){
     console.log("CHANGING COLORS to RED");
-    $(this).data('maphilight', {"fillColor":"A30002"});
+    $(this).data('maphilight', {"fillColor": closed_color});
   });
 
-  $('.map').maphilight();   // Must call this to update the map!
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map_cmt');
+  $('img[usemap]').rwdImageMaps();
 
   return true;
 }
@@ -92,11 +118,14 @@ function bobbys_run() {
 
     if(compare == $(this).attr("alt")) {
       console.log("Changing color for Bobby's Run");
-      $(this).data('maphilight', {"fillColor":"0000FF"});
+      $(this).data('maphilight', {"fillColor": open_color});
     }
   });
 
-  $('.map').maphilight();   // Must call this to update the map!
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map_cmt');
+  $('img[usemap]').rwdImageMaps();
 
   return true;
 }
@@ -118,7 +147,7 @@ function color_list() {
       var compare = open_trails[trail];
 
       if(compare == $(this).attr("alt")) {
-        $(this).data('maphilight', {"fillColor":"FFEA1C"});
+        $(this).data('maphilight', {"fillColor": open_color});
       }
     }
   });
@@ -129,13 +158,15 @@ function color_list() {
       var compare = closed_trails[trail];
 
       if(compare == $(this).attr("alt")) {
-        $(this).data('maphilight', {"fillColor":"A30002"});
+        $(this).data('maphilight', {"fillColor": closed_color});
       }
     }
   });
 
-  $('.map').maphilight();   // Must call this to update the map!
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map_cmt');
+  $('img[usemap]').rwdImageMaps();
 
   return true;
 }
-*/
