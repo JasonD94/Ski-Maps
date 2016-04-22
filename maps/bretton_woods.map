@@ -7,15 +7,7 @@
           It allows the highlighting of the trails to work, by defining regions
           on the map that can be toggled on and off via JavaScript functions.
 -->
-<!--  UNCOMMENT THE LINE BELOW TO EDIT THE MAP IN GIMP OR WHATEVER! -->
-<!-- <img src="Untitled" width="3000" height="2003" border="0" usemap="#map" /> -->
-
 <map name="map">
-<!-- #$-:Image map file created by GIMP Image Map plug-in -->
-<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
-<!-- #$-:Please do not edit lines starting with "#$" -->
-<!-- #$VERSION:2.3 -->
-<!-- #$AUTHOR:Brendan  -->
 <area shape="poly" coords="1252,285,1264,287,1376,354,1360,382,1333,353,1298,331,1263,314,1236,304" alt="High Ridge" href="#highridge" />
 <area shape="poly" coords="1278,322,1273,328,1267,338,1256,345,1246,352,1230,364,1217,370,1204,371,1187,372,1175,372,1192,357,1203,360,1222,360,1231,355,1239,350,1247,341,1254,334,1260,326,1262,321,1264,315" alt="Upper Chute" href="#upperchute" />
 <area shape="poly" coords="1208,319,1195,345,1204,338,1214,330,1224,324,1234,313,1238,308,1231,302" alt="Firetower" href="#firetower" />
