@@ -63,14 +63,9 @@
     <div class="col-md-10">
 
       <div class="center_text_images">
-        <p class="red">THIS MAP IS UNDER CONSTRUCTION.</p>
-        <p class="red">THE BUTTONS DO NOTHING AT THE MOMENT.</p>
-      </div>
-
-      <div class="center_text_images">
         <!-- Buttons for demoing the jQuery Maphilight -->
         <!-- To be modified for Bretton Woods. -->
-        <button class="btn btn-default" type="button" onclick="color_yellow()">Change highlighting to YELLOW</button>
+        <button class="btn btn-default" type="button" onclick="color_yellow()">Change highlighting to GREEN</button>
         <button class="btn btn-default" type="button" onclick="color_red()">Change highlighting to RED</button>
         <br/><br/>
       </div>
@@ -126,9 +121,17 @@
        GitHub link: https://github.com/kemayo/maphilight
    -->
   <script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+  <script type="text/javascript" src="js/jquery.rwdImageMaps.min.js"></script>
 
   <!-- Loon JS File -->
   <script type="text/javascript" src="js/loon.js"></script>
+
+  <!--  Make the maps resizable, using Image Map Resize.  -->
+  <script>
+    $(document).ready(function(e) {
+      $('img[usemap]').rwdImageMaps();
+    });
+  </script>
 
 </body>
 </html>

@@ -19,11 +19,6 @@ var ski_data;
 var open_color = "006600";
 var closed_color = "A30002";
 
-$(function(){
-  $("#ski_area_map").load("maps/cannon_mt.map");
-  $('img[usemap]').rwdImageMaps();
-});
-
 $(document).ready(function() {
   // Get open / closed trails from json file "ski.json"
   // https://stackoverflow.com/questions/15764844/jquery-getjson-save-result-into-variable

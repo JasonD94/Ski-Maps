@@ -53,15 +53,12 @@ $(document).ready(function() {
 
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
-  $('.map').maphilight().parent().addClass('center-map_bw');
   $('img[usemap]').rwdImageMaps();
+  $('.map').maphilight().parent().addClass('center-map_bw');
 
   // This is a total hack, but if it works, I'm happy.
   color_yellow();
   color_red();
-  color_yellow();
-  color_red();
-  color_yellow();
 });
 
 // Change all the highlighting to yellow.
@@ -77,8 +74,8 @@ function color_yellow() {
 
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
-  $('.map').maphilight().parent().addClass('center-map_bw');
   $('img[usemap]').rwdImageMaps();
+  $('.map').maphilight().parent().addClass('center-map_bw');
   return true;
 }
 
@@ -93,8 +90,8 @@ function color_red() {
 
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
-  $('.map').maphilight().parent().addClass('center-map_bw');
   $('img[usemap]').rwdImageMaps();
+  $('.map').maphilight().parent().addClass('center-map_bw');
 
   return true;
 }
