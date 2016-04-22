@@ -298,6 +298,12 @@ h1 {
   font-weight: 300;
 }
 
+/* WARNING RED */
+.red {
+  color: #F9651F;
+  font-weight: bold;
+}
+
 .text_centered {
   color: white;
   font-family: "Work Sans";

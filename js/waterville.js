@@ -454,7 +454,7 @@ var apr15_json = {
 
 
 $(function(){
-  $("#ski_area_map").load("maps/Waterville.map");
+  $("#ski_area_map").load("maps/waterville.map");
 });
 
 $(document).ready(function() {
