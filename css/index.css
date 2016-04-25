@@ -182,7 +182,7 @@ h1.name {
 .highlight_centered {
 /*  background-color: black;*/
   color: white;
-  /*font-family: "Work Sans";*/
+  font-family: "Ubuntu";
   font-size: 150%;
   font-weight: 600;
   text-align: center;
@@ -190,6 +190,7 @@ h1.name {
 
 .color_links {
   color: white;
+  font-family: "Ubuntu";
   font-size: 100%;
   font-weight: 600;
   text-decoration: underline;
@@ -437,7 +438,7 @@ h1 {
 .footer {
   background: rgba(69, 69, 69, 0.75);
   color: white;
-  font-family: "Work Sans";
+  font-family: "Ubuntu";
   font-size: 120%;
   font-weight: 400;
   text-align: center;
