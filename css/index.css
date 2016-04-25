@@ -197,7 +197,7 @@ h1.name {
 }
 
 .color_links_logo {
-  color: #0297ec;
+  color: #3333ff;
   font-family: "Ubuntu";
   font-size: 100%;
   font-weight: 600;
@@ -302,8 +302,8 @@ h1 {
 
 /* For the "About" on the About Page. */
 .about_ski {
-  color:  #3333ff;
-  font-family: "Work Sans";
+  color: #0297ec;
+  font-family: "Ubuntu";
   font-size: 300%;
   font-weight: 300;
 }
