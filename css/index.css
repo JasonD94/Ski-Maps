@@ -196,6 +196,14 @@ h1.name {
   text-decoration: underline;
 }
 
+.color_links_logo {
+  color: #0297ec;
+  font-family: "Ubuntu";
+  font-size: 100%;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 /* Adding black outline to text.
 https://stackoverflow.com/questions/4772906/css-is-it-possible-to-add-a-black-outline-around-each-character-in-text/4772914#4772914 */
 p {
