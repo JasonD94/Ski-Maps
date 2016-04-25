@@ -23,20 +23,10 @@ var closed_color = "A30002";
 // This is a bad hack for the demo. In the future this won't be here.
 var nov15_json = {
   "waterville_closed": [
-    "Exhibition Poma",
-    "Northside Double Chair",
-    "Sunnyside Triple Chair",
-    "World Cup T-Bar",
-    "World Cup Triple Chair",
     "Boneyard",
     "Lower Bobby's Run",
     "Psyched ",
     "Closed",
-    "High Country Double Chair",
-    "White Peak Express Quad",
-    "Valley Run Quad ",
-    "Pasture J-Bar",
-    "Lower Meadows Double Chair",
     "Kinderpark Lift**For lessons only, closed to the public.\n",
     "The Pasture",
     "Baseway",
@@ -96,11 +86,7 @@ var nov15_json = {
 
 var dec15_json = {
   "waterville_closed": [
-    "Northside Double Chair",
-    "Sunnyside Triple Chair",
-    "World Cup Triple Chair",
     "Boneyard",
-    "Lower Bobby's Run",
     "Psyched ",
     "Kinderpark Lift**For lessons only, closed to the public.\n",
     "Leroy's Loop",
@@ -129,11 +115,7 @@ var dec15_json = {
     "No Grit",
     "Oblivion",
     "Exhibition Poma",
-    "White Peak Express Quad",
-    "Valley Run Quad ",
     "Pasture J-Bar",
-    "World Cup T-Bar",
-    "Lower Meadows Double Chair",
     "The Pasture",
     "Baseway",
     "Kinder Park",
@@ -155,7 +137,6 @@ var dec15_json = {
     "Lower Sel's Choice",
     "Psyched",
     "Sel's Choice",
-    "Tommy's World Cup Run",
     "Utter Abandon",
     "Exhibition",
     "WV Progression Park",
@@ -166,9 +147,6 @@ var dec15_json = {
 
 var jan15_json = {
     "waterville_closed": [
-      "Northside Double Chair",
-      "Sunnyside Triple Chair",
-      "World Cup Triple Chair",
       "Boneyard",
       "Lower Bobby's Run",
       "Psyched ",
@@ -181,13 +159,7 @@ var jan15_json = {
       "Ruthies Run"
     ],
     "waterville_open": [
-      "High Country Double Chair",
       "Exhibition Poma",
-      "White Peak Express Quad",
-      "Valley Run Quad ",
-      "Pasture J-Bar",
-      "World Cup T-Bar",
-      "Lower Meadows Double Chair",
       "The Pasture",
       "Baseway",
       "Kinder Park",
@@ -225,7 +197,6 @@ var jan15_json = {
       "Psyched",
       "Sel's Choice",
       "The Chute",
-      "Tommy's World Cup Run",
       "True Grit",
       "Utter Abandon",
       "Exhibition",
@@ -239,94 +210,70 @@ var feb15_json = {
     "waterville_closed": [
     ],
     "waterville_open": [
-      "Exhibition Poma",
-      "Northside Double Chair",
-      "Sunnyside Triple Chair",
-      "World Cup T-Bar",
-      "World Cup Triple Chair",
-      "Boneyard",
-      "Lower Bobby's Run",
-      "Psyched ",
-      "Closed",
-      "High Country Double Chair",
-      "White Peak Express Quad",
-      "Valley Run Quad ",
-      "Pasture J-Bar",
-      "Lower Meadows Double Chair",
-      "Kinderpark Lift**For lessons only, closed to the public.\n",
-      "The Pasture",
-      "Baseway",
-      "Kinder Park",
-      "Leroy's Loop",
-      "Revelation",
-      "Stemtation",
-      "Valley Run",
-      "Main Street",
+      "Sun Run",
+      "Ciao",
+      "Tree Line",
       "Ruthies Run",
       "Scramble",
-      "Lower Stillness",
-      "Rock Island",
-      "Stillness - FT",
-      "And Tyler Too",
-      "Bail Out",
-      "Grimes Way",
-      "Lower Periphery",
-      "Lower Tippecanoe",
-      "Lower White Caps - FT",
-      "No Grit",
-      "Oblivion",
-      "Old Tecumseh",
-      "Palmers Way",
-      "Periphery",
-      "Higher Ground",
-      "Sidewinder",
-      "Siegel Street",
-      "Sun Run",
-      "Tangent",
-      "Terrys Trail",
-      "Tippecanoe",
       "Tree Line",
-      "Upper Bobbys",
-      "Upper Valley Run",
-      "White Caps",
-      "Psyched Out",
-      "South Street",
-      "Ciao",
-      "Gema",
-      "Lower Sel's Choice",
-      "Psyched",
-      "Sel's Choice",
-      "The Chute",
-      "Tommy's World Cup Run",
+      "Main Street",
       "True Grit",
-      "Utter Abandon",
-      "Exhibition",
-      "WV Progression Park",
-      "Exhibition",
+      "Gema",
+      "Oblivion",
+      "Palmers Way",
+      "Bail Out",
+      "Upper Bobbys",
+      "Lower Bobby's Run",
+      "Psyched Out",
+      "White Caps",
+      "Terrys Trail",
+      "And Tyler Too",
+      "Tippecanoe",
+      "Tangent",
+      "Sidewinder",
+      "Grimes Way",
+      "Periphery",
+      "Lower Tippecanoe",
+      "Boneyard",
+      "Siegel Street",
+      "Old Tecumseh",
+      "Lower Periphery - FT",
+      "Sel's Choice",
+      "Lower Sel's Choice",
+      "Tommy's World Cup Run - FT",
+      "The Chute",
+      "Psyched ",
+      "Utter Abandon - FT",
+      "Lower White Caps - FT",
+      "Mini Pipe",
+      "Exhibition - FT",
+      "The Pasture",
+      "Kinderpark Lift**For lessons only, closed to the public.\n",
+      "Upper Valley Run",
+      "Rock Island",
+      "Valley Run",
       "South Street",
-      "Open",
-      "Lower Periphery - FT"
+      "Stillness - FT",
+      "Lower Stillness",
+      "No Grit",
+      "Leroy's Loop",
+      "Revelation",
+      "Stemtation - FT",
+      "Baseway",
+      "Kinderpark Lift**For lessons only, closed to the public.\n",
+      "Exhibition"
     ]
 };
 
 var mar15_json = {
     "waterville_closed": [
       "Exhibition Poma",
-      "Northside Double Chair",
-      "Sunnyside Triple Chair",
-      "World Cup T-Bar",
-      "World Cup Triple Chair",
       "Boneyard",
       "Lower Bobby's Run",
       "Psyched ",
       "Closed"
     ],
     "waterville_open": [
-      "High Country Double Chair",
-      "White Peak Express Quad",
-      "Valley Run Quad ",
-      "Pasture J-Bar",
-      "Lower Meadows Double Chair",
       "Kinderpark Lift**For lessons only, closed to the public.\n",
       "The Pasture",
       "Baseway",
@@ -384,9 +331,6 @@ var mar15_json = {
 
 var apr15_json = {
     "waterville_closed": [
-      "Northside Double Chair",
-      "Sunnyside Triple Chair",
-      "World Cup Triple Chair",
       "Exhibition Poma",
       "Upper Bobbys",
       "Upper Valley Run",
@@ -411,11 +355,6 @@ var apr15_json = {
       "Tangent",
     ],
     "waterville_open": [
-      "White Peak Express Quad",
-      "Valley Run Quad ",
-      "Pasture J-Bar",
-      "World Cup T-Bar",
-      "Lower Meadows Double Chair",
       "Boneyard",
       "Lower Bobby's Run",
       "Psyched ",
@@ -496,13 +435,18 @@ $(document).ready(function() {
 
 // Change all the highlighting to yellow.
 function color_yellow() {
+  var trails_on = [];
 
   // This goes through and changes all the maphilight data "fillColor" properties
   // to "006600" which is the same yellow color I set as "default" for all areas.
   $("area").each(function(){
     console.log("CHANGING COLORS to YELLOW");
     $(this).data('maphilight', {"fillColor":open_color});
+    trails_on.push($(this).attr("alt"));
   });
+
+  // All trails
+  console.log(trails_on);
 
   // Must call this to update the map!
   // Center the map using this helpful SO post
