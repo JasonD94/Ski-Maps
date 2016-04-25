@@ -472,6 +472,24 @@ h1 {
   margin-bottom: 20px;   /* originally -50px */
 }
 
+/*
+    Center map for Pats Peak
+*/
+.center-map_pats {
+  margin: 0 auto;
+  margin-top: 0px;      /* originally -70px */
+  margin-bottom: 0px;   /* originally -50px */
+}
+
+/*
+    Center map for Loon
+*/
+.center-map_loon {
+  margin: 0 auto;
+  margin-top: 0px;      /* originally -70px */
+  margin-bottom: 0px;   /* originally -50px */
+}
+
 /* TESTING */
 img[usemap] {
   border: none;
