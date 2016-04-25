@@ -59,7 +59,7 @@ body {
   padding: 0px;
   height: 100%;
   width: 100%;
-  font-family: "Work Sans";
+  font-family: "Ubuntu";
 }
 
 /*
@@ -125,7 +125,7 @@ ul {
 
 .center_text {
   color: white;
-  font-family: "Work Sans";
+  font-family: "Ubuntu";
   font-size: 200%;
   font-weight: 900;
   text-align: center;
@@ -139,7 +139,7 @@ ul {
 
 .center_text_small {
   color: white;
-  font-family: "Work Sans";
+  font-family: "Ubuntu";
   font-size: 120%;
   font-weight: 900;
   text-align: center;
@@ -219,7 +219,7 @@ h1 {
 .highlight_centered_small {
   background-color: black;
   color: white;
-  font-family: "Work Sans";
+  font-family: "Ubuntu";
   font-size: 100%;
   font-weight: 100;
   text-align: center;
@@ -228,7 +228,7 @@ h1 {
 .highlight_centered_margins {
   background-color: black;
   color: white;
-  font-family: "Work Sans";
+  font-family: "Ubuntu";
   font-size: 200%;
   font-weight: 900;
   margin: 10px;
@@ -238,7 +238,7 @@ h1 {
 .highlight_left_aligned {
   background-color: black;
   color: white;
-  font-family: "Work Sans";
+  font-family: "Ubuntu";
   font-size: 200%;
   font-weight: 900;
   text-align: left;
@@ -247,7 +247,7 @@ h1 {
 .highlight_right_aligned {
   background-color: black;
   color: white;
-  font-family: "Work Sans";
+  font-family: "Ubuntu";
   font-size: 200%;
   font-weight: 900;
   margin-right: -20px;
@@ -263,7 +263,7 @@ h1 {
 .highlight_text_underline_centered {
   background-color: black;
   color: white;
-  font-family: "Work Sans";
+  font-family: "Ubuntu";
   font-size: 200%;
   font-weight: 900;
   text-align: center;
@@ -274,21 +274,21 @@ h1 {
 .left_align {
   color: white;
   text-align: left;
-  font-family: "Work Sans";
+  font-family: "Ubuntu";
   font-size: 200%;
 }
 
 .right_align {
   color: white;
   text-align: left;
-  font-family: "Work Sans";
+  font-family: "Ubuntu";
   font-size: 200%;
 }
 
 .white_text {
   background-color: black;
   color: white;
-  font-family: "Work Sans";
+  font-family: "Ubuntu";
   font-size: 200%;
 }
 
@@ -316,7 +316,7 @@ h1 {
 
 .text_centered {
   color: white;
-  font-family: "Work Sans";
+  font-family: "Ubuntu";
   font-size: 150%;
   font-weight: 100;
   text-align: center;
