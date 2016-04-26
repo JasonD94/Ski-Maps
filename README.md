@@ -25,7 +25,7 @@ On the front end, we're using
 [jQuery Maphilight](https://github.com/kemayo/maphilight),
 and [jQuery RWD Image Maps]( https://github.com/stowball/jQuery-rwdImageMaps).
 
-On the back end we're planning on just using
+On the back end we're just using
 [Python](https://www.python.org/),
 along with
 [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/)
