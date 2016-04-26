@@ -12,7 +12,7 @@ The site will allow users to view the current conditions for the following Ski R
 - Waterville Valley
 
 ## URLs
-A demo of client side programming may be found at the following URL: [downing.io/Ski-Maps](http://downing.io/Ski-Maps/)
+Ski Maps can be found at the following URL: [downing.io/Ski-Maps](http://downing.io/Ski-Maps/)
 
 [Google Docs - Final Presentation](https://docs.google.com/presentation/d/1sT4nOpsitNVVuL6sX4sSmVNYfY83MEFnV0rHZrGgIs8/edit?usp=sharing)
 
