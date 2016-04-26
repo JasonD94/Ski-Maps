@@ -18,7 +18,6 @@ var ski_data;
 var open_color = "006600";
 var closed_color = "A30002";
 
-
 // JSON for pats.
 var nov15_json = {
   "waterville_closed": [
@@ -237,24 +236,12 @@ var apr15_json = {
     ]
 };
 
-$(function(){
-  // $("#ski_area_map").load("maps/pats_peak.map");
-  $('img[usemap]').rwdImageMaps();
-
-  // Center the map using this helpful SO post
-  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
-  $('.map').maphilight().parent().addClass('center-map_pats');
-});
-
 $(document).ready(function() {
-  // Get open / closed trails from json file "ski.json"
-  // https://stackoverflow.com/questions/15764844/jquery-getjson-save-result-into-variable
-  // $.getJSON("json/ski.json", function(data) {
-  //   ski_data = data;
-  // });
-
-  // This is from the maphilight docs, and has been changed for the Ski Trail
-  // highlighting to look "better", basically yellowish instead of dark gray.
+  /*  This is from the maphilight docs, and has been modified to fix some bugs with
+      the highlighting.
+      The alwaysOn and neverOn attributes have been modified to fix issues on the first
+      page load. They are noted below in comments.
+  */
   $.fn.maphilight.defaults = {
     fill: true,
     fillColor: closed_color,
@@ -264,8 +251,8 @@ $(document).ready(function() {
     strokeOpacity: 1,
     strokeWidth: 1,
     fade: false,
-    alwaysOn: true,
-    neverOn: false,
+    alwaysOn: false,        // This is set to "False" on page load to prevent the highlighting from showing up messed up.
+    neverOn: true,          // This is set to "True" on page load so no highlighting shows up at all until a button is clicked.
     groupBy: false,
     wrapClass: true,
     shadow: false,
@@ -286,7 +273,6 @@ $(document).ready(function() {
   // This is a total hack, but if it works, I'm happy.
   color_yellow();
   color_red();
-
 });
 
 // Change all the highlighting to yellow.

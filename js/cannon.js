@@ -9,8 +9,6 @@
  *
  */
 
-var ski_data;
-
 /*
     Global color variables
     Red   = CLOSED
@@ -19,13 +17,62 @@ var ski_data;
 var open_color = "006600";
 var closed_color = "A30002";
 
-$(document).ready(function() {
-  // Get open / closed trails from json file "ski.json"
-  // https://stackoverflow.com/questions/15764844/jquery-getjson-save-result-into-variable
-  // $.getJSON("json/ski.json", function(data) {
-  //   ski_data = data;
-  // });
+// JSON data for Cannon
+var nov15_json = {
+  "waterville_closed": [
 
+  ],
+  "waterville_open": [
+
+  ]
+};
+
+var dec15_json = {
+  "waterville_closed": [
+
+  ],
+  "waterville_open": [
+
+  ]
+};
+
+var jan15_json = {
+  "waterville_closed": [
+
+  ],
+  "waterville_open": [
+
+  ]
+};
+
+var feb15_json = {
+  "waterville_closed": [
+
+  ],
+  "waterville_open": [
+
+  ]
+};
+
+var mar15_json = {
+  "waterville_closed": [
+
+  ],
+  "waterville_open": [
+
+  ]
+};
+
+var apr15_json = {
+  "waterville_closed": [
+
+  ],
+  "waterville_open": [
+
+  ]
+};
+
+$(document).ready(function() {
   // This is from the maphilight docs, and has been changed for the Ski Trail
   // highlighting to look "better", basically yellowish instead of dark gray.
   $.fn.maphilight.defaults = {
@@ -64,13 +111,18 @@ $(document).ready(function() {
 
 // Change all the highlighting to yellow.
 function color_yellow() {
+  var trails_on = [];
 
   // This goes through and changes all the maphilight data "fillColor" properties
   // to "FFEA1C" which is the same yellow color I set as "default" for all areas.
   $("area").each(function(){
     console.log("CHANGING COLORS to YELLOW");
     $(this).data('maphilight', {"fillColor": open_color});
+    trails_on.push($(this).attr("alt"));
   });
+
+  // All trails
+  console.log(trails_on);
 
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center

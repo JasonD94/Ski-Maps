@@ -505,7 +505,6 @@ function color_list() {
   return true;
 }
 
-
 // Update map function.
 // Given a JSON file name, it will update the waterville valley page.
 function update_map(filename) {
