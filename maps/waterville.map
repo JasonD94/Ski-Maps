@@ -7,15 +7,7 @@
           It allows the highlighting of the trails to work, by defining regions
           on the map that can be toggled on and off via JavaScript functions.
 -->
-<!--  UNCOMMENT THE LINE BELOW TO EDIT THE MAP IN GIMP OR WHATEVER! -->
-<!--<img src="Untitled" width="800" height="1037" border="0" usemap="#map" />-->
-
 <map name="map">
-<!-- #$-:Image map file created by GIMP Image Map plug-in -->
-<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
-<!-- #$-:Please do not edit lines starting with "#$" -->
-<!-- #$VERSION:2.3 -->
-<!-- #$AUTHOR:Jason Downing  -->
 <area shape="poly" coords="391,391,410,380,434,369,503,357,508,366,461,376,432,387,403,402,396,430,375,421,368,398,378,392" alt="Sun Run" href="#sunrun" />
 <area shape="poly" coords="320,427,270,460,238,499,215,531,230,558,249,540,273,505,298,465,331,446,373,417,367,398" alt="Ciao" href="#ciao" />
 <area shape="poly" coords="655,195,644,200,644,218,651,218,618,280,610,274,629,239,624,225,630,200,646,189,650,190" alt="Tree Line" href="#treeline" />

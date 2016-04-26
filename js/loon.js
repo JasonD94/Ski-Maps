@@ -207,9 +207,8 @@ var apr15_json = {
     ]
 };
 
-
 $(function(){
-  $("#ski_area_map").load("maps/loon.map");
+  // $("#ski_area_map").load("maps/loon.map");
   $('img[usemap]').rwdImageMaps();
 
   // Center the map using this helpful SO post

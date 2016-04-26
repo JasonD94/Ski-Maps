@@ -393,7 +393,7 @@ var apr15_json = {
 
 
 $(function(){
-  $("#ski_area_map").load("maps/waterville.map");
+  // $("#ski_area_map").load("maps/waterville.map");
 });
 
 $(document).ready(function() {
@@ -431,6 +431,12 @@ $(document).ready(function() {
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
   $('.map').maphilight().parent().addClass('center-map');
+
+  $('img[usemap]').rwdImageMaps();
+
+  // This is a total hack, but if it works, I'm happy.
+  color_yellow();
+  color_red();
 });
 
 // Change all the highlighting to yellow.

@@ -238,7 +238,7 @@ var apr15_json = {
 };
 
 $(function(){
-  $("#ski_area_map").load("maps/pats_peak.map");
+  // $("#ski_area_map").load("maps/pats_peak.map");
   $('img[usemap]').rwdImageMaps();
 
   // Center the map using this helpful SO post

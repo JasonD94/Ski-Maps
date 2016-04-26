@@ -147,7 +147,7 @@ ul {
 
 h1.name {
   color: blue;
-  font-family: "Chivo";
+  font-family: "Ubuntu";
   font-size: 500%;
   font-weight: 700;
   text-align: center;
@@ -166,14 +166,14 @@ h1.name {
 .highlight_red {
   background-color: black;
   color: red;
-  font-family: "Chivo";
+  font-family: "Ubuntu";
 }
 
 /* Assignment 7 title */
 .highlight_gold {
   background-color: #e5c100;    /* Gold color */
   color: #990000;               /* Dark red color */
-  font-family: "Chivo";
+  font-family: "Ubuntu";
   font-size: 50%;
   padding-left: 5px;
   padding-right: 5px;
@@ -295,7 +295,7 @@ h1 {
 /* This is to style the "Ski Maps" logo text. */
 .ski_logo {
   color: white;
-  font-family: "Chivo";
+  font-family: "Ubuntu";
   font-size: 300%;
   font-weight: 300;
 }

@@ -8,11 +8,6 @@
           on the map that can be toggled on and off via JavaScript functions.
 -->
 <map name="map">
-<!-- #$-:Image map file created by GIMP Image Map plug-in -->
-<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
-<!-- #$-:Please do not edit lines starting with "#$" -->
-<!-- #$VERSION:2.3 -->
-<!-- #$AUTHOR:Huy  -->
 <area shape="poly" coords="615,133,599,137,455,184,376,217,349,245,330,275,295,311,312,315,345,278,365,269,366,247,387,224,456,191,583,157,616,141" alt="#Backdraft"  nohref="nohref" />
 <area shape="poly" coords="618,158,618,149,570,173,453,207,368,262,351,293,315,319,332,325,358,302,367,322,382,314,379,291,389,262,415,242,455,218,506,202,576,177" alt="#Breeze"  nohref="nohref" />
 <area shape="poly" coords="594,169,541,193,467,233,420,263,374,333,376,350,381,358,397,382,404,401,434,413,416,384,398,325,444,265,520,222,556,200,593,178" alt="#East_Wind"  nohref="nohref" />

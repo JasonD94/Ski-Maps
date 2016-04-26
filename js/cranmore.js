@@ -19,7 +19,7 @@ var open_color = "006600";
 var closed_color = "A30002";
 
 $(function(){
-  $("#ski_area_map").load("maps/cranmore_mt.map");
+  // $("#ski_area_map").load("maps/cranmore_mt.map");
   $('img[usemap]').rwdImageMaps();
 
   // Center the map using this helpful SO post
