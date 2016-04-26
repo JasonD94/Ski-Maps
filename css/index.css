@@ -495,8 +495,8 @@ h1 {
 */
 .center-map_loon {
   margin: 0 auto;
-  margin-top: 0px;      /* originally -70px */
-  margin-bottom: 0px;   /* originally -50px */
+  margin-top: .25em;      /* using em for responsive design. */
+  margin-bottom: 0px;
 }
 
 /*
@@ -504,8 +504,8 @@ h1 {
 */
 .center-map_pats {
   margin: 0 auto;
-  margin-top: 0px;      /* originally -70px */
-  margin-bottom: 0px;   /* originally -50px */
+  margin-top: .25em;      /* using em for responsive design. */
+  margin-bottom: 0px;
 }
 
 /*
