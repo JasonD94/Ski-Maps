@@ -188,6 +188,23 @@ h1.name {
   text-align: center;
 }
 
+/* Trail Keys */
+.trail_green {
+  color: green;
+  font-family: "Ubuntu";
+  font-size: 150%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.trail_red {
+  color: red;
+  font-family: "Ubuntu";
+  font-size: 150%;
+  font-weight: 600;
+  text-align: center;
+}
+
 .color_links {
   color: #3366BB;
   font-family: "Ubuntu";
