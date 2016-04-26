@@ -498,6 +498,18 @@ h1 {
   margin-bottom: 0px;   /* originally -50px */
 }
 
+/*
+    Horizonatally left align and vertically center the navbar image
+    Idea from: https://stackoverflow.com/questions/23400234/centering-brand-logo-in-bootstrap-3-navbar
+*/
+.align_navbar_img {
+    position: absolute;
+    left: 10px;             /* Center vertically */
+    top: 10px;
+    text-align: left;       /* Left align horizontally */
+    margin: auto;
+}
+
 /* TESTING */
 img[usemap] {
   border: none;
