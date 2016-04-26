@@ -28,6 +28,134 @@ var nov15_json = {
     "#haulback",
     "#bearclaw",
     "#exodus",
+    "#upperrumrunner",
+    "#grandjunction",
+    "#middleblacks",
+    "#upperpickedrock",
+    "#flyingfox",
+    "#mikesway",
+    "#loonmountainpark",
+    "#picoon",
+    "#middleblue",
+    "#littlesister",
+    "#lowerbearclaw",
+    "smalltrails",
+    "#coolidge",
+    "#lowerrumrunner",
+    "#scaler",
+    "#boomrun",
+    "#twitcher",
+    "#jobber",
+    "#ripsaw",
+    "#cruiser",
+    "#undercut",
+    "#bosswoods"
+  ],
+  "waterville_open": [
+    "#snubber",
+    "#speakeasy",
+    "#lowerpickrock",
+    "#northstar",
+    "#rampasture",
+    "#blueox"
+  ]
+};
+
+var dec15_json = {
+  "waterville_closed": [
+    "#flume",
+    "#walkingboss",
+    "#brookway",
+    "#sunset",
+    "#haulback",
+    "#bearclaw",
+    "#exodus",
+    "#flyingfox",
+    "#mikesway",
+    "#loonmountainpark",
+    "#picoon",
+    "#middleblue",
+    "#littlesister",
+    "#lowerbearclaw",
+    "smalltrails",
+    "#coolidge",
+    "#lowerrumrunner",
+    "#scaler",
+    "#boomrun",
+    "#twitcher",
+    "#jobber",
+    "#ripsaw",
+    "#cruiser",
+    "#undercut",
+    "#bosswoods"
+  ],
+  "waterville_open": [
+    "#snubber",
+    "#upperrumrunner",
+    "#grandjunction",
+    "#middleblacks",
+    "#upperpickedrock",
+    "#speakeasy",
+    "#lowerpickrock",
+    "#northstar",
+    "#rampasture",
+    "#blueox"
+  ]
+};
+
+var jan15_json = {
+  "waterville_closed": [
+    "#flume",
+    "#walkingboss",
+    "#brookway",
+    "#sunset",
+    "#haulback",
+    "#bearclaw",
+    "#exodus",
+    "#flyingfox",
+    "#mikesway",
+    "smalltrails",
+    "#boomrun",
+    "#twitcher",
+    "#jobber",
+    "#ripsaw",
+    "#cruiser",
+    "#undercut",
+    "#bosswoods"
+  ],
+  "waterville_open": [
+    "#snubber",
+    "#scaler",
+    "#coolidge",
+    "#lowerrumrunner",
+    "#loonmountainpark",
+    "#picoon",
+    "#middleblue",
+    "#littlesister",
+    "#lowerbearclaw",
+    "#upperrumrunner",
+    "#grandjunction",
+    "#middleblacks",
+    "#upperpickedrock",
+    "#speakeasy",
+    "#lowerpickrock",
+    "#northstar",
+    "#rampasture",
+    "#blueox"
+  ]
+};
+
+var feb15_json = {
+  "waterville_closed": [
+  ],
+  "waterville_open": [
+    "#flume",
+    "#walkingboss",
+    "#brookway",
+    "#sunset",
+    "#haulback",
+    "#bearclaw",
+    "#exodus",
     "#speakeasy",
     "#snubber",
     "#upperrumrunner",
@@ -56,154 +184,91 @@ var nov15_json = {
     "#cruiser",
     "#undercut",
     "#bosswoods"
-  ],
-  "waterville_open": [
   ]
-};
-
-var dec15_json = {
-  "waterville_closed": [
-
-  ],
-  "waterville_open": [
-
-  ]
-};
-
-var jan15_json = {
-    "waterville_closed": [
-      "#flume",
-      "#walkingboss",
-      "#brookway",
-      "#sunset",
-      "#haulback",
-      "#bearclaw",
-      "#exodus",
-      "#speakeasy",
-      "#snubber",
-      "#upperrumrunner",
-      "#grandjunction",
-      "#middleblacks",
-      "#upperpickedrock",
-    ],
-    "waterville_open": [
-      "#flyingfox",
-      "#mikesway",
-      "#northstar",
-      "#rampasture",
-      "#blueox",
-      "#lowerpickrock",
-      "#loonmountainpark",
-      "#picoon",
-      "#middleblue",
-      "#littlesister",
-      "#lowerbearclaw",
-      "smalltrails",
-      "#coolidge",
-      "#lowerrumrunner",
-      "#scaler",
-      "#boomrun",
-      "#twitcher",
-      "#jobber",
-      "#ripsaw",
-      "#cruiser",
-      "#undercut",
-      "#bosswoods"
-    ]
-};
-
-var feb15_json = {
-    "waterville_closed": [
-    ],
-    "waterville_open": [
-      "#flume",
-      "#walkingboss",
-      "#brookway",
-      "#sunset",
-      "#haulback",
-      "#bearclaw",
-      "#exodus",
-      "#speakeasy",
-      "#snubber",
-      "#upperrumrunner",
-      "#grandjunction",
-      "#middleblacks",
-      "#upperpickedrock",
-      "#flyingfox",
-      "#mikesway",
-      "#northstar",
-      "#rampasture",
-      "#blueox",
-      "#lowerpickrock",
-      "#loonmountainpark",
-      "#picoon",
-      "#middleblue",
-      "#littlesister",
-      "#lowerbearclaw",
-      "smalltrails",
-      "#coolidge",
-      "#lowerrumrunner",
-      "#scaler",
-      "#boomrun",
-      "#twitcher",
-      "#jobber",
-      "#ripsaw",
-      "#cruiser",
-      "#undercut",
-      "#bosswoods"
-    ]
 };
 
 var mar15_json = {
-    "waterville_closed": [
-
-    ],
-    "waterville_open": [
-
-    ]
+  "waterville_closed": [
+    "#twitcher",
+    "#jobber",
+    "#ripsaw",
+    "#undercut",
+    "#bosswoods"
+  ],
+  "waterville_open": [
+    "#cruiser",
+    "#flume",
+    "#walkingboss",
+    "#brookway",
+    "#sunset",
+    "#haulback",
+    "#bearclaw",
+    "#exodus",
+    "#speakeasy",
+    "#snubber",
+    "#upperrumrunner",
+    "#grandjunction",
+    "#middleblacks",
+    "#upperpickedrock",
+    "#flyingfox",
+    "#mikesway",
+    "#northstar",
+    "#rampasture",
+    "#blueox",
+    "#lowerpickrock",
+    "#loonmountainpark",
+    "#picoon",
+    "#middleblue",
+    "#littlesister",
+    "#lowerbearclaw",
+    "smalltrails",
+    "#coolidge",
+    "#lowerrumrunner",
+    "#scaler",
+    "#boomrun"
+  ]
 };
 
 var apr15_json = {
-    "waterville_closed": [
-      "#flume",
-      "#walkingboss",
-      "#brookway",
-      "#sunset",
-      "#haulback",
-      "#bearclaw",
-      "#exodus",
-      "#speakeasy",
-      "#snubber",
-      "#upperrumrunner",
-      "#grandjunction",
-      "#middleblacks",
-      "#upperpickedrock",
-      "#flyingfox",
-      "#mikesway",
-      "#northstar",
-      "#rampasture",
-      "#blueox",
-      "#lowerpickrock",
-      "#loonmountainpark",
-      "#picoon",
-      "#middleblue",
-      "#littlesister",
-      "#lowerbearclaw",
-      "smalltrails",
-      "#coolidge",
-      "#lowerrumrunner",
-      "#scaler",
-      "#boomrun",
-      "#twitcher",
-      "#jobber",
-      "#ripsaw",
-      "#cruiser",
-      "#undercut",
-      "#bosswoods"
-    ],
-    "waterville_open": [
-
-    ]
+  "waterville_closed": [
+    "#twitcher",
+    "#jobber",
+    "#ripsaw",
+    "#undercut",
+    "#bosswoods",
+    "#walkingboss",
+    "#middleblacks",
+  ],
+  "waterville_open": [
+    "#cruiser",
+    "#flume",
+    "#brookway",
+    "#sunset",
+    "#haulback",
+    "#bearclaw",
+    "#exodus",
+    "#speakeasy",
+    "#snubber",
+    "#upperrumrunner",
+    "#grandjunction",
+    "#upperpickedrock",
+    "#flyingfox",
+    "#mikesway",
+    "#northstar",
+    "#rampasture",
+    "#blueox",
+    "#lowerpickrock",
+    "#loonmountainpark",
+    "#picoon",
+    "#middleblue",
+    "#littlesister",
+    "#lowerbearclaw",
+    "smalltrails",
+    "#coolidge",
+    "#lowerrumrunner",
+    "#scaler",
+    "#boomrun"
+  ]
 };
 
 $(document).ready(function() {
