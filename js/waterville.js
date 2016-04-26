@@ -4,7 +4,7 @@
  *  an image displayed using HTML.
  *
  *  File created: 1/28/2016 12:30PM EST
- *   Last edited: 3/7/2016 12:30PM EST
+ *   Last edited: 4/25/2016 12:30PM EST
  *    Created by: Jason Downing
  *
  */
@@ -19,8 +19,10 @@ var ski_data;
 var open_color = "006600";
 var closed_color = "A30002";
 
-//******************************************************************************
-// This is a bad hack for the demo. In the future this won't be here.
+/******************************************************************************
+    This date has been FAKED to work for the demo.
+    Since the ski season has ended, we had to resort to faked data.
+*/
 var nov15_json = {
   "waterville_closed": [
     "Boneyard",
@@ -391,20 +393,16 @@ var apr15_json = {
     ]
 };
 
-
-$(function(){
-  // $("#ski_area_map").load("maps/waterville.map");
-});
-
+/*
+    This function gets run on page load, and it sets up the defaults for the
+    map highlighting.
+*/
 $(document).ready(function() {
-  // Get open / closed trails from json file "ski.json"
-  // https://stackoverflow.com/questions/15764844/jquery-getjson-save-result-into-variable
-  $.getJSON("json/ski.json", function(data) {
-    ski_data = data;
-  });
-
-  // This is from the maphilight docs, and has been changed for the Ski Trail
-  // highlighting to look "better", basically yellowish instead of dark gray.
+  /*  This is from the maphilight docs, and has been modified to fix some bugs with
+      the highlighting.
+      The alwaysOn and neverOn attributes have been modified to fix issues on the first
+      page load. They are noted below in comments.
+  */
   $.fn.maphilight.defaults = {
     fill: true,
     fillColor: closed_color,
@@ -414,8 +412,8 @@ $(document).ready(function() {
     strokeOpacity: 1,
     strokeWidth: 1,
     fade: false,
-    alwaysOn: true,
-    neverOn: false,
+    alwaysOn: false,        // This is set to "False" on page load to prevent the highlighting from showing up messed up.
+    neverOn: true,          // This is set to "True" on page load so no highlighting shows up at all until a button is clicked.
     groupBy: false,
     wrapClass: true,
     shadow: false,
@@ -434,25 +432,21 @@ $(document).ready(function() {
 
   $('img[usemap]').rwdImageMaps();
 
-  // This is a total hack, but if it works, I'm happy.
+  // This is a total hack in order to fix the highlighting.
+  // Not sure how this works, but calling the color functions seems to make
+  // the highlighting work properly.
   color_yellow();
   color_red();
 });
 
-// Change all the highlighting to yellow.
+// Change all the highlighting to GREEN.
+// This functions name should be changed.
 function color_yellow() {
-  var trails_on = [];
-
   // This goes through and changes all the maphilight data "fillColor" properties
   // to "006600" which is the same yellow color I set as "default" for all areas.
   $("area").each(function(){
-    console.log("CHANGING COLORS to YELLOW");
     $(this).data('maphilight', {"fillColor":open_color});
-    trails_on.push($(this).attr("alt"));
   });
-
-  // All trails
-  console.log(trails_on);
 
   // Must call this to update the map!
   // Center the map using this helpful SO post
@@ -467,33 +461,7 @@ function color_red() {
   // This goes through and changes all the maphilight data "fillColor" properties
   // to "A30002" which is a red color.
   $("area").each(function(){
-    console.log("CHANGING COLORS to RED");
     $(this).data('maphilight', {"fillColor":closed_color});
-  });
-
-  // Must call this to update the map!
-  // Center the map using this helpful SO post
-  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
-  $('.map').maphilight().parent().addClass('center-map');
-
-  return true;
-}
-
-// Change just "lower bobby's run" to blue.
-function bobbys_run() {
-  // This only changes one ID, as a proof of concept for dynamically styling each
-  // trail area.
-  console.log("CHANGING COLORS to BLUE for BOBBYS RUN");
-
-  $("area").each(function(){
-    var compare = "Upper Bobbys";
-
-    //console.log("Trail: " + compare + " attr: " + $(this).attr("alt"));
-
-    if(compare == $(this).attr("alt")) {
-      console.log("Changing color for Bobby's Run");
-      $(this).data('maphilight', {"fillColor":"0000FF"});
-    }
   });
 
   // Must call this to update the map!
@@ -506,14 +474,10 @@ function bobbys_run() {
 
 // Change the highlighting given a list of trails.
 function color_list() {
-  console.log(ski_data);
 
   // List of trails open / closed.
   var open_trails = ski_data.waterville_open;
   var closed_trails = ski_data.waterville_closed;
-
-  console.log("open trails: " + open_trails);
-  console.log("closed trails: " + closed_trails);
 
   // Open Trails
   $("area").each(function(){
@@ -549,41 +513,65 @@ function color_list() {
 // Update map function.
 // Given a JSON file name, it will update the waterville valley page.
 function update_map(filename) {
-    console.log(filename);
+  /*  This is from the maphilight docs, and has been modified to fix some bugs with
+      the highlighting.
+      The alwaysOn and neverOn attributes have been modified to fix issues on the first
+      page load. They are noted below in comments. They get reset to default values here
+      so that the highlighting will work again when a user clicks on one of the date buttons.
+  */
+  $.fn.maphilight.defaults = {
+    fill: true,
+    fillColor: closed_color,
+    fillOpacity: 0.5,
+    stroke: false,
+    strokeColor: '000000',
+    strokeOpacity: 1,
+    strokeWidth: 1,
+    fade: false,
+    alwaysOn: true,       // This gets set to true so that the highlighting will work again.
+    neverOn: false,       // This gets set to false so that the highlighting will show up again.
+    groupBy: false,
+    wrapClass: true,
+    shadow: false,
+    shadowX: 0,
+    shadowY: 0,
+    shadowRadius: 6,
+    shadowColor: '000000',
+    shadowOpacity: 0.8,
+    shadowPosition: 'outside',
+    shadowFrom: false
+  }
 
-    // List of trails open / closed.
-    var open_trails = filename.waterville_open;
-    var closed_trails = filename.waterville_closed;
+  // List of trails open / closed.
+  var open_trails = filename.waterville_open;
+  var closed_trails = filename.waterville_closed;
 
-    console.log("open trails: " + open_trails);
-    console.log("closed trails: " + closed_trails);
+  // Open Trails
+  $("area").each(function(){
+    for (trail in open_trails) {
+      var compare = open_trails[trail];
 
-    // Open Trails
-    $("area").each(function(){
-      for (trail in open_trails) {
-        var compare = open_trails[trail];
-
-        if(compare == $(this).attr("alt")) {
-          $(this).data('maphilight', {"fillColor":open_color});
-        }
+      if(compare == $(this).attr("alt")) {
+        $(this).data('maphilight', {"fillColor":open_color});
       }
-    });
+    }
+  });
 
-    // Closed Trails
-    $("area").each(function(){
-      for (trail in closed_trails) {
-        var compare = closed_trails[trail];
+  // Closed Trails
+  $("area").each(function(){
+    for (trail in closed_trails) {
+      var compare = closed_trails[trail];
 
-        if(compare == $(this).attr("alt")) {
-          $(this).data('maphilight', {"fillColor":closed_color});
-        }
+      if(compare == $(this).attr("alt")) {
+        $(this).data('maphilight', {"fillColor":closed_color});
       }
-    });
+    }
+  });
 
-    // Must call this to update the map!
-    // Center the map using this helpful SO post
-    // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
-    $('.map').maphilight().parent().addClass('center-map');
+  // Must call this to update the map!
+  // Center the map using this helpful SO post
+  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
+  $('.map').maphilight().parent().addClass('center-map');
 }
 
 
@@ -596,13 +584,11 @@ function update_sidebar(filename) {
 
   // Add open trails.
   for(var open in filename.waterville_open) {
-    //console.log("open is: " + filename.waterville_open[open])
     $("#open_trails").append("<div>" + filename.waterville_open[open] + "</div>");
   }
 
   // Add closed trails.
   for(var closed in filename.waterville_closed) {
-    //console.log("closed is: " + filename.waterville_closed[closed])
     $("#closed_trails").append("<div>" + filename.waterville_closed[closed] + "</div>");
   }
 }
