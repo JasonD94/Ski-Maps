@@ -1,6 +1,6 @@
 <!--
        Date Created: 1/26/2016
-      Last Modified: 3/7/2016 2PM EST
+      Last Modified: 4/25/2016 2PM EST
          Created by: Jason Downing
 
       Waterville Valley Demo Map
@@ -62,9 +62,8 @@
   </script>
 
   <div class="row">
-    <div class="col-sm-12 col-md-1 col-lg-3"></div>
-
-    <div class="col-sm-12 col-md-6 col-lg-6 center-map">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
 
       <!--
         Image found at this URL:
@@ -72,19 +71,8 @@
         https://d13fo19pohlmh8.cloudfront.net/media/assets/ac0736961b5b728cdb1a4f5fb63c6352.jpeg
       -->
       <div class="center_text_images">
-        <img class="map" src="img/maps_imgs/waterville_valley.png" width="800" height="1037" border="0" usemap="#map"/>
+        <img class="map center-map" src="img/maps_imgs/waterville_valley.png" width="800" height="1037" border="0" usemap="#map"/>
       </div>
-
-      <!--
-        Image found at this URL:
-        (I claim no ownership of this image)
-        https://d13fo19pohlmh8.cloudfront.net/media/assets/ac0736961b5b728cdb1a4f5fb63c6352.jpeg
-      -->
-<!--       <img class="map center-map"
-      style="display: block; position: relative; padding: 0px;
-      width: 800px; height: 1037px; background-image: url("http://127.0.0.1:8000/img/maps_imgs/waterville_valley.png"); background-size: contain;"
-      src="img/maps_imgs/waterville_valley.png"
-      width="800" height="1037" border="0" usemap="#map"/> -->
 
       <!--
       Generated this image map from GIMP. See this link for info on how to do this:
@@ -95,7 +83,6 @@
       https://stackoverflow.com/questions/17613729/using-maphilight-for-total-beginners
       https://jsfiddle.net/k67gq/6/
       -->
-<!--       <div id="ski_area_map"></div> -->
       <map name="map">
       <area shape="poly" coords="391,391,410,380,434,369,503,357,508,366,461,376,432,387,403,402,396,430,375,421,368,398,378,392" alt="Sun Run" href="#sunrun" />
       <area shape="poly" coords="320,427,270,460,238,499,215,531,230,558,249,540,273,505,298,465,331,446,373,417,367,398" alt="Ciao" href="#ciao" />
@@ -151,13 +138,12 @@
       <area shape="poly" coords="381,742,370,793,388,798,396,744" alt="Exhibition" href="#exhibition" />
       </map>
     </div>
-    <div class="col-sm-12 col-md-1"></div>
+    <div class="col-md-1"></div>
   </div>
 
   <!-- Demo buttons -->
   <div class="row">
-    <div class="col-sm-1 col-md-1"></div>
-
+    <div class="col-md-1"></div>
     <div class="col-md-10">
       <div class="center_text_images">
         <button class="btn btn-default" type="button" onclick="change_day('nov15')">
@@ -217,19 +203,12 @@
   -->
   <script type="text/javascript" src="js/jquery.rwdImageMaps.min.js"></script>
 
-  <!--  Image Map Resize
-        See this URL for details: https://github.com/davidjbradshaw/image-map-resizer -->
-<!--   <script type="text/javascript" src="js/jquery.rwdImageMaps.min.js"></script> -->
-
   <!-- Waterville Valley JS File -->
   <script type="text/javascript" src="js/waterville.js"></script>
 
   <!--  Make the maps resizable, using Image Map Resize.  -->
   <script>
-    $(document).ready(function() {
-      // $('.map').imageMapResize();
-      $('img[usemap]').rwdImageMaps();
-    });
+    $('img[usemap]').rwdImageMaps();
   </script>
 
 </body>

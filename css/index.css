@@ -458,8 +458,8 @@ h1 {
 */
 .center-map {
   margin: 0 auto;
-  margin-top: -70px;      /* originally -70px */
-  margin-bottom: -50px;   /* originally -50px */
+  margin-top: -10em;      /* Using em to fix the map on different resolutions. */
+  margin-bottom: -7em;
 }
 
 /*
