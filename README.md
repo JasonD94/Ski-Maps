@@ -21,6 +21,8 @@ A demo of the full project (with back-end) will be found at the following URL:
 http://aws.downing.io/Dynamic-Ski-Maps/
 (this should end up being a custom domain at some point)
 
+[Google Docs - Final Presentation](https://docs.google.com/presentation/d/1sT4nOpsitNVVuL6sX4sSmVNYfY83MEFnV0rHZrGgIs8/edit?usp=sharing)
+
 ## Powered by JS & Python
 Ski Maps is built using HTML5, along with various CSS / JS libraries.
 
