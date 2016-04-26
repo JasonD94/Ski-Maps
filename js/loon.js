@@ -18,7 +18,6 @@ var ski_data;
 var open_color = "006600";
 var closed_color = "A30002";
 
-
 // JSON for Loon.
 var nov15_json = {
   "waterville_closed": [
@@ -207,24 +206,12 @@ var apr15_json = {
     ]
 };
 
-$(function(){
-  // $("#ski_area_map").load("maps/loon.map");
-  $('img[usemap]').rwdImageMaps();
-
-  // Center the map using this helpful SO post
-  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
-  $('.map').maphilight().parent().addClass('center-map_loon');
-});
-
 $(document).ready(function() {
-  // Get open / closed trails from json file "ski.json"
-  // https://stackoverflow.com/questions/15764844/jquery-getjson-save-result-into-variable
-  // $.getJSON("json/ski.json", function(data) {
-  //   ski_data = data;
-  // });
-
-  // This is from the maphilight docs, and has been changed for the Ski Trail
-  // highlighting to look "better", basically yellowish instead of dark gray.
+  /*  This is from the maphilight docs, and has been modified to fix some bugs with
+      the highlighting.
+      The alwaysOn and neverOn attributes have been modified to fix issues on the first
+      page load. They are noted below in comments.
+  */
   $.fn.maphilight.defaults = {
     fill: true,
     fillColor: closed_color,
@@ -234,8 +221,8 @@ $(document).ready(function() {
     strokeOpacity: 1,
     strokeWidth: 1,
     fade: false,
-    alwaysOn: true,
-    neverOn: false,
+    alwaysOn: false,        // This is set to "False" on page load to prevent the highlighting from showing up messed up.
+    neverOn: true,          // This is set to "True" on page load so no highlighting shows up at all until a button is clicked.
     groupBy: false,
     wrapClass: true,
     shadow: false,
@@ -299,41 +286,41 @@ function color_red() {
   return true;
 }
 
-// Change just "lower bobby's run" to blue.
-function bobbys_run() {
-  // This only changes one ID, as a proof of concept for dynamically styling each
-  // trail area.
-  console.log("CHANGING COLORS to BLUE for BOBBYS RUN");
-
-  $("area").each(function(){
-    var compare = "Upper Bobbys";
-
-    //console.log("Trail: " + compare + " attr: " + $(this).attr("alt"));
-
-    if(compare == $(this).attr("alt")) {
-      console.log("Changing color for Bobby's Run");
-      $(this).data('maphilight', {"fillColor": open_color});
-    }
-  });
-
-  // Center the map using this helpful SO post
-  // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
-  $('.map').maphilight().parent().addClass('center-map_loon');
-  $('img[usemap]').rwdImageMaps();
-
-  return true;
-}
-
-// Change the highlighting given a list of trails.
-function color_list() {
-  console.log(ski_data);
+// Update map function.
+// Given a JSON file name, it will update the waterville valley page.
+function update_map(filename) {
+  /*  This is from the maphilight docs, and has been modified to fix some bugs with
+      the highlighting.
+      The alwaysOn and neverOn attributes have been modified to fix issues on the first
+      page load. They are noted below in comments. They get reset to default values here
+      so that the highlighting will work again when a user clicks on one of the date buttons.
+  */
+  $.fn.maphilight.defaults = {
+    fill: true,
+    fillColor: closed_color,
+    fillOpacity: 0.5,
+    stroke: false,
+    strokeColor: '000000',
+    strokeOpacity: 1,
+    strokeWidth: 1,
+    fade: false,
+    alwaysOn: true,       // This gets set to true so that the highlighting will work again.
+    neverOn: false,       // This gets set to false so that the highlighting will show up again.
+    groupBy: false,
+    wrapClass: true,
+    shadow: false,
+    shadowX: 0,
+    shadowY: 0,
+    shadowRadius: 6,
+    shadowColor: '000000',
+    shadowOpacity: 0.8,
+    shadowPosition: 'outside',
+    shadowFrom: false
+  }
 
   // List of trails open / closed.
-  var open_trails = ski_data.waterville_open;
-  var closed_trails = ski_data.waterville_closed;
-
-  console.log("open trails: " + open_trails);
-  console.log("closed trails: " + closed_trails);
+  var open_trails = filename.waterville_open;
+  var closed_trails = filename.waterville_closed;
 
   // Open Trails
   $("area").each(function(){
@@ -341,7 +328,7 @@ function color_list() {
       var compare = open_trails[trail];
 
       if(compare == $(this).attr("alt")) {
-        $(this).data('maphilight', {"fillColor": open_color});
+        $(this).data('maphilight', {"fillColor":open_color});
       }
     }
   });
@@ -352,59 +339,15 @@ function color_list() {
       var compare = closed_trails[trail];
 
       if(compare == $(this).attr("alt")) {
-        $(this).data('maphilight', {"fillColor": closed_color});
+        $(this).data('maphilight', {"fillColor":closed_color});
       }
     }
   });
 
+  // Must call this to update the map!
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
   $('.map').maphilight().parent().addClass('center-map_loon');
-  $('img[usemap]').rwdImageMaps();
-
-  return true;
-}
-
-//*******************************************************************************
-// imported from the waterville.js file
-// Update map function.
-// Given a JSON file name, it will update the waterville valley page.
-function update_map(filename) {
-    console.log(filename);
-
-    // List of trails open / closed.
-    var open_trails = filename.waterville_open;
-    var closed_trails = filename.waterville_closed;
-
-    console.log("open trails: " + open_trails);
-    console.log("closed trails: " + closed_trails);
-
-    // Open Trails
-    $("area").each(function(){
-      for (trail in open_trails) {
-        var compare = open_trails[trail];
-
-        if(compare == $(this).attr("alt")) {
-          $(this).data('maphilight', {"fillColor":open_color});
-        }
-      }
-    });
-
-    // Closed Trails
-    $("area").each(function(){
-      for (trail in closed_trails) {
-        var compare = closed_trails[trail];
-
-        if(compare == $(this).attr("alt")) {
-          $(this).data('maphilight', {"fillColor":closed_color});
-        }
-      }
-    });
-
-    // Must call this to update the map!
-    // Center the map using this helpful SO post
-    // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
-    $('.map').maphilight().parent().addClass('center-map_loon');
 }
 
 
@@ -417,13 +360,11 @@ function update_sidebar(filename) {
 
   // Add open trails.
   for(var open in filename.waterville_open) {
-    //console.log("open is: " + filename.waterville_open[open])
     $("#open_trails").append("<div>" + filename.waterville_open[open] + "</div>");
   }
 
   // Add closed trails.
   for(var closed in filename.waterville_closed) {
-    //console.log("closed is: " + filename.waterville_closed[closed])
     $("#closed_trails").append("<div>" + filename.waterville_closed[closed] + "</div>");
   }
 }

@@ -1,6 +1,6 @@
 <!--
        Date Created: 1/26/2016
-      Last Modified: 4/21/2016 11PM EST
+      Last Modified: 4/25/2016 11PM EST
          Created by: Jason Downing
 
       Cranmore Demo Map
@@ -61,17 +61,46 @@
     $("#NavBarHeader").load("html/navbar.html");
   </script>
 
+  <!-- Demo buttons -->
   <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-10">
-
       <div class="center_text_images">
-        <!-- Buttons for demoing the jQuery Maphilight -->
-        <!-- To be modified for Bretton Woods. -->
-        <button class="btn btn-default" type="button" onclick="color_yellow()">Change highlighting to GREEN</button>
-        <button class="btn btn-default" type="button" onclick="color_red()">Change highlighting to RED</button>
-        <br/><br/>
+        <button class="btn btn-default" type="button" onclick="change_day('nov15')">
+          November 2015
+        </button>
+
+        <button class="btn btn-default" type="button" onclick="change_day('dec15')">
+          December 2015
+        </button>
+
+        <button class="btn btn-default" type="button" onclick="change_day('jan15')">
+          January 2016
+        </button>
+
+        <button class="btn btn-default" type="button" onclick="change_day('feb15')">
+          Febuary 2016
+        </button>
+
+        <button class="btn btn-default" type="button" onclick="change_day('mar15')">
+          March 2016
+        </button>
+
+        <button class="btn btn-default" type="button" onclick="change_day('apr15')">
+          April 2016
+        </button>
+
+        <button class="btn btn-default" type="button" onclick="change_day('may15')">
+          May 2016
+        </button>
       </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
 
       <!--
         Image found at this URL:
@@ -91,7 +120,6 @@
         https://stackoverflow.com/questions/17613729/using-maphilight-for-total-beginners
         https://jsfiddle.net/k67gq/6/
       -->
-<!--       <div id="ski_area_map"></div> -->
       <map name="map">
       <area shape="poly" coords="716,305,726,332,726,341,723,350,716,357,703,366,697,371,689,377,683,386,676,397,672,405,665,416,660,423,654,434,645,450,640,470,637,478,635,487,631,501,628,512,626,518,612,546,609,558,606,572,603,580,601,588,596,599,595,605,600,616,606,617,600,631,594,648,585,666,576,683,569,695,567,712,561,727,557,742,552,755,545,770,540,786,535,801,531,818,528,828,524,837,518,855,514,866,508,875,501,886,495,895,488,897,486,898,480,907,449,971,509,971,523,932,528,910,533,898,538,883,542,865,545,854,548,845,550,835,551,826,551,816,551,806,555,799,563,792,567,784,570,773,576,758,593,719,600,711,607,699,610,687,616,672,622,661,624,652,631,640,634,626,635,615,637,601,639,593,639,584,635,574,637,568,642,564,647,559,650,553,654,535,656,527,660,508,671,485,675,461,684,444,688,435,696,422,702,414,708,403,713,393,717,379,722,372,734,367,754,341,755,335,755,325,752,318,748,311,730,290" alt="The Ledges" href="#theledges" />
       <area shape="poly" coords="739,365,748,376,752,386,757,398,760,407,760,418,764,431,764,444,768,451,773,460,781,475,787,486,792,494,800,507,807,517,814,528,819,540,823,547,828,558,838,565,847,571,856,575,888,592,926,617,956,626,976,650,998,658,1006,668,1005,685,991,728,983,746,973,756,964,763,954,768,936,778,909,790,889,798,874,803,851,811,823,825,805,835,791,842,776,846,722,868,699,877,676,885,646,900,631,906,616,912,582,990,594,985,613,974,630,965,661,951,693,935,715,922,743,913,767,899,795,886,811,877,826,868,848,858,871,847,885,838,901,827,927,813,937,805,952,795,1008,766,1014,753,1022,735,1025,722,1029,702,1031,691,1033,664,1018,657,1004,651,996,645,961,621,942,613,932,607,920,597,911,588,904,582,887,572,873,561,864,550,853,531,841,506,826,488,816,475,807,457,800,439,797,426,796,416,794,397,789,387,784,377,778,364,771,355,761,346,754,340" alt="Koessler" href="#koessler" />

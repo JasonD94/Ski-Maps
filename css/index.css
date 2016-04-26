@@ -455,11 +455,12 @@ h1 {
 
 /*
     Center jquery maphilight map
+    This one is for Waterville Valley
 */
 .center-map {
   margin: 0 auto;
-  margin-top: -70px;      /* originally -70px */
-  margin-bottom: -50px;   /* originally -50px */
+  margin-top: -11em;      /* Using em to fix the map on different resolutions. */
+  margin-bottom: -7.5em;
 }
 
 /*
@@ -467,8 +468,8 @@ h1 {
 */
 .center-map_bw {
   margin: 0 auto;
-  margin-top: 0px;      /* originally -70px */
-  margin-bottom: 20px;   /* originally -50px */
+  margin-top: .25em;
+  margin-bottom: 0px;
 }
 
 /*
@@ -476,8 +477,26 @@ h1 {
 */
 .center-map_cmt {
   margin: 0 auto;
+  margin-top: 1em;      /* using em for responsive design. */
+  margin-bottom: 0px;
+}
+
+/*
+    Center map for Cranmore Mountain
+*/
+.center-map_cran {
+  margin: 0 auto;
+  margin-top: .25em;      /* using em for responsive design. */
+  margin-bottom: 0px;
+}
+
+/*
+    Center map for Loon
+*/
+.center-map_loon {
+  margin: 0 auto;
   margin-top: 0px;      /* originally -70px */
-  margin-bottom: 20px;   /* originally -50px */
+  margin-bottom: 0px;   /* originally -50px */
 }
 
 /*
@@ -490,12 +509,15 @@ h1 {
 }
 
 /*
-    Center map for Loon
+    Horizonatally left align and vertically center the navbar image
+    Idea from: https://stackoverflow.com/questions/23400234/centering-brand-logo-in-bootstrap-3-navbar
 */
-.center-map_loon {
-  margin: 0 auto;
-  margin-top: 0px;      /* originally -70px */
-  margin-bottom: 0px;   /* originally -50px */
+.align_navbar_img {
+    position: absolute;
+    left: 10px;             /* Center vertically */
+    top: 10px;
+    text-align: left;       /* Left align horizontally */
+    margin: auto;
 }
 
 /* TESTING */
