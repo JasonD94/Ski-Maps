@@ -32,30 +32,55 @@ var nov15_json = {
     "Skimeister",
     "Rattlesnake",
     "Kandahar",
-    "South Slope",
     "Bandit",
     "Lower East Slope"
   ],
   "waterville_open": [
-
+    "South Slope"
   ]
 };
 
 var dec15_json = {
   "waterville_closed": [
-
+    "Koessler",
+    "Schneider",
+    "East Slope",
+    "Easy St",
+    "Middle",
+    "Hurricane",
+    "North Conway",
+    "Arlberg",
+    "Skimeister",
+    "Rattlesnake",
+    "Kandahar",
+    "Bandit",
+    "Lower East Slope"
   ],
   "waterville_open": [
-
+    "The Ledges",
+    "South Slope"
   ]
 };
 
 var jan15_json = {
   "waterville_closed": [
-
+    "Hurricane",
+    "North Conway",
+    "Arlberg",
+    "Skimeister",
+    "Rattlesnake",
+    "Kandahar",
+    "Bandit",
   ],
   "waterville_open": [
-
+    "Easy St",
+    "Schneider",
+    "Middle",
+    "Koessler",
+    "The Ledges",
+    "South Slope",
+    "East Slope",
+    "Lower East Slope"
   ]
 };
 
@@ -84,33 +109,45 @@ var feb15_json = {
 
 var mar15_json = {
   "waterville_closed": [
-
+    "Hurricane",
+    "Rattlesnake"
   ],
   "waterville_open": [
-
+    "Koessler",
+    "Kandahar",
+    "The Ledges",
+    "Schneider",
+    "East Slope",
+    "Easy St",
+    "Middle",
+    "North Conway",
+    "Arlberg",
+    "Skimeister",
+    "South Slope",
+    "Bandit",
+    "Lower East Slope"
   ]
 };
 
 var apr15_json = {
   "waterville_closed": [
-    "The Ledges",
+    "Hurricane",
+    "Rattlesnake",
+    "The Ledges"
+  ],
+  "waterville_open": [
     "Koessler",
+    "Kandahar",
     "Schneider",
     "East Slope",
     "Easy St",
     "Middle",
-    "Hurricane",
     "North Conway",
     "Arlberg",
     "Skimeister",
-    "Rattlesnake",
-    "Kandahar",
     "South Slope",
     "Bandit",
     "Lower East Slope"
-  ],
-  "waterville_open": [
-
   ]
 };
 
