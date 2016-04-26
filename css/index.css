@@ -455,6 +455,7 @@ h1 {
 
 /*
     Center jquery maphilight map
+    This one is for Waterville Valley
 */
 .center-map {
   margin: 0 auto;
@@ -467,8 +468,8 @@ h1 {
 */
 .center-map_bw {
   margin: 0 auto;
-  margin-top: 0px;      /* originally -70px */
-  margin-bottom: 20px;   /* originally -50px */
+  margin-top: .25em;
+  margin-bottom: 0px;
 }
 
 /*
@@ -476,23 +477,32 @@ h1 {
 */
 .center-map_cmt {
   margin: 0 auto;
-  margin-top: 0px;      /* originally -70px */
-  margin-bottom: 20px;   /* originally -50px */
+  margin-top: 1em;      /* using em for responsive design. */
+  margin-bottom: 0px;
 }
 
 /*
-    Center map for Pats Peak
+    Center map for Cranmore Mountain
 */
-.center-map_pats {
+.center-map_cran {
   margin: 0 auto;
-  margin-top: 0px;      /* originally -70px */
-  margin-bottom: 0px;   /* originally -50px */
+  margin-top: .25em;      /* using em for responsive design. */
+  margin-bottom: 0px;
 }
 
 /*
     Center map for Loon
 */
 .center-map_loon {
+  margin: 0 auto;
+  margin-top: 0px;      /* originally -70px */
+  margin-bottom: 0px;   /* originally -50px */
+}
+
+/*
+    Center map for Pats Peak
+*/
+.center-map_pats {
   margin: 0 auto;
   margin-top: 0px;      /* originally -70px */
   margin-bottom: 0px;   /* originally -50px */

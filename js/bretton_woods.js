@@ -687,7 +687,6 @@ function color_yellow() {
   // This goes through and changes all the maphilight data "fillColor" properties
   // to "FFEA1C" which is the same yellow color I set as "default" for all areas.
   $("area").each(function(){
-    console.log("CHANGING COLORS to YELLOW");
     $(this).data('maphilight', {"fillColor": open_color});
   });
 
@@ -705,7 +704,6 @@ function color_red() {
   // This goes through and changes all the maphilight data "fillColor" properties
   // to "A30002" which is a red color.
   $("area").each(function(){
-    console.log("CHANGING COLORS to RED");
     $(this).data('maphilight', {"fillColor": closed_color});
   });
 
