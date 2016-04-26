@@ -12,14 +12,7 @@ The site will allow users to view the current conditions for the following Ski R
 - Waterville Valley
 
 ## URLs
-A demo of client side programming may be found at the following URL:
-
-http://downing.io/Ski-Maps/
-
-A demo of the full project (with back-end) will be found at the following URL:
-
-http://aws.downing.io/Dynamic-Ski-Maps/
-(this should end up being a custom domain at some point)
+A demo of client side programming may be found at the following URL: [downing.io/Ski-Maps](http://downing.io/Ski-Maps/)
 
 [Google Docs - Final Presentation](https://docs.google.com/presentation/d/1sT4nOpsitNVVuL6sX4sSmVNYfY83MEFnV0rHZrGgIs8/edit?usp=sharing)
 
@@ -30,18 +23,13 @@ On the front end, we're using
 [Bootstrap](https://getbootstrap.com/),
 [jQuery](https://jquery.com/),
 [jQuery Maphilight](https://github.com/kemayo/maphilight),
-and [Image Map Resizer](https://github.com/davidjbradshaw/image-map-resizer).
+and [jQuery RWD Image Maps]( https://github.com/stowball/jQuery-rwdImageMaps).
 
 On the back end we're planning on just using
 [Python](https://www.python.org/),
 along with
 [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/)
 which is a Python library for web scrapping.
-
-We may consider using a combination of or some of:
-[node.js](https://nodejs.org/en/),
-[Angular.js](https://angularjs.org/),
-and [Django](https://www.djangoproject.com/).
 
 ## Running web_scrap.py
 To run the Python script, you will need to have Python3 and BeautifulSoup installed.
