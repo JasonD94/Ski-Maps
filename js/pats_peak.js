@@ -42,6 +42,116 @@ var nov15_json = {
     "#Downdraft",
     "#Tubing_Park",
     "#Bluster",
+    "#Cascade_Brook",
+    "#Blizzard",
+    "#Tempest",
+    "#NorthEaster",
+    "#Crosswind"
+  ],
+  "waterville_open": [
+    "#Turbulence_Park",
+    "#Whisper",
+    "#Puff"
+  ]
+};
+
+var dec15_json = {
+  "waterville_closed": [
+    "#Backdraft",
+    "#Breeze",
+    "#East_Wind",
+    "#Duster",
+    "#Cyclone",
+    "#Tornado",
+    "#Zephyr",
+    "#Lower_East_Wind",
+    "#Squall_Line",
+    "#Blast",
+    "#Lower_Tornado",
+    "#Hurricane",
+    "#Hurricane",
+    "#Hurricane",
+    "#Vortex",
+    "#FIS_Race_Trail",
+    "#Twister",
+    "#Tubing_Park",
+    "#Bluster",
+    "#Cascade_Brook",
+    "#Blizzard",
+    "#Tempest",
+    "#NorthEaster",
+    "#Crosswind"
+  ],
+  "waterville_open": [
+    "#Begginners_Area",
+    "#Downdraft",
+    "#Turbulence_Park",
+    "#Whisper",
+    "#Puff"
+  ]
+};
+
+var jan15_json = {
+  "waterville_closed": [
+    "#Cyclone",
+    "#Tornado",
+    "#Hurricane",
+    "#Hurricane",
+    "#Hurricane",
+    "#Vortex",
+    "#FIS_Race_Trail",
+    "#Cascade_Brook",
+    "#Blizzard",
+    "#Tempest",
+    "#NorthEaster",
+    "#Crosswind"
+  ],
+  "waterville_open": [
+    "#Twister",
+    "#East_Wind",
+    "#Duster",
+    "#Lower_Tornado",
+    "#Squall_Line",
+    "#Lower_East_Wind",
+    "#Breeze",
+    "#Blast",
+    "#Zephyr",
+    "#Backdraft",
+    "#Tubing_Park",
+    "#Bluster",
+    "#Begginners_Area",
+    "#Downdraft",
+    "#Turbulence_Park",
+    "#Whisper",
+    "#Puff"
+  ]
+};
+
+var feb15_json = {
+  "waterville_closed": [
+  ],
+  "waterville_open": [
+    "#Backdraft",
+    "#Breeze",
+    "#East_Wind",
+    "#Duster",
+    "#Cyclone",
+    "#Tornado",
+    "#Zephyr",
+    "#Lower_East_Wind",
+    "#Squall_Line",
+    "#Blast",
+    "#Lower_Tornado",
+    "#Begginners_Area",
+    "#Hurricane",
+    "#Hurricane",
+    "#Hurricane",
+    "#Vortex",
+    "#FIS_Race_Trail",
+    "#Twister",
+    "#Downdraft",
+    "#Tubing_Park",
+    "#Bluster",
     "#Turbulence_Park",
     "#Whisper",
     "#Puff",
@@ -50,190 +160,79 @@ var nov15_json = {
     "#Tempest",
     "#NorthEaster",
     "#Crosswind"
-  ],
-  "waterville_open": [
   ]
-};
-
-var dec15_json = {
-  "waterville_closed": [
-      "#Hurricane",
-      "#Hurricane",
-      "#Vortex",
-      "#FIS_Race_Trail",
-      "#Twister",
-      "#Downdraft",
-      "#Tubing_Park",
-      "#Bluster",
-      "#Turbulence_Park",
-      "#Whisper",
-      "#Puff",
-      "#Cascade_Brook",
-      "#Blizzard",
-      "#Tempest",
-      "#NorthEaster",
-      "#Crosswind"
-  ],
-  "waterville_open": [
-      "#Backdraft",
-      "#Breeze",
-      "#East_Wind",
-      "#Duster",
-      "#Cyclone",
-      "#Tornado",
-      "#Zephyr",
-      "#Lower_East_Wind",
-      "#Squall_Line",
-      "#Blast",
-      "#Lower_Tornado",
-      "#Begginners_Area",
-      "#Hurricane",
-  ]
-};
-
-var jan15_json = {
-    "waterville_closed": [
-      "#Hurricane",
-      "#Hurricane",
-      "#Vortex",
-      "#FIS_Race_Trail",
-      "#Twister",
-      "#Downdraft",
-      "#Tubing_Park",
-      "#Bluster",
-      "#Turbulence_Park",
-      "#Whisper",
-      "#Puff",
-      "#Cascade_Brook",
-      "#Blizzard",
-      "#Tempest",
-      "#NorthEaster",
-      "#Crosswind"
-    ],
-    "waterville_open": [
-      "#Backdraft",
-      "#Breeze",
-      "#East_Wind",
-      "#Duster",
-      "#Cyclone",
-      "#Tornado",
-      "#Zephyr",
-      "#Lower_East_Wind",
-      "#Squall_Line",
-      "#Blast",
-      "#Lower_Tornado",
-      "#Begginners_Area",
-      "#Hurricane",
-    ]
-};
-
-var feb15_json = {
-    "waterville_closed": [
-    ],
-    "waterville_open": [
-      "#Backdraft",
-      "#Breeze",
-      "#East_Wind",
-      "#Duster",
-      "#Cyclone",
-      "#Tornado",
-      "#Zephyr",
-      "#Lower_East_Wind",
-      "#Squall_Line",
-      "#Blast",
-      "#Lower_Tornado",
-      "#Begginners_Area",
-      "#Hurricane",
-      "#Hurricane",
-      "#Hurricane",
-      "#Vortex",
-      "#FIS_Race_Trail",
-      "#Twister",
-      "#Downdraft",
-      "#Tubing_Park",
-      "#Bluster",
-      "#Turbulence_Park",
-      "#Whisper",
-      "#Puff",
-      "#Cascade_Brook",
-      "#Blizzard",
-      "#Tempest",
-      "#NorthEaster",
-      "#Crosswind"
-    ]
 };
 
 var mar15_json = {
-    "waterville_closed": [
-      "#Blizzard",
-      "#Tempest",
-      "#NorthEaster",
-      "#Crosswind"
-    ],
-    "waterville_open": [
-      "#Backdraft",
-      "#Breeze",
-      "#East_Wind",
-      "#Duster",
-      "#Cyclone",
-      "#Tornado",
-      "#Zephyr",
-      "#Lower_East_Wind",
-      "#Squall_Line",
-      "#Blast",
-      "#Lower_Tornado",
-      "#Begginners_Area",
-      "#Hurricane",
-      "#Hurricane",
-      "#Hurricane",
-      "#Vortex",
-      "#FIS_Race_Trail",
-      "#Twister",
-      "#Downdraft",
-      "#Tubing_Park",
-      "#Bluster",
-      "#Turbulence_Park",
-      "#Whisper",
-      "#Puff",
-      "#Cascade_Brook",
-    ]
+  "waterville_closed": [
+    "#FIS_Race_Trail",
+    "#Hurricane",
+    "#Hurricane",
+    "#Hurricane"
+  ],
+  "waterville_open": [
+    "#Backdraft",
+    "#Breeze",
+    "#East_Wind",
+    "#Duster",
+    "#Cyclone",
+    "#Tornado",
+    "#Zephyr",
+    "#Lower_East_Wind",
+    "#Squall_Line",
+    "#Blast",
+    "#Lower_Tornado",
+    "#Begginners_Area",
+    "#Vortex",
+    "#Twister",
+    "#Downdraft",
+    "#Tubing_Park",
+    "#Bluster",
+    "#Turbulence_Park",
+    "#Whisper",
+    "#Puff",
+    "#Cascade_Brook",
+    "#Blizzard",
+    "#Tempest",
+    "#NorthEaster",
+    "#Crosswind"
+  ]
 };
 
 var apr15_json = {
-    "waterville_closed": [
-      "#Backdraft",
-      "#Breeze",
-      "#East_Wind",
-      "#Duster",
-      "#Cyclone",
-      "#Tornado",
-      "#Zephyr",
-      "#Lower_East_Wind",
-      "#Squall_Line",
-      "#Blast",
-      "#Lower_Tornado",
-      "#Begginners_Area",
-      "#Hurricane",
-      "#Hurricane",
-      "#Hurricane",
-      "#Vortex",
-      "#FIS_Race_Trail",
-      "#Twister",
-      "#Downdraft",
-      "#Tubing_Park",
-      "#Bluster",
-      "#Turbulence_Park",
-      "#Whisper",
-      "#Puff",
-      "#Cascade_Brook",
-      "#Blizzard",
-      "#Tempest",
-      "#NorthEaster",
-      "#Crosswind"
-    ],
-    "waterville_open": [
-
-    ]
+  "waterville_closed": [
+    "#FIS_Race_Trail",
+    "#Hurricane",
+    "#Hurricane",
+    "#Hurricane",
+    "#Cyclone",
+    "#Tornado"
+  ],
+  "waterville_open": [
+    "#Backdraft",
+    "#Breeze",
+    "#East_Wind",
+    "#Duster",
+    "#Zephyr",
+    "#Lower_East_Wind",
+    "#Squall_Line",
+    "#Blast",
+    "#Lower_Tornado",
+    "#Begginners_Area",
+    "#Vortex",
+    "#Twister",
+    "#Downdraft",
+    "#Tubing_Park",
+    "#Bluster",
+    "#Turbulence_Park",
+    "#Whisper",
+    "#Puff",
+    "#Cascade_Brook",
+    "#Blizzard",
+    "#Tempest",
+    "#NorthEaster",
+    "#Crosswind"
+  ]
 };
 
 $(document).ready(function() {
@@ -277,18 +276,11 @@ $(document).ready(function() {
 
 // Change all the highlighting to yellow.
 function color_yellow() {
-  var trails_on = [];
-
   // This goes through and changes all the maphilight data "fillColor" properties
   // to "FFEA1C" which is the same yellow color I set as "default" for all areas.
   $("area").each(function(){
-    console.log("CHANGING COLORS to YELLOW");
     $(this).data('maphilight', {"fillColor": open_color});
-    trails_on.push($(this).attr("alt"));
   });
-
-  // All trails
-  console.log(trails_on);
 
   // Center the map using this helpful SO post
   // https://stackoverflow.com/questions/1760586/how-to-align-the-jquery-maphilight-to-center
@@ -303,7 +295,6 @@ function color_red() {
   // This goes through and changes all the maphilight data "fillColor" properties
   // to "A30002" which is a red color.
   $("area").each(function(){
-    console.log("CHANGING COLORS to RED");
     $(this).data('maphilight', {"fillColor": closed_color});
   });
 

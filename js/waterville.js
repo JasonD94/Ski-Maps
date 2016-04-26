@@ -121,7 +121,6 @@ var dec15_json = {
     "The Pasture"
   ],
   "waterville_open": [
-
     "Kinderpark Lift**For lessons only, closed to the public.\n",
     "South Street",
     "Oblivion",
@@ -173,7 +172,7 @@ var jan15_json = {
     "Lower White Caps - FT"
   ],
   "waterville_open": [
-      "Exhibition - FT",
+    "Exhibition - FT",
     "The Pasture",
     "Mini Pipe",
     "Lower Periphery - FT",
@@ -265,10 +264,10 @@ var mar15_json = {
     "Exhibition Poma",
     "Boneyard",
     "Lower Bobby's Run",
-    "Psyched ",
     "Closed"
   ],
   "waterville_open": [
+    "Psyched ",
     "Kinderpark Lift**For lessons only, closed to the public.\n",
     "The Pasture",
     "Baseway",
@@ -320,24 +319,46 @@ var mar15_json = {
     "WV Progression Park",
     "Exhibition",
     "South Street",
-    "Open"
+    "Open",
+    "Stillness - FT",
+    "Tommy's World Cup Run - FT"
   ]
 };
 
 var apr15_json = {
   "waterville_closed": [
     "Exhibition Poma",
-    "Upper Bobbys",
-    "White Caps",
-    "Psyched Out",
-    "South Street",
-    "Ciao",
+    "Boneyard",
+    "Lower Bobby's Run",
+    "Closed",
+    "True Grit",
     "Gema",
-    "Lower Sel's Choice",
+    "Ciao"
+  ],
+  "waterville_open": [
+    "Psyched ",
+    "Kinderpark Lift**For lessons only, closed to the public.\n",
+    "The Pasture",
+    "Baseway",
+    "Kinder Park",
+    "Leroy's Loop",
+    "Revelation",
+    "Stemtation",
+    "Valley Run",
+    "Main Street",
+    "Ruthies Run",
+    "Scramble",
+    "Lower Stillness",
+    "Rock Island",
+    "Stillness",
+    "And Tyler Too",
+    "Bail Out",
+    "Grimes Way",
     "Lower Periphery",
     "Lower Tippecanoe",
     "Lower White Caps",
     "No Grit",
+    "Oblivion",
     "Old Tecumseh",
     "Palmers Way",
     "Periphery",
@@ -346,43 +367,27 @@ var apr15_json = {
     "Siegel Street",
     "Sun Run",
     "Tangent",
-  ],
-  "waterville_open": [
-    "Upper Valley Run",
-    "Oblivion",
-    "Boneyard",
-    "Lower Bobby's Run",
-    "Psyched ",
-    "Kinderpark Lift**For lessons only, closed to the public.\n",
-    "Leroy's Loop",
-    "Revelation",
-    "Stemtation",
-    "Valley Run",
-    "Main Street",
-    "Ruthies Run",
-    "The Pasture",
-    "Baseway",
-    "Kinder Park",
-    "Scramble",
-    "Lower Stillness",
-    "Rock Island",
-    "Stillness",
-    "And Tyler Too",
-    "Bail Out",
-    "Grimes Way",
     "Terrys Trail",
     "Tippecanoe",
     "Tree Line",
+    "Upper Bobbys",
+    "Upper Valley Run",
+    "White Caps",
+    "Psyched Out",
+    "South Street",
+    "Lower Sel's Choice",
     "Psyched",
     "Sel's Choice",
     "The Chute",
     "Tommy's World Cup Run",
-    "True Grit",
     "Utter Abandon",
     "Exhibition",
     "WV Progression Park",
     "Exhibition",
-    "South Street"
+    "South Street",
+    "Open",
+    "Stillness - FT",
+    "Tommy's World Cup Run - FT"
   ]
 };
 
